@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HireMe</string>
+    <string name="brandName">HireMe</string>
+    <string name="tagLine">Hire Worker or Get Job</string>
 </resources>
