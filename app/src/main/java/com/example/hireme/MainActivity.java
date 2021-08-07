@@ -3,7 +3,9 @@ package com.example.hireme;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.vectordrawable.graphics.drawable.AnimationUtilsCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -11,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static int SPLASH_SCREEN = 3000;
 
     //variables for the splash screen
     Animation topAnim, bottomAnim;
@@ -36,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
         img.setAnimation(topAnim);
         logo.setAnimation(bottomAnim);
         tagLine.setAnimation(bottomAnim);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, MainMenu.class);
+                startActivity(intent);
+                finish();
+            }
+        },SPLASH_SCREEN);
 
     }
 
