@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, MainMenu.class);
+                Intent intent = new Intent(MainActivity.this, IT20133290_VacancyMenu.class);
                 startActivity(intent);
                 finish();
             }
