@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">HireMe</string>
-    <string name="brandName">HireMe</string>
     <string name="tagLine">Hire Worker or Get Job</string>
     <string name="title_activity_main_menu">MainMenu</string>
     <!-- Strings used for fragments for navigation -->

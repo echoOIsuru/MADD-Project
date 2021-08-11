@@ -1,0 +1,5 @@
+<resources>
+    <string name="MainOption1">Looking for worker</string>
+    <string name="MainOption2">Looking for job</string>
+    <string name="Enter">Enter</string>
+</resources>
