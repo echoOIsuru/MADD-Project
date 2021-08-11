@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hireme" >
+    package="com.example.hireme">
 
     <application
         android:allowBackup="true"
@@ -8,13 +8,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HireMe" >
+        android:theme="@style/Theme.HireMe">
+        <activity
+            android:name=".IT20224370_EditProfile"
+            android:exported="true" />
+        <activity
+            android:name=".It20224370_UpdateRequests"
+            android:exported="true" />
+        <activity
+            android:name=".IT20224370_MyRequests"
+            android:exported="true" />
+        <activity
+            android:name=".IT20224370_JobRequest"
+            android:exported="true" />
+        <activity
+            android:name=".IT20224370_Householdjobs"
+            android:exported="true" />
+        <activity
+            android:name=".IT20224370_JobCategories"
+            android:exported="true" />
         <activity
             android:name=".MainMenu"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
