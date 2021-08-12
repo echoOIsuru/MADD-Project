@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IT20133290_JobMenu">
+    tools:context=".IT20133290_JobMenu"
+    android:background="@color/light_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,15 +29,15 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop1">
+                android:background="@drawable/backgroundop3flip">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
                     android:text="@string/LatestJob"
-                    android:textColor="#000000"
+                    android:textColor="@color/title"
                     android:textSize="30sp" />
 
                 <Button
@@ -46,7 +47,8 @@
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/Enter" />
+                    android:text="@string/Enter"
+                    android:textColor="@color/title" />
 
             </RelativeLayout>
 
@@ -75,16 +77,16 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop2">
+                android:background="@drawable/backgroundop3">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
                     android:text="@string/FindJob"
                     android:textAlignment="textEnd"
-                    android:textColor="#000000"
+                    android:textColor="@color/title"
                     android:textSize="30sp" />
 
                 <Button
@@ -95,7 +97,8 @@
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/Enter" />
+                    android:text="@string/Enter"
+                    android:textColor="@color/title"/>
 
             </RelativeLayout>
 
@@ -125,15 +128,15 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop1">
+                android:background="@drawable/backgroundop3flip">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
                     android:text="@string/SentRequests"
-                    android:textColor="#000000"
+                    android:textColor="@color/title"
                     android:textSize="30sp" />
 
                 <Button
@@ -143,7 +146,8 @@
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/Enter" />
+                    android:text="@string/Enter"
+                    android:textColor="@color/title"/>
 
             </RelativeLayout>
 
@@ -173,16 +177,16 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop2">
+                android:background="@drawable/backgroundop3">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
                     android:text="@string/AcceptedRequests"
                     android:textAlignment="textEnd"
-                    android:textColor="#000000"
+                    android:textColor="@color/title"
                     android:textSize="30sp" />
 
                 <Button
@@ -193,7 +197,8 @@
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/Enter" />
+                    android:text="@string/Enter"
+                    android:textColor="@color/title"/>
 
             </RelativeLayout>
 

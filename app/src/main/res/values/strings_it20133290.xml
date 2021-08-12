@@ -14,5 +14,7 @@
     <string name="JobLevel">Job Level</string>
     <string name="Salary">Salary</string>
     <string name="Description">More Description</string>
+    <string name="delete_vacancy">REMOVE</string>
+    <string name="update_vacancy">UPDATE</string>
 
 </resources>

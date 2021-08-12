@@ -3,5 +3,8 @@
     <color name="light_background">#DCF3F8</color>
     <color name="input_filed">#F8F9D2</color>
     <color name="submit_btn_color">#F7EC1E</color>
+    <color name="remove_btn">#F94C2A</color>
+    <color name="update_btn">#51E500</color>
+    <color name="title">#4F5049</color>
 
 </resources>
