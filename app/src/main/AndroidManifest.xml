@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
+            android:name=".IT20133290_AddVacancy"
+            android:exported="true" />
+        <activity
+            android:name=".IT20133290_JobMenu"
+            android:exported="true" />
+        <activity
             android:name=".IT20133290_VacancyMenu"
             android:exported="true" />
         <activity

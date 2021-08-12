@@ -2,4 +2,17 @@
     <string name="MainOption1">Looking for worker</string>
     <string name="MainOption2">Looking for job</string>
     <string name="Enter">Enter</string>
+    <string name="LatestJob">Latest Vacancies</string>
+    <string name="FindJob">Find Vacancies</string>
+    <string name="SentRequests">Sent Requests</string>
+    <string name="AcceptedRequests">Accepted Requests</string>
+    <string name="AddVacancy">Add Your Vacancy Details</string>
+    <string name="LetsStart">Lets Start!</string>
+    <string name="JobTitle">Job Title</string>
+    <string name="Organization">Organization</string>
+    <string name="JobFamily">Job Family</string>
+    <string name="JobLevel">Job Level</string>
+    <string name="Salary">Salary</string>
+    <string name="Description">More Description</string>
+
 </resources>
