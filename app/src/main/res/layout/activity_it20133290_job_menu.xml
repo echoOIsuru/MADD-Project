@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IT20133290_JobMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/background_padding"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sub_menu_width"
+            android:layout_weight="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding"
+                android:layout_marginEnd="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_weight="0.5"
+                android:background="@drawable/backgroundop1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/LatestJob"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/Enter" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="@dimen/card_pic_width"
+                android:layout_height="@dimen/card_pic_height"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/latest_job" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sub_menu_width"
+            android:layout_weight="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding"
+                android:layout_marginEnd="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_weight="0.5"
+                android:background="@drawable/backgroundop2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/FindJob"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/Enter" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="@dimen/card_pic_width"
+                android:layout_height="@dimen/card_pic_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginBottom="-10dp"
+                android:src="@drawable/find_job" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sub_menu_width"
+            android:layout_weight="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding"
+                android:layout_marginEnd="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_weight="0.5"
+                android:background="@drawable/backgroundop1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/SentRequests"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/Enter" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="@dimen/card_pic_width"
+                android:layout_height="@dimen/card_pic_height"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="-11dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/sent_requests" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sub_menu_width"
+            android:layout_weight="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding"
+                android:layout_marginEnd="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_weight="0.5"
+                android:background="@drawable/backgroundop2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/AcceptedRequests"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/Enter" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="@dimen/card_pic_width"
+                android:layout_height="@dimen/card_pic_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/accepted_job" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

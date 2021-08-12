@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="light_background">#DCF3F8</color>
-
+    <color name="input_filed">#F8F9D2</color>
+    <color name="submit_btn_color">#F7EC1E</color>
 
 </resources>

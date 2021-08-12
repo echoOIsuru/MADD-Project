@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.25" />
+        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_add_vacancy.xml" value="0.264" />
+        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_job_menu.xml" value="0.264" />
+        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.1" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main_menu.xml" value="0.2563405797101449" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/navbar.xml" value="0.21842105263157896" />
@@ -17,5 +19,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
