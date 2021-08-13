@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, IT20133290_JobMenu.class);
+                Intent intent = new Intent(MainActivity.this, DashBoard.class);
                 startActivity(intent);
                 finish();
             }

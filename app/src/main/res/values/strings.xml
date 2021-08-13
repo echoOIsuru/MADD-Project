@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">HireMe</string>
     <string name="tagLine">Hire Worker or Get Job</string>
+    <string name="title_activity_it20133290_sent_vacancy">IT20133290_SentVacancy</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_bottom_nav_bar">BottomNavBar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="lookingForWorker">Hire Workers</string>
+    <string name="Vacancies">Vacancies</string>
+    <string name="BeWork">Be a Worker</string>
+    <string name="Feedback">Feedbacks</string>
+
 </resources>
