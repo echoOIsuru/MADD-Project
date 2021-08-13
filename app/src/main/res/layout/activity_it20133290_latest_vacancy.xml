@@ -40,12 +40,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:textSize="16dp"
                     android:layout_alignParentTop="true"
                     android:paddingLeft="@dimen/card_padding"
                     android:paddingTop="@dimen/card_padding"
                     android:paddingRight="@dimen/card_padding"
-                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services."
-                    android:textSize="16dp" />
+                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services." />
 
 
                 <RelativeLayout
@@ -60,7 +60,7 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="Rs. 30,000/month"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -70,24 +70,15 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="21/11/2021"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
 
                 </RelativeLayout>
 
             </LinearLayout>
 
-
             <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="@color/remove_btn"
-                android:text="@string/delete_vacancy" />
-
-            <Button
+                android:id="@+id/btnApply"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
@@ -95,7 +86,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/update_btn"
-                android:text="@string/update_vacancy" />
+                android:text="@string/apply" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -125,12 +116,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:textSize="16dp"
                     android:layout_alignParentTop="true"
                     android:paddingLeft="@dimen/card_padding"
                     android:paddingTop="@dimen/card_padding"
                     android:paddingRight="@dimen/card_padding"
-                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services."
-                    android:textSize="16dp" />
+                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services." />
 
 
                 <RelativeLayout
@@ -145,7 +136,7 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="Rs. 30,000/month"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -155,22 +146,12 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="21/11/2021"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
 
                 </RelativeLayout>
 
             </LinearLayout>
-
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="@color/remove_btn"
-                android:text="@string/delete_vacancy" />
 
             <Button
                 android:layout_width="100dp"
@@ -180,7 +161,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/update_btn"
-                android:text="@string/update_vacancy" />
+                android:text="@string/apply" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -210,12 +191,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:textSize="16dp"
                     android:layout_alignParentTop="true"
                     android:paddingLeft="@dimen/card_padding"
                     android:paddingTop="@dimen/card_padding"
                     android:paddingRight="@dimen/card_padding"
-                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services."
-                    android:textSize="16dp" />
+                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services." />
 
 
                 <RelativeLayout
@@ -230,7 +211,7 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="Rs. 30,000/month"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -240,22 +221,12 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="21/11/2021"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
 
                 </RelativeLayout>
 
             </LinearLayout>
-
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="@color/remove_btn"
-                android:text="@string/delete_vacancy" />
 
             <Button
                 android:layout_width="100dp"
@@ -265,7 +236,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/update_btn"
-                android:text="@string/update_vacancy" />
+                android:text="@string/apply" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -295,12 +266,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:textSize="16dp"
                     android:layout_alignParentTop="true"
                     android:paddingLeft="@dimen/card_padding"
                     android:paddingTop="@dimen/card_padding"
                     android:paddingRight="@dimen/card_padding"
-                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services."
-                    android:textSize="16dp" />
+                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services." />
 
 
                 <RelativeLayout
@@ -315,7 +286,7 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="Rs. 30,000/month"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -325,22 +296,12 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="21/11/2021"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
 
                 </RelativeLayout>
 
             </LinearLayout>
-
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="@color/remove_btn"
-                android:text="@string/delete_vacancy" />
 
             <Button
                 android:layout_width="100dp"
@@ -350,7 +311,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/update_btn"
-                android:text="@string/update_vacancy" />
+                android:text="@string/apply" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -380,12 +341,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:textSize="16dp"
                     android:layout_alignParentTop="true"
                     android:paddingLeft="@dimen/card_padding"
                     android:paddingTop="@dimen/card_padding"
                     android:paddingRight="@dimen/card_padding"
-                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services."
-                    android:textSize="16dp" />
+                    android:text="Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services." />
 
 
                 <RelativeLayout
@@ -400,7 +361,7 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="Rs. 30,000/month"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -410,22 +371,12 @@
                         android:paddingTop="@dimen/background_padding"
                         android:paddingRight="@dimen/card_padding"
                         android:text="21/11/2021"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
 
                 </RelativeLayout>
 
             </LinearLayout>
-
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="@color/remove_btn"
-                android:text="@string/delete_vacancy" />
 
             <Button
                 android:layout_width="100dp"
@@ -435,7 +386,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/update_btn"
-                android:text="@string/update_vacancy" />
+                android:text="@string/apply" />
         </RelativeLayout>
 
 

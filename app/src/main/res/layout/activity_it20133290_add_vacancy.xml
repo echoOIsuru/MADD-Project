@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_background"
+    android:background="@drawable/backgroundop3sq"
     tools:context=".IT20133290_AddVacancy"
 >
 
@@ -51,7 +51,7 @@
                     android:id="@+id/etJobTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/input_filed" />
+                    android:background="@color/input_filed2" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +67,7 @@
                     android:id="@+id/etOrganization"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/input_filed"/>
+                    android:background="@color/input_filed2"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +83,7 @@
                     android:id="@+id/etSalary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/input_filed"/>
+                    android:background="@color/input_filed2"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +100,7 @@
                     android:id="@+id/etJobFamily"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/input_filed"/>
+                    android:background="@color/input_filed2"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +117,7 @@
                     android:id="@+id/etJobLevel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/input_filed"/>
+                    android:background="@color/input_filed2"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <TextView
@@ -128,7 +128,7 @@
                 android:paddingLeft="15dp"
                 android:text="Deadline"
                 android:textSize="16dp"
-                android:background="@color/input_filed"/>
+                android:background="@color/input_filed2"/>
             <DatePicker
                 android:layout_marginBottom="10dp"
                 android:id="@+id/datePicker1"
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:datePickerMode="spinner"
                 android:calendarViewShown="false"
-                android:background="@color/input_filed"/>
+                android:background="@color/input_filed2"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/filledDescription"
@@ -150,7 +150,7 @@
                     android:id="@+id/etDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/input_filed"/>
+                    android:background="@color/input_filed2"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
