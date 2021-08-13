@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+
+
+    <string name="name">Tharindu Samarakoon</string>
+    <string name="email">tharindu@gmail.com</string>
+    <string name="requests">Requests</string>
+    <string name="myjobs">My Jobs</string>
+    <string name="reviews">Reviews</string>
+    <string name="workhistory">Work History</string>
+    <string name="myjob">MyJobs</string>
+    <string name="plumber">Plumber</string>
+    <string name="addnew">Add New</string>
+    <string name="electrician">Electrician</string>
+    <string name="driver">Driver</string>
+    <string name="btnaccept">ACCEPT</string>
+    <string name="btndecline">DECLINE</string>
+    <string name="rateelec">400/= Per Hour</string>
+    <string name="rateplum">700/= Per Hour</string>
+    <string name="ratedriv">1000/= Per Day</string>
+    <string name="jobtitle">Job Title</string>
+    <string name="pricerate">Price Rate</string>
+    <string name="contact">Contact</string>
+    <string name="description">Description</string>
+
+</resources>
