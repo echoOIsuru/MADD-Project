@@ -8,41 +8,13 @@
     android:orientation="vertical"
     tools:context=".IT20133290_VacancyMenu">
 
-    <!--Top Navbar-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize">
-
-            <ImageView
-                android:layout_width="@dimen/back_width"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/arrowbackicon" />
-
-            <ImageView
-                android:layout_width="@dimen/search_width"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/searchicon" />
-        </RelativeLayout>
-
-    </LinearLayout>
-
-
-    <!--Container-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/background_padding"
-        android:layout_weight="0.8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -58,25 +30,27 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop1">
+                android:background="@drawable/backgroundop3">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/MainOption1"
+                    android:text="@string/AddVacancyMenu"
                     android:textColor="@color/title2"
                     android:textSize="30sp" />
 
                 <Button
-                    android:id="@+id/btnVcustomerMenu"
+
+                    android:id="@+id/btnAddVaMenu"
                     android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
                     android:onClick="onClick"
+                    android:textColor="@color/title"
                     android:padding="@dimen/card_padding"
                     android:text="@string/Enter" />
 
@@ -87,8 +61,9 @@
                 android:layout_height="@dimen/card_pic_height"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/looking" />
+                android:layout_marginRight="-30dp"
+                android:layout_marginBottom="-13dp"
+                android:src="@drawable/add_vacancy_menu" />
 
 
         </RelativeLayout>
@@ -106,23 +81,24 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop1">
+                android:background="@drawable/backgroundop3">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/MainOption2"
+                    android:text="@string/PublishedVacancyMenu"
                     android:textColor="@color/title2"
                     android:textSize="30sp" />
 
                 <Button
-                    android:id="@+id/btnVworker"
+                    android:id="@+id/btnPublishedVaMenu"
                     android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="0dp"
+                    android:textColor="@color/title"
                     android:background="@android:color/transparent"
                     android:onClick="onClick"
                     android:padding="@dimen/card_padding"
@@ -135,33 +111,11 @@
                 android:layout_height="@dimen/card_pic_height"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
+                android:layout_marginRight="-51dp"
                 android:layout_marginBottom="5dp"
-                android:src="@drawable/job" />
+                android:src="@drawable/published_vacancy_menu" />
 
 
-        </RelativeLayout>
-
-    </LinearLayout>
-
-
-    <!--Bottom Navbar-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="#FFFFFF">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5">
-
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/home" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -169,28 +123,53 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5">
 
-            <ImageView
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/notification" />
-        </RelativeLayout>
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding"
+                android:layout_marginEnd="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_weight="0.5"
+                android:background="@drawable/backgroundop3">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/WorkersFeedbackMenu"
+                    android:textColor="@color/title2"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/btnInterviewMenu"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:textColor="@color/title"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:padding="@dimen/card_padding"
+                    android:text="@string/Enter" />
+
+            </RelativeLayout>
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/card_pic_width"
+                android:layout_height="@dimen/card_pic_height"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/profile" />
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="-36dp"
+                android:src="@drawable/interview_menu" />
+
+
         </RelativeLayout>
 
-    </LinearLayout>
 
+    </LinearLayout>
 
 </LinearLayout>
