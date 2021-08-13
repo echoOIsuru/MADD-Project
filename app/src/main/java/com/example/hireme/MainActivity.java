@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, IT20133290_VacancyMenu.class);
+                Intent intent = new Intent(MainActivity.this, IT20231682_feedback_user_history.class);
                 startActivity(intent);
                 finish();
             }

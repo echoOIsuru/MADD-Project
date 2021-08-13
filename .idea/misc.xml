@@ -5,11 +5,16 @@
       <map>
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main_menu.xml" value="0.2563405797101449" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/drawable/it20231682_ic_delete.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/drawable/it20231682_ic_edit.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.25" />
         <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback.xml" value="0.25" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/navbar.xml" value="0.21842105263157896" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_thankyou.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_user_history.xml" value="0.4" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_view.xml" value="0.4" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_worker_view.xml" value="0.4" />
       </map>
     </option>
   </component>
