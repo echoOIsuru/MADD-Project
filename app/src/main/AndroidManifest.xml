@@ -10,22 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
+            android:name=".IT20224370_Workerprofile" android:parentActivityName=".MainMenu"
+            android:exported="true" />
+        <activity
+            android:name=".IT20224370_IndustrialJobs" android:parentActivityName=".IT20224370_JobCategories"
+            android:exported="true" />
+        <activity
             android:name=".IT20224370_EditProfile"
             android:exported="true" />
         <activity
-            android:name=".It20224370_UpdateRequests"
+            android:name=".It20224370_UpdateRequests" android:parentActivityName=".IT20224370_MyRequests"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_MyRequests"
+            android:name=".IT20224370_MyRequests" android:parentActivityName=".IT20224370_JobCategories"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_JobRequest"
+            android:name=".IT20224370_JobRequest" android:parentActivityName=".IT20224370_JobCategories"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_Householdjobs"
+            android:name=".IT20224370_Householdjobs" android:parentActivityName=".IT20224370_JobCategories"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_JobCategories"
+            android:name=".IT20224370_JobCategories" android:parentActivityName=".MainMenu"
             android:exported="true" />
         <activity
             android:name=".IT20133290_VacancyMenu"

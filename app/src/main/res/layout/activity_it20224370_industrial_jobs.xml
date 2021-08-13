@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">-->
-    <!-- Here you put the rest of your current view-->
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,19 +6,17 @@
     android:layout_height="match_parent"
     android:background="#DCF3F8"
     android:backgroundTint="@color/backgroundcolor"
-    tools:context=".IT20224370_Householdjobs">
+    tools:context=".IT20224370_IndustrialJobs">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout7"
         android:layout_width="368dp"
         android:layout_height="132dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/it20224370_relativeborder"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <Button
             android:id="@+id/btnview1"
@@ -58,7 +48,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="11dp"
             android:layout_marginEnd="81dp"
-            android:text="Rohana Ranasooriya"
+            android:text="@string/tvIndustrial3"
             android:textStyle="bold" />
 
         <TextView
@@ -67,8 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="61dp"
             android:text="Kandy" />
 
         <TextView
@@ -77,9 +67,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="68dp"
-            android:text="@string/TextPainter" />
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="34dp"
+            android:text="@string/tv_industrialjobs3" />
 
         <ImageView
             android:id="@+id/img3"
@@ -87,29 +77,31 @@
             android:layout_height="26dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="29dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="7dp"
             app:srcCompat="@drawable/briefcase" />
 
         <ImageView
             android:id="@+id/img4"
-            android:layout_width="@dimen/mini_imgwidth"
-            android:layout_height="@dimen/mini_imgheight"
+            android:layout_width="30dp"
+            android:layout_height="23dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="155dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="176dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/mapp" />
 
         <ImageView
-            android:id="@+id/img5"
-            android:layout_width="98dp"
-            android:layout_height="88dp"
+            android:id="@+id/imageView11"
+            android:layout_width="170dp"
+            android:layout_height="84dp"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="17dp"
-            app:srcCompat="@drawable/painter" />
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-17dp"
+            android:layout_marginBottom="42dp"
+            app:srcCompat="@drawable/filling" />
 
     </RelativeLayout>
 
@@ -117,11 +109,12 @@
         android:id="@+id/relativeLayout6"
         android:layout_width="368dp"
         android:layout_height="132dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/it20224370_relativeborder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5">
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
 
         <Button
             android:id="@+id/btnview2"
@@ -153,7 +146,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="11dp"
             android:layout_marginEnd="81dp"
-            android:text="Shashmitha Rajendra"
+            android:text="@string/tvIndustrial1"
             android:textStyle="bold" />
 
         <TextView
@@ -162,8 +155,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="56dp"
             android:text="Kandy" />
 
         <TextView
@@ -172,9 +165,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="73dp"
-            android:text="@string/TextPlumber" />
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/tv_IndustialJobs" />
 
         <ImageView
             android:id="@+id/img2"
@@ -182,31 +175,30 @@
             android:layout_height="26dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="57dp"
-            android:layout_marginEnd="34dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="9dp"
             app:srcCompat="@drawable/briefcase" />
 
         <ImageView
             android:id="@+id/img6"
-            android:layout_width="@dimen/mini_imgwidth"
-            android:layout_height="@dimen/mini_imgheight"
+            android:layout_width="30dp"
+            android:layout_height="23dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="155dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="162dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/mapp" />
 
         <ImageView
-            android:id="@+id/img7"
-            android:layout_width="104dp"
-            android:layout_height="80dp"
-            android:layout_alignParentStart="true"
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="83dp"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="15dp"
             android:layout_marginTop="7dp"
-            app:srcCompat="@drawable/plumber" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/mechanic" />
 
     </RelativeLayout>
 
@@ -215,6 +207,8 @@
         android:layout_width="@dimen/searchVie_Width"
         android:layout_height="@dimen/searchVie_Height"
         android:background="@drawable/it20224370_relativeborder"
+        android:inputType="textShortMessage"
+        android:queryHint="@string/search2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -223,14 +217,17 @@
 
     </SearchView>
 
+
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="370dp"
         android:layout_height="131dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/it20224370_relativeborder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout6">
 
@@ -249,8 +246,8 @@
 
         <Button
             android:id="@+id/btnrequest3"
-            android:layout_width="@dimen/btnWidth"
-            android:layout_height="@dimen/btnheight"
+            android:layout_width="103dp"
+            android:layout_height="37dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="89dp"
@@ -260,13 +257,13 @@
 
         <TextView
             android:id="@+id/tv7"
-            android:layout_width="147dp"
-            android:layout_height="37dp"
+            android:layout_width="171dp"
+            android:layout_height="38dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="81dp"
-            android:text="Prathiba Wijesuriya"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="57dp"
+            android:text="@string/tvIndustrial2"
             android:textStyle="bold" />
 
         <TextView
@@ -287,7 +284,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="55dp"
-            android:text="@string/TextElectrician" />
+            android:text="@string/tv_indusrialjobs" />
 
         <ImageView
             android:id="@+id/img8"
@@ -295,131 +292,30 @@
             android:layout_height="26dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="19dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="18dp"
             app:srcCompat="@drawable/briefcase" />
 
         <ImageView
             android:id="@+id/img9"
-            android:layout_width="@dimen/mini_imgwidth"
-            android:layout_height="@dimen/mini_imgheight"
+            android:layout_width="30dp"
+            android:layout_height="23dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="58dp"
-            android:layout_marginEnd="155dp"
+            android:layout_marginEnd="166dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/mapp" />
 
         <ImageView
-            android:id="@+id/img10"
-            android:layout_width="101dp"
-            android:layout_height="69dp"
+            android:id="@+id/imageView2"
+            android:layout_width="104dp"
+            android:layout_height="98dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginEnd="254dp"
-            android:layout_marginBottom="54dp"
-            app:srcCompat="@drawable/elec" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout5"
-        android:layout_width="369dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/it20224370_relativeborder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/btnview4"
-            android:layout_width="@dimen/btnWidth"
-            android:layout_height="@dimen/btnheight"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="89dp"
-            android:layout_marginEnd="252dp"
-            android:text="@string/btnView"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <Button
-            android:id="@+id/btnrequest4"
-            android:layout_width="@dimen/btnWidth"
-            android:layout_height="@dimen/btnheight"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="89dp"
-            android:layout_marginEnd="64dp"
-            android:text="@string/btnrequest"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <TextView
-            android:id="@+id/tv10"
-            android:layout_width="147dp"
-            android:layout_height="37dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="81dp"
-            android:text="Prathiba Wijesuriya"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tv11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="60dp"
-            android:text="Kandy" />
-
-        <TextView
-            android:id="@+id/tv12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="55dp"
-            android:text="House Maid" />
-
-        <ImageView
-            android:id="@+id/img11"
-            android:layout_width="28dp"
-            android:layout_height="26dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="20dp"
-            app:srcCompat="@drawable/briefcase" />
-
-        <ImageView
-            android:id="@+id/img12"
-            android:layout_width="@dimen/mini_imgwidth"
-            android:layout_height="@dimen/mini_imgheight"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="155dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/mapp" />
-
-        <ImageView
-            android:id="@+id/img13"
-            android:layout_width="101dp"
-            android:layout_height="87dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="12dp"
-            app:srcCompat="@drawable/maid" />
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/arborists" />
 
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-<!--</ScrollView>-->

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HireMe</string>
+    <string name="app_name">Job Categories</string>
     <string name="tagLine">Hire Worker or Get Job</string>
     <string name="title_activity_main_menu">MainMenu</string>
     <!-- Strings used for fragments for navigation -->
@@ -10,24 +10,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="jobcategory1">Household Jobs</string>
-    <string name="jobcategory2">Industrial Jobs</string>
-    <string name="btnenter1">View</string>
-    <string name="btnenter2">View</string>
-    <string name="btnrequest">Request Job</string>
-    <string name="btnView">View Profile</string>
-    <string name="TextElectrician">Electrician</string>
-    <string name="TextPlumber">Plumber</string>
-    <string name="TextPainter">Painter</string>
-    <string name="btnSendRequest">Send</string>
-    <string name="pt_name">Amal Perera</string>
-    <string name="phonenum">077XXXXXXX</string>
-    <string name="Address">121/1 Second street, Kandy</string>
-    <string name="Date">09/08/2021</string>
-    <string name="Time">08.30 AM</string>
-    <string name="btn_Update">Update</string>
-    <string name="TV_email">Email</string>
-    <string name="date">12/06/1992</string>
-    <string name="tv_status">Accepted</string>
-    <string name="tv_status1">Pending</string>
+    <string name="ET_Description">5 years of work experience as an electrician</string>
+    <string name="TV_Number">Conatct Number</string>
+
+
 </resources>

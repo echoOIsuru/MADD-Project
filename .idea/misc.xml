@@ -6,21 +6,23 @@
         <entry key="..\:/MADD/app/src/main/res/drawable/it20224370_imageborder.xml" value="0.20833333333333334" />
         <entry key="..\:/MADD/app/src/main/res/drawable/it20224370_layoutborder.xml" value="0.2703125" />
         <entry key="..\:/MADD/app/src/main/res/drawable/it20224370_relativeborder.xml" value="0.20833333333333334" />
+        <entry key="..\:/MADD/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.264" />
+        <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_cusprofile.xml" value="0.5310119695321001" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_customer_profile.xml" value="0.264" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_edit_profile.xml" value="0.24010416666666667" />
-        <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_job_categories.xml" value="0.264" />
+        <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_industrial_jobs.xml" value="0.4" />
+        <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_job_categories.xml" value="0.4" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_job_request.xml" value="0.25416666666666665" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_myrequests.xml" value="0.25416666666666665" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_update_requests.xml" value="0.25416666666666665" />
+        <entry key="..\:/MADD/app/src/main/res/layout/activity_it20224370_workerprofile.xml" value="0.4" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_main.xml" value="0.2351851851851852" />
         <entry key="..\:/MADD/app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
-        <entry key="..\:/MADD/app/src/main/res/layout/it20224370_householdjobs.xml" value="0.5310119695321001" />
+        <entry key="..\:/MADD/app/src/main/res/layout/it20224370_householdjobs.xml" value="0.3701550387596899" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main_menu.xml" value="0.2563405797101449" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/navbar.xml" value="0.21842105263157896" />
       </map>
     </option>
   </component>

@@ -4,46 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#366881"
-    android:backgroundTint="#C3DCE8"
-    tools:context=".IT20224370_CustomerProfile">
+    android:background="@color/Background"
+    android:backgroundTint="@color/Background"
+    tools:context=".IT20224370_Workerprofile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="390dp"
-        android:layout_height="435dp"
-        android:background="#1F7169"
-        android:backgroundTint="#5994C8"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="377dp"
+        android:layout_height="444dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/it20224370_relativeborder"
+        android:backgroundTint="@color/boxcolor2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945">
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="39dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.954"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/edit" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7">
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
             android:layout_width="309dp"
             android:layout_height="39dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="@string/pt_name"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.469"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -51,10 +39,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
             android:text="Full Name"
             android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView8"
-            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,36 +51,39 @@
             android:id="@+id/textView37"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:text="Date of Birth"
+            android:layout_marginBottom="112dp"
+            android:fontFamily="@font/roboto"
+            android:text="Description"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintHorizontal_bias="0.121"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView36"
             android:layout_width="44dp"
             android:layout_height="21dp"
+            android:fontFamily="@font/roboto"
             android:text="@string/TV_email"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.526" />
+            app:layout_constraintVertical_bias="0.501" />
 
         <TextView
             android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Mobile Number"
+            android:fontFamily="@font/roboto"
+            android:text="@string/TV_Number"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintHorizontal_bias="0.142"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
@@ -99,66 +91,70 @@
             android:id="@+id/editTextPhone4"
             android:layout_width="307dp"
             android:layout_height="42dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="amalaperera@gmail.com"
             android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView36"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextPhone5"
-            android:layout_width="307dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="32dp"
-            android:ems="10"
-            android:hint="12/06/1992"
-            android:inputType="phone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
             android:id="@+id/editTextPhone3"
             android:layout_width="307dp"
             android:layout_height="42dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="0778976651"
             android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView34"
             tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="318dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/ET_Description"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37"
+            app:layout_constraintVertical_bias="0.812" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="160dp"
-        android:layout_height="145dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="193dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/propic" />
 
-    <TextView
-        android:id="@+id/textView32"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="Amal Perera"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        android:text="@string/btnrequest"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

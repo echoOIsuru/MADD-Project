@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DCF3F8"
+    android:backgroundTint="#DCF3F8"
     tools:context=".IT20224370_MyRequests">
 
     <RelativeLayout
@@ -11,8 +13,9 @@
         android:layout_width="405dp"
         android:layout_height="283dp"
         android:background="@drawable/it20224370_relativeborder"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.089">
@@ -45,12 +48,12 @@
             android:layout_height="48dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="237dp"
-            android:layout_marginEnd="154dp"
+            android:layout_marginTop="233dp"
+            android:layout_marginEnd="156dp"
             android:text="Update"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/textView14"
@@ -190,8 +193,9 @@
         android:background="@drawable/it20224370_relativeborder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
         app:layout_constraintVertical_bias="0.808">
 
         <TextView
@@ -219,11 +223,11 @@
         <Button
             android:id="@+id/btn1"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="237dp"
-            android:layout_marginEnd="154dp"
+            android:layout_marginTop="241dp"
+            android:layout_marginEnd="153dp"
             android:text="Update"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

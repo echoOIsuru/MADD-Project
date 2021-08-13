@@ -1,143 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A8BE4"
-    android:backgroundTint="@color/Background"
+    android:background="@color/light_background"
+    android:orientation="vertical"
     tools:context=".IT20224370_JobCategories">
 
-    android:layout_width="369dp"
-    android:layout_height="678dp"
-    android:background="@drawable/it20224370_layoutborder"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Services"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="258dp"
-        android:layout_height="256dp"
-        android:background="#256C8C"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:ignore="MissingConstraints">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="133dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="-17dp"
-            android:fontFamily="@font/roboto"
-            android:padding="25dp"
-            android:text="@string/jobcategory1"
-            android:textAlignment="center"
-            android:textColor="#F8F8F8"
-            android:textSize="33sp"
-            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnview1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="361dp"
+            android:layout_height="332dp"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="84dp"
-            android:layout_marginBottom="-8dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/roboto_bold"
-            android:padding="20dp"
-            android:text="@string/btnenter2"
-            android:textStyle="bold" />
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="-1dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.171"
+            app:srcCompat="@drawable/backgroundop1" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="219dp"
-            android:layout_height="120dp"
+            android:layout_width="367dp"
+            android:layout_height="221dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="-11dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="41dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/house"
+            tools:layout_editor_absoluteY="105dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="90dp"
-            android:layout_marginEnd="22dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="34dp"
+            android:fontFamily="@font/aclonica"
+            android:padding="25dp"
+            android:text="@string/jobcategory1"
+            android:textAlignment="center"
+            android:textColor="#FFF9F9"
+            android:textSize="33sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/house" />
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnview1"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="199dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="7dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="20dp"
+            android:text="@string/btnenter1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="265dp"
-        android:layout_height="273dp"
-        android:background="#245F7C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        tools:ignore="MissingConstraints">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <Button
+            android:id="@+id/btnview"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="199dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="20dp"
+            android:text="@string/btnenter1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="331dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="23dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/backgroundop1" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="134dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="139dp"
-            android:fontFamily="@font/roboto_bold"
+            android:layout_width="321dp"
+            android:layout_height="94dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/aclonica"
             android:padding="25dp"
             android:text="@string/jobcategory2"
             android:textAlignment="center"
             android:textColor="#FFF9F9"
-            android:textSize="33sp" />
-
-        <Button
-            android:layout_width="104dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="78dp"
-            android:layout_marginBottom="-4dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/roboto_bold"
-            android:padding="20dp"
-            android:text="@string/btnenter1" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="166dp"
-            android:layout_height="146dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="49dp"
-            android:layout_marginTop="87dp"
-            android:layout_marginEnd="49dp"
-            android:layout_marginBottom="40dp"
+            android:textSize="33sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="370dp"
+            android:layout_height="255dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="43dp"
             app:srcCompat="@drawable/industrialpng" />
 
     </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
 
 
