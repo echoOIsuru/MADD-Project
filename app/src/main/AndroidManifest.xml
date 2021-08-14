@@ -10,12 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
-            android:name=".DashBoard"
+            android:name=".IT20133290_AcceptedRequest"
             android:exported="true" />
         <activity
-            android:name=".BottomNavBar"
-            android:exported="true"
-            android:label="@string/title_activity_bottom_nav_bar" />
+            android:name=".IT20133290_WorkerRequest"
+            android:exported="true" />
+        <activity
+            android:name=".DashBoard"
+            android:exported="true" />
         <activity
             android:name=".IT20133290_Popup_apply_form"
             android:exported="true"

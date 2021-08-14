@@ -29,7 +29,7 @@ public class IT20133290_CustomerMenu extends AppCompatActivity {
         else if(v == btn2)
             i = new Intent(this,IT20133290_PublishedVacancy.class);
         else if(v == btn3)
-            i = new Intent(this,IT20133290_PublishedVacancy.class);
+            i = new Intent(this,IT20133290_WorkerRequest.class);
 
         startActivity(i);
     }

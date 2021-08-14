@@ -10,5 +10,6 @@
     <color name="input_filed2">#FDFFFF</color>
     <color name="popup">#F1F00F</color>
     <color name="popup_button">#2832D4</color>
+    <color name="accepted">#FFFC56</color>
 
 </resources>

@@ -230,7 +230,7 @@
                         android:padding="@dimen/card_padding"
                         android:text="@string/AcceptedRequests"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/title"
+                        android:textColor="@color/title2"
                         android:textSize="30sp" />
 
                     <Button
