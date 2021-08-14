@@ -25,7 +25,6 @@ public class IT20133290_JobMenu extends AppCompatActivity {
 
     public void Onclick(View v){
         Intent i = new Intent(this,IT20133290_LatestVacancy.class);
-        System.out.println(v);
 
         if(v == btn1){
             i = new Intent(this,IT20133290_LatestVacancy.class);
@@ -34,7 +33,7 @@ public class IT20133290_JobMenu extends AppCompatActivity {
         }else if(v == btn3){
             i = new Intent(this,IT20133290_SentRequest.class);
         }else if(v == btn4){
-            i = new Intent(this,IT20133290_LatestVacancy.class);
+            i = new Intent(this,IT20133290_AcceptedRequest.class);
         }
 
         startActivity(i);

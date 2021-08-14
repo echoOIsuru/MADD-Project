@@ -16,4 +16,16 @@
     <string name="BeWork">Be a Worker</string>
     <string name="Feedback">Feedbacks</string>
 
+
+    <string name="sample1">
+        Thank you for applying for the position of office administrator with ABC Company in Minneapolis, MN.
+        <br/>We would like to invite you to come to our office to interview for the position. Your interview has been scheduled for May 10, 2021, 1 pm, at 123 Main Street, Minneapolis, MN 55199.
+        <br/>Please call me at 651-555-6666 or email me at johnsmith@abccompany.com if you have any questions or need to reschedule.<br/>
+        <br/><br/>Sincerely,<br/>
+        John Smith<br/>
+        ABC Company<br/>
+
+
+    </string>
+
 </resources>
