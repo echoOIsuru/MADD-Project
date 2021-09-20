@@ -4,7 +4,7 @@
  * @author IT20133290 R.M.Isuru Sahan Kumarasingha
  */
 
-package com.example.hireme.services;
+package com.example.hireme.services.it20133290;
 
 import android.content.Context;
 import android.widget.EditText;

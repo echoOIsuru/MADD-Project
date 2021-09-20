@@ -17,7 +17,7 @@ public class Connection {
     private DatabaseReference ref;
 
     public Connection(){
-        ref = FirebaseDatabase.getInstance("https://hireme-2e86a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference().child("Vacancies");
+        ref = FirebaseDatabase.getInstance("https://hireme-2e86a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference();
 
     }
 

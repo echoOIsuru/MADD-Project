@@ -16,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 public class CommonUtils {
 
     Connection con = new Connection();
-    DatabaseReference ref = con.getRef();
+    DatabaseReference ref = con.getRef().child("Vacancies");
     private long maxID = 0;
 
     public CommonUtils() {
