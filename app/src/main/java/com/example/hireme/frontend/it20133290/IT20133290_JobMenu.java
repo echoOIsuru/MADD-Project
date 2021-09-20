@@ -1,4 +1,4 @@
-package com.example.hireme;
+package com.example.hireme.frontend.it20133290;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.hireme.R;
 
 public class IT20133290_JobMenu extends AppCompatActivity {
 
@@ -33,7 +35,7 @@ public class IT20133290_JobMenu extends AppCompatActivity {
         }else if(v == btn3){
             i = new Intent(this,IT20133290_SentRequest.class);
         }else if(v == btn4){
-            i = new Intent(this,IT20133290_AcceptedRequest.class);
+            i = new Intent(this, IT20133290_AcceptedRequest.class);
         }
 
         startActivity(i);

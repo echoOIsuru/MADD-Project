@@ -10,48 +10,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
-            android:name=".IT20133290_AcceptedRequest"
+            android:name=".frontend.it20133290.IT20133290_AcceptedRequest"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_WorkerRequest"
+            android:name=".frontend.it20133290.IT20133290_WorkerRequest"
             android:exported="true" />
         <activity
-            android:name=".DashBoard"
+            android:name=".frontend.DashBoard"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_Popup_apply_form"
+            android:name=".frontend.it20133290.IT20133290_Popup_apply_form"
             android:exported="true"
             android:theme="@style/Theme.HireMe.popMe" />
         <activity
-            android:name=".IT20133290_CustomerMenu"
+            android:name=".frontend.it20133290.IT20133290_CustomerMenu"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_SentRequest"
+            android:name=".frontend.it20133290.IT20133290_SentRequest"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_FindVacancy"
+            android:name=".frontend.it20133290.IT20133290_FindVacancy"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_LatestVacancy"
+            android:name=".frontend.it20133290.IT20133290_LatestVacancy"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_PublishedVacancy"
+            android:name=".frontend.it20133290.IT20133290_PublishedVacancy"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_AddVacancy"
+            android:name=".frontend.it20133290.IT20133290_AddVacancy"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_JobMenu"
+            android:name=".frontend.it20133290.IT20133290_JobMenu"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_VacancyMenu"
+            android:name=".frontend.it20133290.IT20133290_VacancyMenu"
             android:exported="true" />
         <activity
-            android:name=".MainMenu"
+            android:name=".frontend.MainMenu"
             android:exported="true"
             android:label="Dashboard" />
         <activity
-            android:name=".MainActivity"
+            android:name=".frontend.SplashScreen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

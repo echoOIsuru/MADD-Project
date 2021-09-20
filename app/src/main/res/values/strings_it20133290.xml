@@ -1,9 +1,9 @@
 <resources>
     <string name="MainOption1">Publish Vacancies</string>
-    <string name="MainOption2">Looking for job</string>
+    <string name="MainOption2">Looking for a job</string>
     <string name="AddVacancyMenu">Add New Vacancy</string>
     <string name="PublishedVacancyMenu">My Vacancies</string>
-    <string name="WorkersFeedbackMenu">Accept Job Requests</string>
+    <string name="WorkersFeedbackMenu">Job Requests</string>
     <string name="Enter">Enter</string>
     <string name="LatestJob">Latest Vacancies</string>
     <string name="FindJob">Find Vacancies</string>
@@ -28,5 +28,4 @@
     <string name="Bio">Brief description about yourself</string>
     <string name="EnterHere">Enter Here..</string>
     <string name="Submit">SUBMIT</string>
-
 </resources>

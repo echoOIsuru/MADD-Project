@@ -2,7 +2,7 @@
 <resources>
     <color name="light_background">#EEEEEE</color>
     <color name="input_filed">#F8F9D2</color>
-    <color name="submit_btn_color">#F7EC1E</color>
+    <color name="submit_btn_color">#144CBD</color>
     <color name="remove_btn">#F94C2A</color>
     <color name="update_btn">#51E500</color>
     <color name="title">#4F5049</color>
@@ -10,6 +10,6 @@
     <color name="input_filed2">#FDFFFF</color>
     <color name="popup">#F1F00F</color>
     <color name="popup_button">#2832D4</color>
-    <color name="accepted">#FFFC56</color>
+    <color name="accepted">#144CBD</color>
 
 </resources>

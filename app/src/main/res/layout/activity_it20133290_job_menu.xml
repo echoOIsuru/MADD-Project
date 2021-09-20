@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/light_background"
     android:orientation="vertical"
-    tools:context=".IT20133290_JobMenu">
+    tools:context=".frontend.it20133290.IT20133290_JobMenu">
 
     <!--Top Navbar-->
     <LinearLayout
@@ -31,7 +31,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:gravity="center"
-                android:text="@string/app_name"
+                android:text="@string/MainOption2"
                 android:fontFamily="@font/aclonica"
                 android:padding="12dp"
                 android:textSize="23dp" />
