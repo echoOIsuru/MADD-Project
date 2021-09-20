@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundop3sq"
-    tools:context=".IT20133290_PublishedVacancy"
+    tools:context=".frontend.it20133290.IT20133290_PublishedVacancy"
     android:orientation="vertical">
 
     <!--Top Navbar-->

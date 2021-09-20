@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroundop3sq"
     android:orientation="vertical"
-    tools:context=".IT20133290_AddVacancy">
+    tools:context=".frontend.it20133290.IT20133290_AddVacancy">
     <!--Top Navbar-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:fontFamily="@font/aclonica"
                 android:gravity="center"
                 android:padding="12dp"
-                android:text="@string/app_name"
+                android:text="@string/AddVacancyMenu"
                 android:textSize="23dp" />
         </RelativeLayout>
 

@@ -1,12 +1,13 @@
-package com.example.hireme;
+package com.example.hireme.frontend.it20133290;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
+
+import com.example.hireme.R;
 
 public class IT20133290_VacancyMenu extends AppCompatActivity {
 

@@ -1,10 +1,12 @@
-package com.example.hireme;
+package com.example.hireme.frontend.it20133290;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.WindowManager;
+
+import com.example.hireme.R;
 
 public class IT20133290_Popup_apply_form extends AppCompatActivity {
 
@@ -19,7 +21,7 @@ public class IT20133290_Popup_apply_form extends AppCompatActivity {
         int width = dm.widthPixels;
         int hight = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.9),(int)(hight*.7));
+        getWindow().setLayout((int)(width*.6),(int)(hight*.6));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
