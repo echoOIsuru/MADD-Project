@@ -181,7 +181,7 @@
                             android:textSize="16dp" />
 
                         <DatePicker
-                            android:id="@+id/datePicker1"
+                            android:id="@+id/dpDeadline"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
@@ -224,11 +224,12 @@
         android:paddingRight="12dp">
 
         <Button
+            android:id="@+id/btnAddData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/submit_btn_color"
-            android:text="Submit"
+            android:text="@string/Submit"
             android:textColor="@color/black" />
 
     </RelativeLayout>
