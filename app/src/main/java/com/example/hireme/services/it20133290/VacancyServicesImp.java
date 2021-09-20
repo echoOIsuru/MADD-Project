@@ -4,7 +4,7 @@
  *
  * @author IT20133290 R.M.Isuru Sahan Kumarasingha
  */
-package com.example.hireme.services;
+package com.example.hireme.services.it20133290;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hireme.database.Connection;
-import com.example.hireme.frontend.it20133290.IT20133290_AddVacancy;
 import com.example.hireme.models.Vacancies;
 import com.example.hireme.util.CommonUtils;
 
@@ -53,7 +52,7 @@ public class VacancyServicesImp implements VacancyServices {
                 vacancies.setDescription(description.getText().toString().trim());
                 vacancies.setDeadline(deadline);
 
-                con.getRef().child(String.valueOf(cu.getNextID())).setValue(vacancies);
+                con.getRef().child("Vacancies").child(String.valueOf(cu.getNextID())).setValue(vacancies);
 
                 Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
 

@@ -7,11 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.hireme.R;
 import com.example.hireme.models.Vacancies;
-import com.example.hireme.services.VacancyServicesImp;
+import com.example.hireme.services.it20133290.VacancyServicesImp;
 
 import java.util.Date;
 
