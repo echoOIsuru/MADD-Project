@@ -12,6 +12,7 @@ import com.example.hireme.R;
 public class IT20133290_CustomerMenu extends AppCompatActivity {
 
     Button btn1, btn2, btn3;
+    String msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,11 @@ public class IT20133290_CustomerMenu extends AppCompatActivity {
         btn1 = findViewById(R.id.btnAddVaMenu);
         btn2 = findViewById(R.id.btnPublishedVaMenu);
         btn3 = findViewById(R.id.btnInterviewMenu);
+
+        Intent i = getIntent();
+        msg = i.getStringExtra("email");
+
+        System.out.println(msg);
     }
 
     public void onClick(View v){
@@ -33,6 +39,7 @@ public class IT20133290_CustomerMenu extends AppCompatActivity {
         else if(v == btn3)
             i = new Intent(this,IT20133290_WorkerRequest.class);
 
+        i.putExtra("email",msg);
         startActivity(i);
     }
 

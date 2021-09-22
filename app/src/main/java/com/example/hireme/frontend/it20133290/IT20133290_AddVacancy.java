@@ -2,6 +2,7 @@ package com.example.hireme.frontend.it20133290;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class IT20133290_AddVacancy extends AppCompatActivity {
     EditText jobTitle, organization, salary, jobFamily, jobLevel, description;
     DatePicker deadline;
     Button submit;
+    String msg;
     Vacancies vacancies;
     //DatabaseReference ref;
     VacancyServicesImp vacSer = new VacancyServicesImp();
@@ -39,16 +41,23 @@ public class IT20133290_AddVacancy extends AppCompatActivity {
         submit=(findViewById(R.id.btnAddData));
 
 
+        //getExtra
+        Intent i = getIntent();
+        msg = i.getStringExtra("email");
+        System.out.println(msg);
+
+
+
         //create onclick to save data
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Date date = new Date(deadline.getYear(),deadline.getMonth(),deadline.getDayOfMonth());
+                String date = ""+deadline.getYear()+"/"+deadline.getMonth()+"/"+deadline.getDayOfMonth();
 
                 //add values
                 vacSer.addNewVacancy(IT20133290_AddVacancy.this,jobTitle, organization, jobFamily,
-                        jobLevel, description,salary, date) ;
+                        jobLevel, description,salary, date,msg) ;
 
             }
         });
