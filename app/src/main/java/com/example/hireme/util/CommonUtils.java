@@ -17,7 +17,9 @@ public class CommonUtils {
 
     Connection con = new Connection();
     DatabaseReference ref = con.getRef().child("Vacancies");
+    DatabaseReference ref2 = con.getRef().child("AppUser");
     private long maxID = 0;
+    private long cusID = 0;
 
     public CommonUtils() {
         ref.addValueEventListener(new ValueEventListener() {
@@ -34,6 +36,21 @@ public class CommonUtils {
 
             }
         });
+
+        ref2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()) {
+                    cusID = dataSnapshot.getChildrenCount();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public long getNextID(){
@@ -41,4 +58,7 @@ public class CommonUtils {
         return maxID + 1;
     }
 
+    public long getCusID() {
+        return cusID + 1;
+    }
 }

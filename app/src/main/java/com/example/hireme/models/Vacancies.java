@@ -12,9 +12,30 @@ public class Vacancies {
     private String jobLevel;
     private String description;
     private String salary;
-    private Date deadline;
+    private String deadline;
+    private String email;
 
     public Vacancies() {
+    }
+
+    public Vacancies(String jobTitle, String organization, String jobFamily,
+                     String jobLevel, String description, String salary, String deadline, String email) {
+        this.jobTitle = jobTitle;
+        this.organization = organization;
+        this.jobFamily = jobFamily;
+        this.jobLevel = jobLevel;
+        this.description = description;
+        this.salary = salary;
+        this.deadline = deadline;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getJobTitle() {
@@ -65,11 +86,11 @@ public class Vacancies {
         this.salary = salary;
     }
 
-    public Date getDeadline() {
+    public String getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
 }

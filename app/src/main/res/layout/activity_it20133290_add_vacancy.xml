@@ -49,11 +49,11 @@
             android:orientation="vertical"
             android:padding="@dimen/icon_padding">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/logo"
-                android:layout_gravity="center"/>
+<!--            <ImageView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:src="@drawable/logo"-->
+<!--                android:layout_gravity="center"/>-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -132,7 +132,8 @@
                                 android:id="@+id/etSalary"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/input_filed2" />
+                                android:background="@color/input_filed2"
+                                android:inputType="number" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
