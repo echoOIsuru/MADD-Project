@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/light_background"
     android:orientation="vertical"
-    tools:context=".IT20133290_VacancyMenu">
+    tools:context=".frontend.it20133290.IT20133290_VacancyMenu">
 
-    <!--
+    <!--Top Navbar-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/background_padding">
+        android:background="#FFFFFF">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,26 +23,30 @@
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/icon_padding"
-                android:src="@drawable/arrowbackicon" />
+                android:src="@drawable/ic_baseline_menu_24" />
 
-            <ImageView
-                android:layout_width="@dimen/search_width"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/searchicon" />
-
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/app_name"
+                android:textSize="23dp" />
         </RelativeLayout>
+
     </LinearLayout>
-    -->
+
+
+    <!--Container-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/background_padding"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="10dp">
+        android:layout_weight="0.8"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -58,25 +62,29 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop1">
+                android:background="@drawable/backgroundop3flip">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
                     android:text="@string/MainOption1"
-                    android:textColor="#000000"
+                    android:textColor="@color/title2"
                     android:textSize="30sp" />
 
                 <Button
+                    android:id="@+id/btnVcustomerMenu"
                     android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:textSize="17dp"
                     android:padding="@dimen/card_padding"
-                    android:text="@string/Enter" />
+                    android:text="@string/Enter"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -104,23 +112,27 @@
                 android:layout_marginEnd="@dimen/card_padding"
                 android:layout_marginBottom="@dimen/card_padding"
                 android:layout_weight="0.5"
-                android:background="@drawable/backgroundop1">
+                android:background="@drawable/backgroundop3flip">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="sans-serif-black"
                     android:padding="@dimen/card_padding"
                     android:text="@string/MainOption2"
-                    android:textColor="#000000"
+                    android:textColor="@color/title2"
                     android:textSize="30sp" />
 
                 <Button
+                    android:id="@+id/btnVworker"
                     android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="0dp"
                     android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
                     android:padding="@dimen/card_padding"
                     android:text="@string/Enter" />
 
@@ -137,7 +149,56 @@
 
         </RelativeLayout>
 
+    </LinearLayout>
+
+
+    <!--Bottom Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/notification" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
 
     </LinearLayout>
+
 
 </LinearLayout>

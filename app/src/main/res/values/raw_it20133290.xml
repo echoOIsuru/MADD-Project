@@ -8,4 +8,6 @@
     <dimen name="card_pic_width">255dp</dimen>
     <dimen name="card_pic_height">166dp</dimen>
     <dimen name="button_width">110dp</dimen>
+    <dimen name="sub_menu_width">250dp</dimen>
 </resources>
+
