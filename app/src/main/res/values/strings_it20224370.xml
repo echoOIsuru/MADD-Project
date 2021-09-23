@@ -29,6 +29,13 @@
     <string name="tvIndustrial3">Rauka Dissasekara</string>
     <string name="search2">Colombo</string>
     <string name="tv_industrialjobs3">Filling station attendant</string>
-
+    <string name="Tv_FullName">Full Name</string>
+    <string name="tv_address">Address</string>
+    <string name="tv_Date">Date</string>
+    <string name="tv_time">Time</string>
+    <string name="Tv_Job">Requested Job</string>
+    <string name="Tv_Jobsample">Driver</string>
+    <string name="ET_Description">5 years of work experience as an electrician</string>
+    <string name="TV_Number">Conatct Number</string>
 
 </resources>
