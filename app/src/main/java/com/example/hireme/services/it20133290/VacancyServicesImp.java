@@ -52,7 +52,6 @@ public class VacancyServicesImp implements VacancyServices {
                               AutoCompleteTextView jobLevel, EditText description, EditText salary, String deadline, String email) {
 
         String desPattern = ".{1,200}";
-
         try {
             if (TextUtils.isEmpty(jobTitle.getText().toString()))
                 Toast.makeText(c, "Please enter job title", Toast.LENGTH_LONG).show();
@@ -90,12 +89,9 @@ public class VacancyServicesImp implements VacancyServices {
                 clearVacancyForm(jobTitle, organization, jobFamily,
                         jobLevel, description,salary);
             }
-
         } catch (Exception e) {
-
+            Toast.makeText(c, "Data Inserted Unsuccessful", Toast.LENGTH_LONG).show();
         }
-
-
     }
 
     @Override
@@ -114,10 +110,6 @@ public class VacancyServicesImp implements VacancyServices {
             return options;
         }
 
-
-//        vacancyAdapter = new VacancyAdapter(options);
-//        vacancyAdapter.startListening();
-//        rvAll.setAdapter(vacancyAdapter);
     }
 
     @Override
@@ -170,7 +162,6 @@ public class VacancyServicesImp implements VacancyServices {
     @Override
     public void validateUser(Context c, EditText email, EditText password) {
 
-
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         try {
             if (TextUtils.isEmpty(email.getText().toString()))
@@ -186,9 +177,7 @@ public class VacancyServicesImp implements VacancyServices {
                  String enteredEmail = email.getText().toString();
                  String enteredPassword = password.getText().toString();
 
-
                  Query checkUser = con.getRef().child("AppUser").orderByChild("email").equalTo(enteredEmail);
-
                  checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                      @Override
                      public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -198,10 +187,8 @@ public class VacancyServicesImp implements VacancyServices {
                                   val = temp.getKey();
                               }
 
-                              System.out.println(val);
 
                               String dbPassword = snapshot.child(val).child("password").getValue(String.class);
-
 
                               if(dbPassword.equals(enteredPassword)){
                                   String dbName = snapshot.child(val).child("name").getValue(String.class);
@@ -215,7 +202,6 @@ public class VacancyServicesImp implements VacancyServices {
                                   i.putExtra("tel",dbTel);
                                   i.putExtra("email",dbEmail);
 
-
                                   c.startActivity(i);
                               }else{
                                   Toast.makeText(c, "The Entered Password is incorrect", Toast.LENGTH_LONG).show();
@@ -224,22 +210,16 @@ public class VacancyServicesImp implements VacancyServices {
                               Toast.makeText(c, "No such user exist", Toast.LENGTH_LONG).show();
                           }
                      }
-
                      @Override
                      public void onCancelled(@NonNull DatabaseError error) {
 
                      }
                  });
-
-
-
             }
 
         } catch (Exception e) {
-
+            Toast.makeText(c, "Try again", Toast.LENGTH_LONG).show();
         }
-
-
 
     }
 

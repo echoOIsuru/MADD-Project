@@ -33,8 +33,6 @@ public class CommonUtils {
                     for(DataSnapshot temp : dataSnapshot.getChildren()){
                         val = temp.getKey();
                     }
-//                    System.out.println(val+" -----Value----------------");
-//                    System.out.println(nextID+" -----NextID----------------");
 
                     while (val.equals("VID"+nextID)){
                         maxID++;
@@ -42,7 +40,6 @@ public class CommonUtils {
                     }
 
                     maxID = Long.parseLong(nextID);
-//                    System.out.println(maxID+" -----MAX----------------ID");
                 }
             }
 

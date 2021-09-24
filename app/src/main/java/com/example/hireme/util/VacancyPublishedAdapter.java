@@ -91,7 +91,6 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
                         Connection con = new Connection();
 
                         String date = ""+datePicker.getYear()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getDayOfMonth();
-
                         String desPattern = ".{1,200}";
 
                         if(!(description.getText().toString()).matches(desPattern))
