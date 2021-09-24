@@ -7,6 +7,7 @@
 package com.example.hireme.services.it20133290;
 
 import android.content.Context;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
 import com.example.hireme.models.Vacancies;
@@ -16,8 +17,8 @@ import java.util.Date;
 
 public interface VacancyServices {
 
-    void addNewVacancy(Context c, EditText jobTitle, EditText  organization, EditText  jobFamily,
-                       EditText  jobLevel, EditText  description, EditText  salary, String deadline,String email);
+    void addNewVacancy(Context c, EditText jobTitle, EditText  organization, AutoCompleteTextView jobFamily,
+                       AutoCompleteTextView  jobLevel, EditText  description, EditText  salary, String deadline,String email);
 
     FirebaseRecyclerOptions<Vacancies> txtSearch(String str);
 

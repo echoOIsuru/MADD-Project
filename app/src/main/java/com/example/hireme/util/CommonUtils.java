@@ -36,7 +36,7 @@ public class CommonUtils {
 //                    System.out.println(val+" -----Value----------------");
 //                    System.out.println(nextID+" -----NextID----------------");
 
-                    while (val.equals(nextID)){
+                    while (val.equals("VID"+nextID)){
                         maxID++;
                         nextID = Long.toString(maxID);
                     }
@@ -66,7 +66,7 @@ public class CommonUtils {
                     //System.out.println(val+" -----Value----------------");
                    // System.out.println(nextID+" -----NextID----------------");
 
-                    while (val.equals(nextID)){
+                    while (val.equals("CUID"+nextID)){
                         cusID++;
                         nextID = Long.toString(cusID);
                     }

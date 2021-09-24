@@ -9,6 +9,7 @@ package com.example.hireme.services.it20133290;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,6 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hireme.database.Connection;
 import com.example.hireme.frontend.DashBoard;
+import com.example.hireme.frontend.it20133290.IT20133290_AddVacancy;
+import com.example.hireme.frontend.it20133290.IT20133290_CustomerMenu;
 import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
 import com.example.hireme.models.AppUser;
 import com.example.hireme.models.Vacancies;
@@ -45,8 +48,8 @@ public class VacancyServicesImp implements VacancyServices {
     RecyclerView rvAll;
 
     @Override
-    public void addNewVacancy(Context c, EditText jobTitle, EditText organization, EditText jobFamily,
-                              EditText jobLevel, EditText description, EditText salary, String deadline, String email) {
+    public void addNewVacancy(Context c, EditText jobTitle, EditText organization, AutoCompleteTextView jobFamily,
+                              AutoCompleteTextView jobLevel, EditText description, EditText salary, String deadline, String email) {
 
         String desPattern = ".{1,200}";
 
@@ -79,6 +82,10 @@ public class VacancyServicesImp implements VacancyServices {
 
                 Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
 
+                Intent i = new Intent(c, IT20133290_CustomerMenu.class);
+                i.putExtra("email",email);
+                c.startActivity(i);
+
                 //clear entered values
                 clearVacancyForm(jobTitle, organization, jobFamily,
                         jobLevel, description,salary);
@@ -93,10 +100,21 @@ public class VacancyServicesImp implements VacancyServices {
 
     @Override
     public FirebaseRecyclerOptions<Vacancies> txtSearch(String str) {
-        FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
-                setQuery(con.getRef().child("Vacancies").orderByChild("jobTitle").startAt(str).endAt(str+"~"),Vacancies.class).build();
+        int val = 0;
+        String val2 = "";
+        try{
+            val = Integer.parseInt(str);
+            val2 = ""+val;
+            FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
+                    setQuery(con.getRef().child("Vacancies").orderByChild("salary").startAt(val2).endAt(val2+"~"),Vacancies.class).build();
+            return options;
+        }catch (Exception e){
+            FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
+                    setQuery(con.getRef().child("Vacancies").orderByChild("jobTitle").startAt(str).endAt(str+"~"),Vacancies.class).build();
+            return options;
+        }
 
-        return options;
+
 //        vacancyAdapter = new VacancyAdapter(options);
 //        vacancyAdapter.startListening();
 //        rvAll.setAdapter(vacancyAdapter);

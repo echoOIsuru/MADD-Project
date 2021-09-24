@@ -151,12 +151,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:hint="@string/JobFamily">
+                            android:hint="@string/JobFamily"
+                            android:background="@color/white">
 
                             <AutoCompleteTextView
+
                                 android:id="@+id/etJobFamily"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
+                                android:inputType="none"
                                 android:background="@color/input_filed2" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -168,12 +171,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:hint="@string/JobLevel">
+                            android:hint="@string/JobLevel"
+                            android:background="@color/input_filed2" >
 
                             <AutoCompleteTextView
                                 android:id="@+id/etJobLevel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:inputType="none"
                                 android:background="@color/input_filed2" />
 
                         </com.google.android.material.textfield.TextInputLayout>

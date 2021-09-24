@@ -9,8 +9,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.example.hireme.R;
 import com.example.hireme.database.Connection;
@@ -22,11 +26,18 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 public class IT20133290_LatestVacancy extends AppCompatActivity {
 
 //    Button btn1;
+    Button clear;
 
     RecyclerView rvAll;
     Connection con = new Connection();
     VacancyAdapter vacancyAdapter;
     VacancyServicesImp vacSer = new VacancyServicesImp();
+
+    //category
+    String item[] = {"Banking","Driving","Internet","Private", "Government", "Other"};
+    AutoCompleteTextView atCategory;
+    ArrayAdapter<String> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,47 @@ public class IT20133290_LatestVacancy extends AppCompatActivity {
 
         vacancyAdapter = new VacancyAdapter(options);
         rvAll.setAdapter(vacancyAdapter);
+
+        ///Category dropdown menu
+        atCategory = findViewById(R.id.etVacancyCategory);
+        adapter = new ArrayAdapter<String>(this,R.layout.it20133290_list_item,item);
+        atCategory.setAdapter(adapter);
+        atCategory.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String i = Long.toString(parent.getItemIdAtPosition(position));
+
+                System.out.println(i+"----------TESTTTTTTTTTTTTTTTTTTT");
+
+                FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
+                        setQuery(con.getRef().child("Vacancies").orderByChild("jobFamily").startAt(item[Integer.parseInt(i)]).endAt(item[Integer.parseInt(i)]+"~"),Vacancies.class).build();
+
+                vacancyAdapter = new VacancyAdapter(options);
+                rvAll.setAdapter(vacancyAdapter);
+                vacancyAdapter.startListening();
+
+
+                Toast.makeText(getApplicationContext(),"Item "+i, Toast.LENGTH_SHORT);
+            }
+        });
+
+        //clear button
+        clear = findViewById(R.id.btnVacancySortClear);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                atCategory.setText("");
+                FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
+                        setQuery(con.getRef().child("Vacancies"),Vacancies.class).build();
+
+                vacancyAdapter = new VacancyAdapter(options);
+                rvAll.setAdapter(vacancyAdapter);
+                vacancyAdapter.startListening();
+            }
+        });
+
+
+
 
 //        btn1 = (Button)findViewById(R.id.btnApply);
 //        btn1.setOnClickListener(new View.OnClickListener() {

@@ -18,6 +18,8 @@
     <string name="UserContact">Contact Number</string>
     <string name="Organization">Organization</string>
     <string name="JobFamily">Job Family</string>
+    <string name="Sort">Sort</string>
+    <string name="clear">Clear</string>
     <string name="Category">Category</string>
     <string name="JobLevel">Job Level</string>
     <string name="Salary">Salary</string>
