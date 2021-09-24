@@ -43,15 +43,7 @@ public class VacancyAdapter extends FirebaseRecyclerAdapter<Vacancies,VacancyAda
         holder.salary.setText("Rs. "+model.getSalary() + " /m");
 
         String temp = model.getDeadline();
-
-//        String day = Integer.toString(temp.getDate());
-//        String month = Integer.toString(model.getDeadline().getMonth()+1);
-//        String year = Integer.toString(model.getDeadline().getYear());
-//
-//        String date = day;
         holder.date.setText(temp);
-
-
 
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override

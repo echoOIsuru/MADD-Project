@@ -62,7 +62,6 @@ public class IT20133290_LatestVacancy extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String i = Long.toString(parent.getItemIdAtPosition(position));
 
-                System.out.println(i+"----------TESTTTTTTTTTTTTTTTTTTT");
 
                 FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
                         setQuery(con.getRef().child("Vacancies").orderByChild("jobFamily").startAt(item[Integer.parseInt(i)]).endAt(item[Integer.parseInt(i)]+"~"),Vacancies.class).build();
