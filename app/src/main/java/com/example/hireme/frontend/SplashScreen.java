@@ -1,6 +1,7 @@
-package com.example.hireme.frontend;
+package com.example.hireme;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.vectordrawable.graphics.drawable.AnimationUtilsCompat;
 
 import android.content.Intent;
 import android.os.Bundle;

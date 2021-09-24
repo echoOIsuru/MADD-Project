@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCF3F8"
+    android:backgroundTint="@color/backgroundcolor"
+    android:orientation="vertical">
+<!--    tools:context=".IT20224370_Workerprofile"-->
+
+    <!--Top Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:layout_width="@dimen/back_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_baseline_menu_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/app_name"
+                android:textSize="23dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8">
+        <!--Container-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/background_padding"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/workerpropic"
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="6dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="#FF000000" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="377dp"
+                android:layout_height="444dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/it20224370_relativeborder"
+                android:backgroundTint="@color/boxcolor2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName3"
+                    android:layout_width="309dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto"
+                    android:inputType="textPersonName"
+                    android:text="@string/pt_name"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.469"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView35"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Full Name"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.118"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="112dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Description"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.121"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="50dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="23dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/TV_email"
+                    android:textSize="18sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.107"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextPhone3"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/TV_Number"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.142"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+                <TextView
+                    android:id="@+id/editTextemail"
+                    android:layout_width="307dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="18sp"
+                    android:hint="amalaperera@gmail.com"
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.457"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView36"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/editTextPhone3"
+                    android:layout_width="307dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto"
+                    android:hint="0778976651"
+                    android:inputType="phone"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.457"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView34"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/editTextTextDes"
+                    android:layout_width="318dp"
+                    android:layout_height="68dp"
+                    android:layout_marginBottom="32dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:textSize="18sp"
+                    android:hint="@string/ET_Description"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.542"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37"
+                    app:layout_constraintVertical_bias="0.812" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <Button
+                    android:id="@+id/workerbtn"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/btn_color"
+                    android:text="@string/btnrequest">
+
+                </Button>
+
+                <!--            <Button-->
+                <!--                android:id="@+id/backbtn"-->
+                <!--                android:layout_width="120dp"-->
+                <!--                android:layout_height="50dp"-->
+                <!--                android:backgroundTint="@color/btn_color"-->
+                <!--                android:text="back">-->
+
+                <!--            </Button>-->
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Bottom Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/notification" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
+
+        <!--Bottom Navbar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="#FFFFFF">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/icon_padding"
+                    android:src="@drawable/home" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/icon_padding"
+                    android:src="@drawable/notification" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/icon_padding"
+                    android:src="@drawable/profile" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

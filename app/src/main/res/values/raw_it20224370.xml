@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="searchVie_Width">180dp</dimen>
+    <dimen name="searchVie_Height">39dp</dimen>
+    <dimen name="btnheight">37dp</dimen>
+    <dimen name="btnWidth">104dp</dimen>
+    <dimen name="mini_imgheight">23dp</dimen>
+    <dimen name="mini_imgwidth">30dp</dimen>
+</resources>
