@@ -120,7 +120,7 @@
                 android:hint="@string/JobLevel">
 
                 <AutoCompleteTextView
-                    android:id="@+id/etJobLevel"
+                    android:id="@+id/et2JobLevel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/input_filed2" />
