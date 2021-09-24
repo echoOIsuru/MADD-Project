@@ -12,7 +12,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.hireme.R;
+import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
+import com.example.hireme.frontend.it20133290.IT201333290_RegisterActivity;
+
+public class SplashScreen extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 3000;
 
@@ -24,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
 
         //Splash animation
         topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
@@ -43,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, DashBoard.class);
+                Intent intent = new Intent(SplashScreen.this, IT20133290_LoginActivity.class);
+                //Intent intent = new Intent(SplashScreen.this,IT201333290_RegisterActivity.class);
                 startActivity(intent);
                 finish();
             }

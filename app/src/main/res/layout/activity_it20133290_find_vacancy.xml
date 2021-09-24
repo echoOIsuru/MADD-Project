@@ -5,13 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".IT20133290_FindVacancy"
+    tools:context=".frontend.it20133290.IT20133290_FindVacancy"
     android:background="@drawable/backgroundop3sq">
+
+
+    <!--Top Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:layout_width="@dimen/back_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_baseline_menu_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/FindJob"
+                android:textSize="23dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_weight="0.8"
         android:padding="@dimen/icon_padding">
 
         <ImageView
@@ -25,12 +58,14 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/aclonica"
             android:text="@string/LetsStart"
+            android:layout_gravity="center"
             android:textSize="35dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/SearchVacancy"
+            android:layout_gravity="center"
             android:textSize="15dp" />
 
         <LinearLayout
@@ -85,7 +120,7 @@
                 android:hint="@string/JobLevel">
 
                 <AutoCompleteTextView
-                    android:id="@+id/etJobLevel"
+                    android:id="@+id/et2JobLevel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/input_filed2" />
@@ -112,5 +147,52 @@
 
     </LinearLayout>
 
+    <!--Bottom Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/notification" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -10,5 +10,7 @@
         <item>@font/stoke_light</item>
         <item>@font/tauri</item>
         <item>@font/viga</item>
+        <item>@font/roboto</item>
+        <item>@font/roboto_bold</item>
     </array>
 </resources>
