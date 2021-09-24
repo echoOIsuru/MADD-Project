@@ -64,7 +64,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         map.put("Contact",contact.getText().toString());
         map.put("Description",description.getText().toString());
         map.put("Image",image.getText().toString());
-
+        //connection
         FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").push()
                 .setValue(map)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
