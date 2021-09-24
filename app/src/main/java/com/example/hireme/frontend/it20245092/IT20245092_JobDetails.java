@@ -1,15 +1,15 @@
-package com.example.hireme;
+package com.example.hireme.frontend.it20245092;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.hireme.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
@@ -65,7 +65,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         map.put("Description",description.getText().toString());
         map.put("Image",image.getText().toString());
 
-        FirebaseDatabase.getInstance().getReference().child("Jobs").push()
+        FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").push()
                 .setValue(map)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

@@ -1,8 +1,10 @@
-package com.example.hireme;
+package com.example.hireme.frontend.it20245092;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.hireme.R;
 
 public class IT20245092_Requests extends AppCompatActivity {
 

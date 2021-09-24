@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context=".IT20245092_MyJobs">
+    tools:context=".frontend.it20245092.IT20245092_MyJobs">
 
     <!--Top Navbar-->
     <LinearLayout

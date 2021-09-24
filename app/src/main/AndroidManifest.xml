@@ -13,26 +13,26 @@
         android:theme="@style/Theme.HireMe">
 
         <activity
-            android:name=".IT20245092_Jobs"
+            android:name=".frontend.it20245092.IT20245092_Jobs"
             android:exported="true" />
         <activity
-            android:name=".Jobs"
+            android:name=".frontend.it20245092.Jobs"
             android:exported="true" />
         <activity
-            android:name=".IT20245092_DeleteConfimation"
+            android:name=".frontend.it20245092.IT20245092_DeleteConfimation"
             android:exported="true"
             android:theme="@style/Theme.HireMe.popMe" />
         <activity
-            android:name=".IT20245092_WorkHistory"
+            android:name=".frontend.it20245092.IT20245092_WorkHistory"
             android:exported="true" />
         <activity
-            android:name=".IT20245092_Requests"
+            android:name=".frontend.it20245092.IT20245092_Requests"
             android:exported="true" />
         <activity
-            android:name=".IT20245092_JobDetails"
+            android:name=".frontend.it20245092.IT20245092_JobDetails"
             android:exported="true" />
         <activity
-            android:name=".IT20245092_MyJobs"
+            android:name=".frontend.it20245092.IT20245092_MyJobs"
             android:exported="true" />
         <activity
             android:name=".frontend.it20224370.IT20224370_Workerprofile" android:parentActivityName=".IT20224370_Workerprofile"
@@ -118,7 +118,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IT20245092_workerprofile"
+            android:name=".frontend.it20245092.IT20245092_workerprofile"
             android:exported="true" />
 
         <meta-data

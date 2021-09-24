@@ -47,7 +47,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".IT20245092_workerprofile"
+        tools:context=".frontend.it20245092.IT20245092_workerprofile"
         android:background="@color/light_background"
         tools:ignore="MissingClass"
         android:orientation="vertical">
