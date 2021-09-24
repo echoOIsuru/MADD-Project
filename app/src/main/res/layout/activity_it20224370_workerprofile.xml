@@ -56,24 +56,23 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/workerpropic"
-                android:layout_width="150dp"
-                android:layout_height="110dp"
+                android:layout_width="220dp"
+                android:layout_height="150dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="110dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginLeft="23dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="6dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="10dp"
                 android:src="@mipmap/ic_launcher"
                 app:civ_border_width="1dp"
                 app:civ_circle_background_color="#FF000000" />
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="377dp"
                 android:layout_height="444dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/it20224370_relativeborder"
@@ -211,8 +210,9 @@
 
                 <Button
                     android:id="@+id/workerbtn"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginStart="130dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="@color/btn_color"
