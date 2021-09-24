@@ -44,15 +44,18 @@
             android:exported="true" />
         <activity
             android:name=".frontend.it20133290.IT20133290_PublishedVacancy"
+            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu"
             android:exported="true" />
         <activity
             android:name=".frontend.it20133290.IT20133290_AddVacancy"
+            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu"
             android:exported="true" />
         <activity
             android:name=".frontend.it20133290.IT20133290_JobMenu"
             android:exported="true" />
         <activity
             android:name=".frontend.it20133290.IT20133290_VacancyMenu"
+            android:parentActivityName=".frontend.DashBoard"
             android:exported="true" />
         <activity
             android:name=".frontend.MainMenu"

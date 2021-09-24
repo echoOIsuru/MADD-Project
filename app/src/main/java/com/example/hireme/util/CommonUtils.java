@@ -25,9 +25,24 @@ public class CommonUtils {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String val = "";
                 if(dataSnapshot.exists()) {
                     maxID = dataSnapshot.getChildrenCount();
+                    maxID++;
+                    String nextID = Long.toString(maxID);
+                    for(DataSnapshot temp : dataSnapshot.getChildren()){
+                        val = temp.getKey();
+                    }
+//                    System.out.println(val+" -----Value----------------");
+//                    System.out.println(nextID+" -----NextID----------------");
 
+                    while (val.equals(nextID)){
+                        maxID++;
+                        nextID = Long.toString(maxID);
+                    }
+
+                    maxID = Long.parseLong(nextID);
+//                    System.out.println(maxID+" -----MAX----------------ID");
                 }
             }
 
@@ -41,7 +56,23 @@ public class CommonUtils {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()) {
+                    String val = "";
                     cusID = dataSnapshot.getChildrenCount();
+                    cusID++;
+                    String nextID = Long.toString(cusID);
+                    for(DataSnapshot temp : dataSnapshot.getChildren()){
+                        val = temp.getKey();
+                    }
+                    //System.out.println(val+" -----Value----------------");
+                   // System.out.println(nextID+" -----NextID----------------");
+
+                    while (val.equals(nextID)){
+                        cusID++;
+                        nextID = Long.toString(cusID);
+                    }
+
+                    cusID = Long.parseLong(nextID);
+                    //System.out.println(cusID+" -----MAX----------------ID");
 
                 }
             }
@@ -55,10 +86,10 @@ public class CommonUtils {
 
     public long getNextID(){
 
-        return maxID + 1;
+        return maxID;
     }
 
     public long getCusID() {
-        return cusID + 1;
+        return cusID;
     }
 }

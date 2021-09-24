@@ -26,6 +26,7 @@ public class IT20133290_PublishedVacancy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20133290_published_vacancy);
+        getSupportActionBar().hide();
 
         Intent i = getIntent();
         msg = i.getStringExtra("email");

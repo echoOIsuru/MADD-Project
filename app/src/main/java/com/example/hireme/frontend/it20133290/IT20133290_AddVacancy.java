@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.hireme.R;
 import com.example.hireme.models.Vacancies;
@@ -25,20 +26,25 @@ public class IT20133290_AddVacancy extends AppCompatActivity {
     //DatabaseReference ref;
     VacancyServicesImp vacSer = new VacancyServicesImp();
 
+    ImageView backArrow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_it20133290_add_vacancy);
 
         //assign view into variables
         jobTitle = findViewById(R.id.etJobTitle);
         jobFamily = findViewById(R.id.etJobFamily);
-        jobLevel=(findViewById(R.id.etJobLevel));
-        organization=(findViewById(R.id.etOrganization));
-        salary=(findViewById(R.id.etSalary));
-        description=(findViewById(R.id.etDescription));
-        deadline=(findViewById(R.id.dpDeadline));
-        submit=(findViewById(R.id.btnAddData));
+        jobLevel = (findViewById(R.id.etJobLevel));
+        organization = (findViewById(R.id.etOrganization));
+        salary = (findViewById(R.id.etSalary));
+        description = (findViewById(R.id.etDescription));
+        deadline = (findViewById(R.id.dpDeadline));
+        submit = (findViewById(R.id.btnAddData));
+
+        backArrow = findViewById(R.id.backArrow);
 
 
         //getExtra
@@ -59,6 +65,17 @@ public class IT20133290_AddVacancy extends AppCompatActivity {
                 vacSer.addNewVacancy(IT20133290_AddVacancy.this,jobTitle, organization, jobFamily,
                         jobLevel, description,salary, date,msg) ;
 
+                Intent i = new Intent(IT20133290_AddVacancy.this,IT20133290_CustomerMenu.class);
+                i.putExtra("email",msg);
+                startActivity(i);
+
+            }
+        });
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

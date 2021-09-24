@@ -18,6 +18,7 @@ public class IT20133290_VacancyMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20133290_vacancy_menu);
+        getSupportActionBar().hide();
         btn1 = findViewById(R.id.btnVcustomerMenu);
         btn2 = findViewById(R.id.btnVworker);
 

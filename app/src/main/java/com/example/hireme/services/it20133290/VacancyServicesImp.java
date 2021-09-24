@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hireme.database.Connection;
 import com.example.hireme.frontend.DashBoard;
+import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
 import com.example.hireme.models.AppUser;
 import com.example.hireme.models.Vacancies;
 import com.example.hireme.util.CommonUtils;
@@ -30,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.Locale;
 
 public class VacancyServicesImp implements VacancyServices {
     //get model class instance
@@ -73,7 +75,7 @@ public class VacancyServicesImp implements VacancyServices {
                 vacancies.setDeadline(deadline);
                 vacancies.setEmail(email);
 
-                con.getRef().child("Vacancies").child(String.valueOf(cu.getNextID())).setValue(vacancies);
+                con.getRef().child("Vacancies").child("VID"+(cu.getNextID())).setValue(vacancies);
 
                 Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
 
@@ -131,11 +133,12 @@ public class VacancyServicesImp implements VacancyServices {
                 appUser.setEmail(email.getText().toString().trim());
                 appUser.setPassword(password.getText().toString().trim());
 
-                con.getRef().child("AppUser").child(String.valueOf(cu.getCusID())).setValue(appUser);
+                con.getRef().child("AppUser").child("CUID"+(cu.getCusID())).setValue(appUser);
 
-                Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, "Account created Successfully, Now you can log in", Toast.LENGTH_LONG).show();
 
-
+                Intent i = new Intent(c, IT20133290_LoginActivity.class);
+                c.startActivity(i);
             }
 
         } catch (Exception e) {

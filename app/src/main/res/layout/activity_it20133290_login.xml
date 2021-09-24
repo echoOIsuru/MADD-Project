@@ -7,8 +7,7 @@
     tools:context=".frontend.it20133290.IT20133290_LoginActivity"
     android:background="@drawable/backgroundop3sq"
     android:orientation="vertical"
-   android:paddingTop="200dp"
-    >
+    android:gravity="center">
 
 
     <LinearLayout
@@ -90,29 +89,44 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingRight="12dp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/card_padding"
+                android:padding="@dimen/card_padding">
+
+                <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/submit_btn_color"
+                    android:text="@string/Login"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/light_background"
+                    android:text="@string/Signin"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingRight="12dp"
-        android:padding="@dimen/card_padding">
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/submit_btn_color"
-            android:text="@string/Login"
-            android:textColor="@color/black" />
-
-    </RelativeLayout>
 
 
 </LinearLayout>

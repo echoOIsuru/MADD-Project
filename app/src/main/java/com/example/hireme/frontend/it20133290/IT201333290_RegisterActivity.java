@@ -28,6 +28,7 @@ public class IT201333290_RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it201333290_register);
+        getSupportActionBar().hide();
 
         name = findViewById(R.id.etUserName);
         email = findViewById(R.id.etUserEmail);
