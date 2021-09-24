@@ -18,22 +18,29 @@
             android:layout_height="?actionBarSize">
 
             <ImageView
+                android:id="@+id/backArrow"
                 android:layout_width="@dimen/back_width"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/icon_padding"
-                android:src="@drawable/ic_baseline_menu_24" />
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
                 android:fontFamily="@font/aclonica"
                 android:gravity="center"
                 android:padding="12dp"
                 android:text="@string/AddVacancyMenu"
                 android:textSize="23dp" />
+
+            <ImageView
+                android:layout_width="@dimen/back_width"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/ic_baseline_menu_24" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -184,7 +191,7 @@
                         <DatePicker
                             android:id="@+id/dpDeadline"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="150dp"
                             android:layout_marginBottom="10dp"
                             android:background="@color/input_filed2"
                             android:calendarViewShown="false"

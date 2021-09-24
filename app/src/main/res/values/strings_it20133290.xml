@@ -6,6 +6,7 @@
     <string name="WorkersFeedbackMenu">Job Requests</string>
     <string name="Enter">Enter</string>
     <string name="LatestJob">Latest Vacancies</string>
+    <string name="JobMenuDescription">Find your Opportunities. We will post vacancies</string>
     <string name="FindJob">Find Vacancies</string>
     <string name="SentRequests">Sent Requests</string>
     <string name="AcceptedRequests">Accepted Requests</string>
@@ -31,8 +32,9 @@
     <string name="apply">Apply</string>
     <string name="SearchVacancy">Select Details</string>
     <string name="Find">Find</string>
-    <string name="Bio">Brief description about yourself</string>
+    <string name="Bio">Send us about yourself. Contact me at email</string>
     <string name="EnterHere">Enter Here..</string>
     <string name="Submit">SUBMIT</string>
     <string name="Login">LOGIN</string>
+    <string name="Signin">SIGN IN</string>
 </resources>

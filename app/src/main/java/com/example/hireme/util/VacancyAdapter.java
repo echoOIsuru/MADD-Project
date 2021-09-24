@@ -57,7 +57,9 @@ public class VacancyAdapter extends FirebaseRecyclerAdapter<Vacancies,VacancyAda
             @Override
             public void onClick(View v) {
                 Intent popUp = new Intent(holder.itemView.getContext(),IT20133290_Popup_apply_form.class);
+                popUp.putExtra("gmail",model.getEmail());
                 holder.itemView.getContext().startActivity(popUp);
+
             }
         });
 
