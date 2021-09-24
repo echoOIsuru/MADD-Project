@@ -52,5 +52,6 @@
     <string name="tv_time">Time</string>
     <string name="Tv_Job">Requested Job</string>
     <string name="Tv_Jobsample">Driver</string>
+    <string name="BtnText">My Requests</string>
 
 </resources>
