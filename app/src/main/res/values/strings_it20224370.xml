@@ -29,13 +29,28 @@
     <string name="tvIndustrial3">Rauka Dissasekara</string>
     <string name="search2">Colombo</string>
     <string name="tv_industrialjobs3">Filling station attendant</string>
+    <string name="btn_jobs">View</string>
+    <string name="tv_jobs">Household Jobs</string>
+    <string name="tv_job2">Industrial Jobs</string>
+    <string name="tv_form">Full Name</string>
+    <string name="tvpage2">My Requests</string>
+    <string name="tvpage1">Job Categories</string>
+    <string name="tvpage3">Household Jobs</string>
+    <string name="tvpage4">Industrial Jobs</string>
+    <string name="tvConfirmation">Confirm</string>
+    <string name="tv_confirmmessage">Are you sure, you want to send this job request?</string>
+    <string name="btn_confirm2">Cancel</string>
+    <string name="tv_confirmdelete">Are you sure, you want to delete this job request?</string>
+    <string name="tv_reqid">rq001</string>
+    <string name="Tv_Mobilenumber">Mobile Number</string>
+    <string name="ET_Description">5 years of work experience as an electrician</string>
+    <string name="TV_Number">Conatct Number</string>
+    <string name="Tv_RequestID">Request ID</string>
     <string name="Tv_FullName">Full Name</string>
     <string name="tv_address">Address</string>
     <string name="tv_Date">Date</string>
     <string name="tv_time">Time</string>
     <string name="Tv_Job">Requested Job</string>
     <string name="Tv_Jobsample">Driver</string>
-    <string name="ET_Description">5 years of work experience as an electrician</string>
-    <string name="TV_Number">Conatct Number</string>
 
 </resources>

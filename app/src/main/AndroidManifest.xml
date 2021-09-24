@@ -10,33 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
-            android:name=".IT20224370_Workerprofile" android:parentActivityName=".MainMenu"
+            android:name=".frontend.it20224370.IT20224370_Workerprofile" android:parentActivityName=".IT20224370_Workerprofile"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_IndustrialJobs" android:parentActivityName=".IT20224370_JobCategories"
+            android:name=".frontend.it20224370.IT20224370_IndustrialJobs" android:parentActivityName=".IT20224370_JobCategories"
+            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".frontend.it20224370.IT20224370_EditProfile"-->
+<!--            android:exported="true" />-->
+<!--        <activity-->
+<!--            android:name=".frontend.it20224370.It20224370_UpdateRequests" android:parentActivityName=".IT20224370_MyRequests"-->
+<!--            android:exported="true" />-->
+        <activity
+            android:name=".frontend.it20224370.IT20224370_MyRequests"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_EditProfile"
+            android:name=".frontend.it20224370.IT20224370_JobRequest"
             android:exported="true" />
         <activity
-            android:name=".It20224370_UpdateRequests" android:parentActivityName=".IT20224370_MyRequests"
+            android:name=".frontend.it20224370.IT20224370_Householdjobs"
             android:exported="true" />
         <activity
-            android:name=".IT20224370_MyRequests" android:parentActivityName=".IT20224370_JobCategories"
+            android:name=".frontend.it20224370.IT20224370_JobCategories"
             android:exported="true" />
-        <activity
-            android:name=".IT20224370_JobRequest" android:parentActivityName=".IT20224370_JobCategories"
-            android:exported="true" />
-        <activity
-            android:name=".IT20224370_Householdjobs" android:parentActivityName=".IT20224370_JobCategories"
-            android:exported="true" />
-        <activity
-            android:name=".IT20224370_JobCategories" android:parentActivityName=".MainMenu"
-            android:exported="true" />
-        <activity
-            android:name=".IT20133290_VacancyMenu"
-            android:name=".frontend.it20133290.IT201333290_RegisterActivity"
-            android:exported="true" />
+
         <activity
             android:name=".frontend.it20133290.IT20133290_LoginActivity"
             android:exported="true" />
@@ -82,9 +79,8 @@
             android:exported="true"
             android:label="Dashboard" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
             android:exported="true">
-            android:name=".frontend.SplashScreen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

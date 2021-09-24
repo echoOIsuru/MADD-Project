@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.hireme.R;
-import com.example.hireme.frontend.SplashScreen;
 import com.example.hireme.models.AppUser;
 import com.example.hireme.models.Vacancies;
 import com.example.hireme.services.it20133290.VacancyServicesImp;

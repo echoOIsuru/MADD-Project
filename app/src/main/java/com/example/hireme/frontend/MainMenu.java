@@ -24,8 +24,8 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent launchactivity= new Intent(MainMenu.this,IT20224370_JobCategories.class);
-                startActivity(launchactivity);
+                //Intent launchactivity= new Intent(MainMenu.this,IT20224370_JobCategories.class);
+                //startActivity(launchactivity);
 
             }
         });
