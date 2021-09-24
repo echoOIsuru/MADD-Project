@@ -2,5 +2,5 @@
 <resources>
     <color name="btnaccept">#61C509</color>
     <color name="btndecline">#FF0000</color>
-
+    <color name="forminput">#9CBDFF</color>
 </resources>

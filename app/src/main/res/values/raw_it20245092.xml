@@ -9,6 +9,8 @@
     <dimen name="formimg">36dp</dimen>
     <dimen name="formpad">10dp</dimen>
     <dimen name="formtxt">20dp</dimen>
+    <dimen name="profilebtnH">120dp</dimen>
+    <dimen name="profilebtnW">240dp</dimen>
 
 
 </resources>

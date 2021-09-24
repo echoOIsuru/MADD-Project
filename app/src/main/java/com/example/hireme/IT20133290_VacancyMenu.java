@@ -12,7 +12,6 @@ public class IT20133290_VacancyMenu extends AppCompatActivity {
 
     Button btn1, btn2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

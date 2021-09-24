@@ -21,8 +21,7 @@
                 android:layout_width="@dimen/back_width"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/arrowbackicon" />
+                android:padding="@dimen/icon_padding" />
 
             <ImageView
                 android:layout_width="@dimen/search_width"

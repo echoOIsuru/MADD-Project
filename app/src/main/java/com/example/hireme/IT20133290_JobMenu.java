@@ -25,7 +25,6 @@ public class IT20133290_JobMenu extends AppCompatActivity {
 
     public void Onclick(View v){
         Intent i = new Intent(this,IT20133290_LatestVacancy.class);
-        System.out.println(v);
 
         if(v == btn1){
             i = new Intent(this,IT20133290_LatestVacancy.class);

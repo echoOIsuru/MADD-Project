@@ -3,40 +3,38 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/drawable/it20245092_rounded.xml" value="0.290625" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/drawable/rectangle.xml" value="0.2390625" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_dash_board.xml" value="0.20989583333333334" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_add_vacancy.xml" value="0.20742753623188406" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_customer_menu.xml" value="0.20244565217391305" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_find_vacancy.xml" value="0.20244565217391305" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_job_menu.xml" value="0.20742753623188406" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_latest_vacancy.xml" value="0.20244565217391305" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_popup_apply_form.xml" value="0.2" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_published_vacancy.xml" value="0.20244565217391305" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.23596014492753623" />
-        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_job_details.xml" value="0.14492753623188406" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_delete_confimation.xml" value="0.19746376811594202" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_job_details.xml" value="0.2" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_job_insert.xml" value="0.24365942028985507" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_jobs.xml" value="0.264" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_my_jobs.xml" value="0.264" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_requests.xml" value="0.27447916666666666" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_work_history.xml" value="0.20244565217391305" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_worker_profile1.xml" value="0.25" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_worker_profile2.xml" value="0.2" />
-        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_workerprofile.xml" value="0.264" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_it20245092_workerprofile.xml" value="0.2" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_jobs.xml" value="0.264" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/activity_main_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/it20245092_editjobpopup.xml" value="0.2" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/it20245092_job.xml" value="0.2" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/it20245092_jobedit.xml" value="0.1" />
+        <entry key="..\:/SLIIT/2nd year/2nd Sem/Mobile Application Development/MADD-Project/app/src/main/res/layout/job.xml" value="0.264" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.22320675105485233" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_bottom_nav_bar.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_dash_board.xml" value="0.264" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_add_vacancy.xml" value="0.264" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_customer_menu.xml" value="0.264" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_find_vacancy.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_job_menu.xml" value="0.264" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_latest_vacancy.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_popup_apply_form.xml" value="0.2" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_published_vacancy.xml" value="0.264" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_sent_request.xml" value="0.17543859649122806" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.264" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main_menu.xml" value="0.2563405797101449" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/fragment_dashboard.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/fragment_first.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/fragment_home.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/fragment_notifications.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/popup_it20133290_enter_details.xml" value="0.20652173913043478" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.21842105263157896" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/menu.xml" value="0.1" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/navbar.xml" value="0.21842105263157896" />
       </map>
     </option>
   </component>
@@ -50,13 +48,6 @@
     <option name="state">
       <ProjectState>
         <option name="scale" value="0.14492753623188406" />
-      </ProjectState>
-    </option>
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.264" />
       </ProjectState>
     </option>
   </component>
