@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:background="#DCF3F8"
         android:backgroundTint="@color/backgroundcolor"
-        android:orientation="vertical"
-        tools:context=".IT20224370_JobRequest">
+        android:orientation="vertical">
+<!--        tools:context=".IT20224370_JobRequest">-->
 
     <!--Top Navbar-->
     <LinearLayout
