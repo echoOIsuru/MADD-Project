@@ -64,9 +64,32 @@
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/navbar.xml" value="0.21842105263157896" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/menu/search.xml" value="0.264" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/drawable/it20231682_ic_delete.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/drawable/it20231682_ic_edit.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/drawable/rounded.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_dash_board.xml" value="0.24375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20133290_add_vacancy.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20133290_customer_menu.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20133290_find_vacancy.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20133290_popup_apply_form.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback.xml" value="0.264" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_popup_confirmation_form.xml" value="0.264" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_thankyou.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_user_history.xml" value="0.264" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_view.xml" value="0.264" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_feedback_worker_view.xml" value="0.264" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_it20231682_give_feedback.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.24375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/it20231682_feedback_item.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/layout/it20231682_feedback_update_popup.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.259375" />
+        <entry key="..\:/Users/Kushani/AndroidStudioProjects/MADD-Project/app/src/main/res/menu/feedback_search.xml" value="0.259375" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

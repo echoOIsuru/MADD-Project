@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.hireme.IT20231682_feedback_view;
 import com.example.hireme.R;
 import com.example.hireme.frontend.it20133290.IT20133290_VacancyMenu;
 //import com.example.hireme.frontend.it20224370.IT20224370_JobCategories;
@@ -18,7 +19,7 @@ import com.example.hireme.services.it20133290.VacancyServicesImp;
 
 public class DashBoard extends AppCompatActivity {
 
-    Button btnVacancy, btnhireWorker,btnworker;
+    Button btnVacancy, btnhireWorker,btnworker,btnFeedbackID;
     String msg;
 
 
@@ -31,6 +32,7 @@ public class DashBoard extends AppCompatActivity {
         btnVacancy = findViewById(R.id.btnVacancy);
         btnhireWorker = findViewById(R.id.hireworker);
         btnworker = findViewById(R.id.btnworkerPro);
+        btnFeedbackID = findViewById(R.id.btnFeedbackID);
 
         Intent i = getIntent();
         msg = i.getStringExtra("email");
@@ -59,6 +61,10 @@ public class DashBoard extends AppCompatActivity {
             i.putExtra("email",msg);
             i.putExtra("name",msg);
             i.putExtra("tel",msg);
+        }else if(v == btnFeedbackID){
+            i = new Intent(this, IT20231682_feedback_view.class);
+            i.putExtra("email",msg);
+            i.putExtra("name",msg);
         }
 
 
