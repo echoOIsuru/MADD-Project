@@ -53,6 +53,7 @@ public class IT20224370_AdapterHousehold extends FirebaseRecyclerAdapter<IT20224
 
                 Intent i = new Intent(view.getContext(), IT20224370_JobRequest.class);
 
+                //i.putExtra("email",);
                 i.putExtra("wjob",model.getJob());
                 i.putExtra("wmail",model.getEmail());
 

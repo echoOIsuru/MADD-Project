@@ -30,6 +30,10 @@ public class IT20224370_IndustrialJobs extends AppCompatActivity {
         setContentView(R.layout.activity_it20224370_industrial_jobs);
         getSupportActionBar().hide();
 
+        Intent i = getIntent();
+        String msg = "abc@gmail.com";
+        //i.getStringExtra("email");
+
         recyclerView=(RecyclerView) findViewById(R.id.IndustrialRV);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -69,6 +73,7 @@ public class IT20224370_IndustrialJobs extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent launchactivity= new Intent(IT20224370_IndustrialJobs.this,IT20224370_MyRequests.class);
+                launchactivity.putExtra("email",msg);
                 startActivity(launchactivity);
 
             }
