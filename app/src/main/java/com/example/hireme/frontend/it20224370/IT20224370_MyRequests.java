@@ -34,9 +34,13 @@ public class IT20224370_MyRequests extends AppCompatActivity {
         recyclerView=(RecyclerView) findViewById(R.id.RequestRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        String userMail = getIntent().getStringExtra("email");     //get logged user mail by an intent
+
+        //according to the logged user mail retrieve user previously made requests and pass to model
+
         FirebaseRecyclerOptions<IT20224370_RequestModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_RequestModel>()
-                        .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests"), IT20224370_RequestModel.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").orderByChild("userMail").equalTo(userMail), IT20224370_RequestModel.class)
                         .build();
 
         requestAdapter = new IT20224370_AdapterRequest(options);
@@ -77,10 +81,4 @@ public class IT20224370_MyRequests extends AppCompatActivity {
         requestAdapter.stopListening();
     }
 
-
-
-//    private void openPopUpWindow(){
-//        Intent popUp = new Intent(this,IT20224370_DeletePopup.class);
-//        startActivity(popUp);
-//    }
 }
