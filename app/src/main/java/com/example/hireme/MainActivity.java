@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, DashBoard.class);
+                Intent intent = new Intent(MainActivity.this, IT20231682_feedback_view.class);
 
                 startActivity(intent);
                 finish();

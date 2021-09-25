@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hireme">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
-            android:name=".IT20231682_feedback_user_history"
-            android:exported="true" />
-        <activity
-            android:name=".IT20231682_feedback_worker_view"
-            android:exported="true" />
-        <activity
-            android:name=".IT20231682_feedback_Thankyou"
+            android:name=".IT20231682_give_feedback"
             android:exported="true" />
         <activity
             android:name=".IT20231682_feedback_view"
-            android:exported="true" />
-        <activity
-            android:name=".IT20231682_feedback"
             android:exported="true" />
         <activity
             android:name=".DashBoard"

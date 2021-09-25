@@ -33,15 +33,15 @@
             android:layout_height="400dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:hint="@string/EnterHere"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:hint="@string/EnterHere">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPopupApply"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@color/input_filed2"/>
+                android:background="@color/input_filed2"
+                android:gravity="center" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

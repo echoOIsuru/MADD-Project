@@ -5,46 +5,44 @@
 
 
 <resources>
-
-    <string name="feedViewName2">John Davis</string>
-    <string name="feedViewDate2">05 Apr 2021</string>
-    <string name="feedViewCom2">Grate Service!</string>
-    <string name="feedViewName3">Peter Andre</string>
-    <string name="feedViewDate3">05 Apr 2021</string>
-    <string name="feedViewCom3">Good Service.</string>
-    <string name="feedViewName4">Janet Jackson</string>
-    <string name="feedViewDate4">05 Apr 2021</string>
-    <string name="feedViewCom4">Good Job</string>
-    <string name="enterFeedName">Name:</string>
-    <string name="enterFeedEmail">Email:</string>
-    <string name="enterFeedQ1">Did you achieve your goal?</string>
-    <string name="Q1RadioBt1">Yes</string>
-    <string name="Q1RadioBt2">Partially</string>
-    <string name="Q1RadioBt3">No</string>
-    <string name="enterFeedQ2">Rate your experience</string>
-    <string name="enterFeedCom">Leave Feedback</string>
-    <string name="enterFeedCancelBt">Cancel</string>
-    <string name="enterFeedSubmitBt2">Submit</string>
-    <string name="feedThanxMes">Thanks for your feedback!</string>
-    <string name="feedThanxBt">OK</string>
-    <string name="feedRateCount1">80</string>
-    <string name="feedRateCount2">8</string>
-    <string name="feedRateCount3">6</string>
-    <string name="feedRateCount4">2</string>
-    <string name="feedRateCount5">1</string>
-    <string name="feedRateTextView">105</string>
-    <string name="feedRateTextView2">Ratings</string>
-    <string name="feedWorkerBt1">CANCEL</string>
-    <string name="feedWorkerBt2">OK</string>
-    <string name="feedHistoryName1">Oliver  Smith</string>
-    <string name="feedHistoryName2">Jack Wilson</string>
-    <string name="feedHistoryName3">John Duncan</string>
-    <string name="feedHistoryDate1">05 APR 2021</string>
-    <string name="feedHisstoryMes1">Completed</string>
-    <string name="driverId1">Employee ID: 010</string>
-    <string name="driverId2">Empolyee Id: 012</string>
-    <string name="driverId3">Employee Id:015</string>
-    <string name="feedHistoryCancelBt">Cancel</string>
-
-
+<!--    <string name="feedViewName2">John Davis</string>-->
+<!--    <string name="feedViewDate2">05 Apr 2021</string>-->
+<!--    <string name="feedViewCom2">Grate Service!</string>-->
+<!--    <string name="feedViewName3">Peter Andre</string>-->
+<!--    <string name="feedViewDate3">05 Apr 2021</string>-->
+<!--    <string name="feedViewCom3">Good Service.</string>-->
+<!--    <string name="feedViewName4">Janet Jackson</string>-->
+<!--    <string name="feedViewDate4">05 Apr 2021</string>-->
+<!--    <string name="feedViewCom4">Good Job</string>-->
+<!--    <string name="enterFeedName">Name:</string>-->
+<!--    <string name="enterFeedEmail">Email:</string>-->
+<!--    <string name="enterFeedQ1">Did you achieve your goal?</string>-->
+<!--    <string name="Q1RadioBt1">Yes</string>-->
+<!--    <string name="Q1RadioBt2">Partially</string>-->
+<!--    <string name="Q1RadioBt3">No</string>-->
+<!--    <string name="enterFeedQ2">Rate your experience</string>-->
+<!--    <string name="enterFeedCom">Leave Feedback:</string>-->
+<!--    <string name="enterFeedSubmitBt2">Submit</string>-->
+<!--    <string name="feedThanxMes">Thanks for your feedback!</string>-->
+<!--    <string name="feedThanxBt">OK</string>-->
+<!--    <string name="feedRateCount1">80</string>-->
+<!--    <string name="feedRateCount2">8</string>-->
+<!--    <string name="feedRateCount3">6</string>-->
+<!--    <string name="feedRateCount4">2</string>-->
+<!--    <string name="feedRateCount5">1</string>-->
+<!--    <string name="feedRateTextView">105</string>-->
+<!--    <string name="feedRateTextView2">Ratings</string>-->
+<!--    <string name="feedWorkerBt2">OK</string>-->
+<!--    <string name="feedHistoryName1">Oliver  Smith</string>-->
+<!--    <string name="feedHistoryName2">Jack Wilson</string>-->
+<!--    <string name="feedHistoryName3">John Duncan</string>-->
+<!--    <string name="feedHistoryDate1">05 APR 2021</string>-->
+<!--    <string name="feedHistoryMes1">Completed</string>-->
+<!--    <string name="driverId1">Employee ID: 010</string>-->
+<!--    <string name="driverId2">Employee Id: 012</string>-->
+<!--    <string name="driverId3">Employee Id:015</string>-->
+<!--    <string name="feedHistoryCancelBt">Cancel</string>-->
+<!--    <string name="feedViewYou">You</string>-->
+<!--    <string name="feedConfirmBt1">Confirm</string>-->
+<!--    <string name="feedConfirmMsg">Are you sure want to delete this?</string>-->
 </resources>
