@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">HireMe</string>
+    <string name="brandName">HireMe</string>
     <string name="tagLine">Hire Worker or Get Job</string>
     <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_it20133290_sent_vacancy">IT20133290_SentVacancy</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -23,6 +29,21 @@
     <string name="Vacancies">Vacancies</string>
     <string name="BeWork">Be a Worker</string>
     <string name="Feedback">Feedbacks</string>
+    <string name="kandy">Kandy</string>
+    <string name="des">5+ years of experience</string>
+    <string name="confirm">CONFIRM</string>
+
+
+    <string name="sample1">
+        Thank you for applying for the position of office administrator with ABC Company in Minneapolis, MN.
+        <br />We would like to invite you to come to our office to interview for the position. Your interview has been scheduled for May 10, 2021, 1 pm, at 123 Main Street, Minneapolis, MN 55199.
+        <br />Please call me at 651-555-6666 or email me at johnsmith@abccompany.com if you have any questions or need to reschedule.<br />
+        <br /><br />Sincerely,<br />
+        John Smith<br />
+        ABC Company<br />
+
+
+    </string>
 
 
 <!--    <string name="feedViewName5">Emily Smith</string>-->

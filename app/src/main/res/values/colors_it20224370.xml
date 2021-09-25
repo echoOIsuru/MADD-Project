@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="backgroundcolor">#EEEEEE</color>
+    <color name="borderlayout">#000000</color>
+    <color name="boxcolor2">#80ABD1</color>
+    <color name="boxcolor">#1F7169</color>
+    <color name="btn_color">#144CBD</color>
+    <color name="Tv_Title">#FFFDFD</color>
+    <color name="buttonmain">#172F38</color>
+
+</resources>

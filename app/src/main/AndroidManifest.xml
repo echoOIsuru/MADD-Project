@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
+
+        <activity
+            android:name=".frontend.it20245092.IT20245092_Jobs"
+            android:exported="true" />
         <activity
             android:name=".IT20231682_give_feedback"
             android:exported="true" />
@@ -18,46 +22,99 @@
             android:name=".IT20231682_feedback_view"
             android:exported="true" />
         <activity
-            android:name=".DashBoard"
+            android:name=".frontend.it20245092.Jobs"
             android:exported="true" />
         <activity
-            android:name=".BottomNavBar"
-            android:exported="true"
-            android:label="@string/title_activity_bottom_nav_bar" />
-        <activity
-            android:name=".IT20133290_Popup_apply_form"
+            android:name=".frontend.it20245092.IT20245092_DeleteConfimation"
             android:exported="true"
             android:theme="@style/Theme.HireMe.popMe" />
         <activity
-            android:name=".IT20133290_CustomerMenu"
+            android:name=".frontend.it20245092.IT20245092_WorkHistory"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_SentRequest"
+            android:name=".frontend.it20245092.IT20245092_Requests"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_FindVacancy"
+            android:name=".frontend.it20245092.IT20245092_JobDetails"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_LatestVacancy"
+            android:name=".frontend.it20245092.IT20245092_MyJobs"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_PublishedVacancy"
+            android:name=".frontend.it20224370.IT20224370_Workerprofile" android:parentActivityName=".IT20224370_Workerprofile"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_AddVacancy"
+            android:name=".frontend.it20224370.IT20224370_IndustrialJobs" android:parentActivityName=".IT20224370_JobCategories"
+            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".frontend.it20224370.IT20224370_EditProfile"-->
+<!--            android:exported="true" />-->
+<!--        <activity-->
+<!--            android:name=".frontend.it20224370.It20224370_UpdateRequests" android:parentActivityName=".IT20224370_MyRequests"-->
+<!--            android:exported="true" />-->
+        <activity
+            android:name=".frontend.it20224370.IT20224370_MyRequests"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_JobMenu"
+            android:name=".frontend.it20224370.IT20224370_JobRequest"
             android:exported="true" />
         <activity
-            android:name=".IT20133290_VacancyMenu"
+            android:name=".frontend.it20224370.IT20224370_Householdjobs"
             android:exported="true" />
         <activity
-            android:name=".MainMenu"
+            android:name=".frontend.it20224370.IT20224370_JobCategories"
+            android:exported="true" />
+
+        <activity
+            android:name=".frontend.it20133290.IT20133290_LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_AcceptedRequest"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_WorkerRequest"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.DashBoard"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_Popup_apply_form"
+            android:exported="true"
+            android:theme="@style/Theme.HireMe.popMe" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_CustomerMenu"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_SentRequest"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_FindVacancy"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_LatestVacancy"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_PublishedVacancy"
+            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_AddVacancy"
+            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_JobMenu"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20133290.IT20133290_VacancyMenu"
+            android:parentActivityName=".frontend.DashBoard"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.MainMenu"
             android:exported="true"
             android:label="Dashboard" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
+            android:exported="true">
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -66,6 +123,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".frontend.it20245092.IT20245092_workerprofile"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

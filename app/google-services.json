@@ -4,11 +4,16 @@
     "firebase_url": "https://hireme-d66c5-default-rtdb.firebaseio.com",
     "project_id": "hireme-d66c5",
     "storage_bucket": "hireme-d66c5.appspot.com"
+    "project_number": "356887448854",
+    "firebase_url": "https://hireme-2e86a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hireme-2e86a",
+    "storage_bucket": "hireme-2e86a.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:121980491737:android:739ef3aeb155503e7bebc8",
+        "mobilesdk_app_id": "1:356887448854:android:6693759e8d8fdb05ded437",
         "android_client_info": {
           "package_name": "com.example.hireme"
         }
@@ -16,18 +21,21 @@
       "oauth_client": [
         {
           "client_id": "121980491737-b8drd9bq3hvit97ofd6a1ogg7841a45k.apps.googleusercontent.com",
+          "client_id": "356887448854-4pntccnr80bim331hf6pgvlcqb2tu00k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
           "current_key": "AIzaSyDoiXneoJVit4ns1u29hawp-rckyRcv2TQ"
+          "current_key": "AIzaSyDsk_jH7r3c6oTxL7zQc8z8N2_GHmy1lq4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+              "client_id": "356887448854-4pntccnr80bim331hf6pgvlcqb2tu00k.apps.googleusercontent.com",
               "client_id": "121980491737-b8drd9bq3hvit97ofd6a1ogg7841a45k.apps.googleusercontent.com",
               "client_type": 3
             }
