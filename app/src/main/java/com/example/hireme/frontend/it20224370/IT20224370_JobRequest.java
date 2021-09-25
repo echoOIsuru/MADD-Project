@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,38 +78,68 @@ public class IT20224370_JobRequest extends AppCompatActivity {
 //        startActivity(popUp);
 //    }
 
+    //insert data inorder to send a job request
+
     private void insertData(){
-        String SaveJob = getIntent().getStringExtra("wjob");
-        String SaveMail = getIntent().getStringExtra("wmail");
 
-        Map<String,Object> map = new HashMap<>();
-        //map.put("workerID",wid);
-        map.put("fullName",fullName.getText().toString());
-        map.put("mobileNumber",mobileNumber.getText().toString());
-        map.put("date",date.getText().toString());
-        map.put("status","pending");
-        map.put("userMail","abc@gmail.com");
-        map.put("selectedJob",SaveJob);
-        map.put("workerMail",SaveMail);
-        map.put("time",time.getText().toString());
-        map.put("address",address.getText().toString());
 
-        FirebaseDatabase.getInstance().getReference().child("requests").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(IT20224370_JobRequest.this,"Data Inserted Successfully", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(Exception e) {
+        String passedJob = getIntent().getStringExtra("wjob");
+        String passedWorkerMail = getIntent().getStringExtra("wmail");
+        String passedUserMail = getIntent().getStringExtra("email");     //passed data through intents
 
-                        Toast.makeText(IT20224370_JobRequest.this,"Data Insertion is Unsuccessful", Toast.LENGTH_SHORT).show();
+        //nested else if to clarify whether user enter inputs to text fields, if not shows a toast
+        try {
+            if (TextUtils.isEmpty(fullName.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
 
-                    }
-                });
+            else if (TextUtils.isEmpty(mobileNumber.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(date.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();
+
+            else if (TextUtils.isEmpty(time.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter Appointment Time", Toast.LENGTH_SHORT).show();
+
+            else if(TextUtils.isEmpty(address.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter Address", Toast.LENGTH_SHORT).show();
+
+            else {
+        //map with firebase and insert user inputs to firebase object
+                Map<String,Object> map = new HashMap<>();
+                //map.put("workerID",wid);
+                map.put("fullName",fullName.getText().toString());
+                map.put("mobileNumber",mobileNumber.getText().toString());
+                map.put("date",date.getText().toString());
+                map.put("status","pending");
+                map.put("userMail","abcz@gmail.com");
+                map.put("selectedJob",passedJob);
+                map.put("workerMail",passedWorkerMail);
+                map.put("time",time.getText().toString());
+                map.put("address",address.getText().toString());
+
+                FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").push()
+                        .setValue(map)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                if(!map.isEmpty())
+                                Toast.makeText(IT20224370_JobRequest.this,"Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(Exception e) {
+
+                                Toast.makeText(IT20224370_JobRequest.this,"Data Insertion is Unsuccessful", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+            }
+
+            } catch (Exception e) {
+
+            }
 
     }
 
