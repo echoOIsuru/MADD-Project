@@ -45,7 +45,7 @@ public class IT20231682_feedback_view extends AppCompatActivity {
 
         FirebaseRecyclerOptions<IT20231682_feedback_model> options =
                 new FirebaseRecyclerOptions.Builder<IT20231682_feedback_model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("IT20231682_feedback_model"), IT20231682_feedback_model.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://hireme-d66c5-default-rtdb.firebaseio.com/").getReference().child("IT20231682_feedback_model"), IT20231682_feedback_model.class)
                         .build();
 
         it20231682_feedbackAdapter = new IT20231682_feedbackAdapter(options);
@@ -54,7 +54,7 @@ public class IT20231682_feedback_view extends AppCompatActivity {
 
 
         // get total number of rating count
-        totalr = FirebaseDatabase.getInstance().getReference().child("IT20231682_feedback_model");
+        totalr = FirebaseDatabase.getInstance("https://hireme-d66c5-default-rtdb.firebaseio.com/").getReference().child("IT20231682_feedback_model");
 
         totalr.addValueEventListener(new ValueEventListener() {
             @Override
@@ -135,7 +135,7 @@ public class IT20231682_feedback_view extends AppCompatActivity {
     private void textSearch(String str){
         FirebaseRecyclerOptions<IT20231682_feedback_model> options =
                 new FirebaseRecyclerOptions.Builder<IT20231682_feedback_model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("IT20231682_feedback_model").orderByChild("name").startAfter(str).endAt(str+"~"), IT20231682_feedback_model.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://hireme-d66c5-default-rtdb.firebaseio.com/").getReference().child("IT20231682_feedback_model").orderByChild("name").startAt(str).endAt(str+"~"), IT20231682_feedback_model.class)
                         .build();
 
         it20231682_feedbackAdapter = new IT20231682_feedbackAdapter(options);

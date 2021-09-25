@@ -71,7 +71,7 @@ public class IT20231682_give_feedback extends AppCompatActivity {
 
 
 
-        reference = database.getInstance().getReference().child("IT20231682_feedback_model");
+        reference = database.getInstance("https://hireme-d66c5-default-rtdb.firebaseio.com/").getReference().child("IT20231682_feedback_model");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override

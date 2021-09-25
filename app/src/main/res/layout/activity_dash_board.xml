@@ -246,7 +246,7 @@
                         android:textSize="20sp" />
 
                     <Button
-
+                        android:id="@+id/btnFeedbackID"
                         android:layout_width="@dimen/button_width"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -254,6 +254,7 @@
                         android:layout_marginBottom="0dp"
                         android:background="@android:color/transparent"
                         android:padding="@dimen/card_padding"
+                        android:onClick="onClick"
                         android:text="@string/Enter"
                         android:textColor="@color/title2" />
 

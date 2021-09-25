@@ -119,7 +119,7 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
 
 
 
-                        FirebaseDatabase.getInstance().getReference().child("IT20231682_feedback_model")
+                        FirebaseDatabase.getInstance("https://hireme-d66c5-default-rtdb.firebaseio.com/").getReference().child("IT20231682_feedback_model")
                                 .child(getRef(position).getKey())
                                 .updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -155,7 +155,7 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //delete data from database
-                        FirebaseDatabase.getInstance().getReference().child("IT20231682_feedback_model")
+                        FirebaseDatabase.getInstance("https://hireme-d66c5-default-rtdb.firebaseio.com/").getReference().child("IT20231682_feedback_model")
                                 .child(getRef(position).getKey()).removeValue();
                         Toast.makeText(holder.name.getContext(), "Successfully deleted!", Toast.LENGTH_SHORT).show();
                     }
