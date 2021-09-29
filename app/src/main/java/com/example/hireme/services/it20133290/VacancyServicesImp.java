@@ -13,13 +13,11 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hireme.database.Connection;
 import com.example.hireme.frontend.DashBoard;
-import com.example.hireme.frontend.it20133290.IT20133290_AddVacancy;
 import com.example.hireme.frontend.it20133290.IT20133290_CustomerMenu;
 import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
 import com.example.hireme.models.AppUser;
@@ -31,10 +29,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import java.security.Key;
-import java.util.Date;
-import java.util.Locale;
 
 public class VacancyServicesImp implements VacancyServices {
     //get model class instance
