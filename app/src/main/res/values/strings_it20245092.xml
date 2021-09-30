@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Tharindu Samarakoon</string>
+    <string name="email">tharindu@gmail.com</string>
+    <string name="requests">Requests</string>
+    <string name="myjobs">My Jobs</string>
+    <string name="reviews">Reviews</string>
+    <string name="workhistory">Work History</string>
+    <string name="myjob">MyJobs</string>
+    <string name="plumber">Plumber</string>
+    <string name="addnew">Add New</string>
+    <string name="electrician">Electrician</string>
+    <string name="driver">Driver</string>
+    <string name="btnaccept">ACCEPT</string>
+    <string name="btndecline">DECLINE</string>
+    <string name="rateelec">400/= Per Hour</string>
+    <string name="rateplum">700/= Per Hour</string>
+    <string name="ratedriv">1000/= Per Day</string>
+    <string name="jobtitle">Job Title</string>
+    <string name="pricerate">Price Rate</string>
+    <string name="contact">Contact</string>
+    <string name="description">Description</string>
+    <string name="jobprofile">Job Profile</string>
+    <string name="location">Location</string>
+    <string name="contactno">+94779133196</string>
+    <string name="workhs">Work Histoy</string>
+    <string name="hs1">Job - Electrician</string>
+    <string name="hs2">Client - A.B.M De Silva</string>
+    <string name="hs3">Charges - 1200/=</string>
+    <string name="hs4">Location - Kandy</string>
+    <string name="hs5">Feedback - Pending</string>
+    <string name="dlt">Delete</string>
+    <string name="confirmation">Are you sure want to delete the job ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+
+</resources>
