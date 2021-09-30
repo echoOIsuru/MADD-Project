@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_background"
-    android:orientation="vertical"
-    tools:context=".IT20224370_JobCategories">
+    android:orientation="vertical">
 
     <!--Top Navbar-->
     <LinearLayout

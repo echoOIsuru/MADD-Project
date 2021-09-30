@@ -21,8 +21,8 @@ public class IT20224370_MyRequests extends AppCompatActivity {
 
     RecyclerView recyclerView;
     IT20224370_AdapterRequest requestAdapter;
-    Button btn1;
-    ImageButton btn2;
+    //Button btn1;
+    //ImageButton btn2;
 
 
     @Override

@@ -72,6 +72,7 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="377dp"
                 android:layout_height="444dp"
+
                 android:layout_marginTop="2dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="30dp"
@@ -104,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Full Name"
+                    android:text="@string/Tv_FullName"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.108"
@@ -117,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="112dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Description"
+                    android:text="@string/TV_Description"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +159,7 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="amalaperera@gmail.com"
+                    android:hint="@string/TV_Email"
                     android:inputType="phone"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -174,7 +175,7 @@
                     android:layout_marginTop="12dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="0778976651"
+                    android:hint="@string/MobileNum_TV"
                     android:inputType="phone"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -208,13 +209,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5">
 
+
                 <Button
                     android:id="@+id/workerbtn"
                     android:layout_width="150dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="130dp"
                     android:layout_marginBottom="20dp"
+                    android:background="@drawable/it20224370_rounded_btn"
                     android:backgroundTint="@color/btn_color"
                     android:text="@string/btnrequest">
 

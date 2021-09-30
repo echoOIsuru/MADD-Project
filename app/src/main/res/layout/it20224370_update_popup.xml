@@ -120,7 +120,7 @@
         android:layout_marginRight="25dp"
         android:background="@drawable/it20224370_rounded_btn"
         android:gravity="center"
-        android:text="Update"
+        android:text="@string/btn_Update"
         android:textAllCaps="false"
         android:textSize="21dp" />
 

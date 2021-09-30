@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
         <activity
-            android:name=".frontend.it20224370.IT20224370_Workerprofile" android:parentActivityName=".IT20224370_Workerprofile"
+            android:name=".frontend.it20224370.IT20224370_Workerprofile"
             android:exported="true" />
         <activity
-            android:name=".frontend.it20224370.IT20224370_IndustrialJobs" android:parentActivityName=".IT20224370_JobCategories"
+            android:name=".frontend.it20224370.IT20224370_IndustrialJobs"
             android:exported="true" />
 <!--        <activity-->
 <!--            android:name=".frontend.it20224370.IT20224370_EditProfile"-->

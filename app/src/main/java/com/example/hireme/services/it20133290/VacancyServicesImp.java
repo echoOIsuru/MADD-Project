@@ -13,11 +13,13 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hireme.database.Connection;
 import com.example.hireme.frontend.DashBoard;
+import com.example.hireme.frontend.it20133290.IT20133290_AddVacancy;
 import com.example.hireme.frontend.it20133290.IT20133290_CustomerMenu;
 import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
 import com.example.hireme.models.AppUser;
@@ -29,6 +31,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.security.Key;
+import java.util.Date;
+import java.util.Locale;
 
 public class VacancyServicesImp implements VacancyServices {
     //get model class instance
@@ -45,8 +51,9 @@ public class VacancyServicesImp implements VacancyServices {
     public void addNewVacancy(Context c, EditText jobTitle, EditText organization, AutoCompleteTextView jobFamily,
                               AutoCompleteTextView jobLevel, EditText description, EditText salary, String deadline, String email) {
 
-        String desPattern = ".{1,200}";
+        String desPattern = ".{1,200}"; // creating pattern for description
         try {
+            //check input filed are empty or not
             if (TextUtils.isEmpty(jobTitle.getText().toString()))
                 Toast.makeText(c, "Please enter job title", Toast.LENGTH_LONG).show();
             else if (TextUtils.isEmpty(jobFamily.getText().toString()))
@@ -70,7 +77,7 @@ public class VacancyServicesImp implements VacancyServices {
                 vacancies.setDescription(description.getText().toString().trim());
                 vacancies.setDeadline(deadline);
                 vacancies.setEmail(email);
-
+                //insert value in to database
                 con.getRef().child("Vacancies").child("VID"+(cu.getNextID())).setValue(vacancies);
 
                 Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
@@ -92,13 +99,17 @@ public class VacancyServicesImp implements VacancyServices {
     public FirebaseRecyclerOptions<Vacancies> txtSearch(String str) {
         int val = 0;
         String val2 = "";
+
+        //check the value is number or string
         try{
             val = Integer.parseInt(str);
             val2 = ""+val;
+            //find values by salary
             FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
                     setQuery(con.getRef().child("Vacancies").orderByChild("salary").startAt(val2).endAt(val2+"~"),Vacancies.class).build();
             return options;
         }catch (Exception e){
+            //find values by job title
             FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
                     setQuery(con.getRef().child("Vacancies").orderByChild("jobTitle").startAt(str).endAt(str+"~"),Vacancies.class).build();
             return options;
@@ -155,9 +166,10 @@ public class VacancyServicesImp implements VacancyServices {
 
     @Override
     public void validateUser(Context c, EditText email, EditText password) {
-
+        //create patter for email
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         try {
+            //check input fields are empty or not
             if (TextUtils.isEmpty(email.getText().toString()))
                 Toast.makeText(c, "Please enter email", Toast.LENGTH_LONG).show();
 
@@ -168,47 +180,46 @@ public class VacancyServicesImp implements VacancyServices {
                 Toast.makeText(c, "Incorrect Email", Toast.LENGTH_LONG).show();
 
             else {
-                 String enteredEmail = email.getText().toString();
-                 String enteredPassword = password.getText().toString();
+                String enteredEmail = email.getText().toString();
+                String enteredPassword = password.getText().toString();
+                //validate user
+                Query checkUser = con.getRef().child("AppUser").orderByChild("email").equalTo(enteredEmail);
+                checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()){
+                            String val = "ok";
+                            for(DataSnapshot temp : snapshot.getChildren()){
+                                val = temp.getKey();
+                            }
 
-                 Query checkUser = con.getRef().child("AppUser").orderByChild("email").equalTo(enteredEmail);
-                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-                     @Override
-                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                          if(snapshot.exists()){
-                              String val = "ok";
-                              for(DataSnapshot temp : snapshot.getChildren()){
-                                  val = temp.getKey();
-                              }
+                            String dbPassword = snapshot.child(val).child("password").getValue(String.class);
+                            //get user values
+                            if(dbPassword.equals(enteredPassword)){
+                                String dbName = snapshot.child(val).child("name").getValue(String.class);
+                                String dbTel = snapshot.child(val).child("tel").getValue(String.class);
+                                String dbEmail = snapshot.child(val).child("email").getValue(String.class);
 
+                                Intent i = new Intent(c,DashBoard.class);
 
-                              String dbPassword = snapshot.child(val).child("password").getValue(String.class);
+                                //i.putExtra("pass",dbPassword);
+                                i.putExtra("name",dbName);
+                                i.putExtra("tel",dbTel);
+                                i.putExtra("email",dbEmail);
 
-                              if(dbPassword.equals(enteredPassword)){
-                                  String dbName = snapshot.child(val).child("name").getValue(String.class);
-                                  String dbTel = snapshot.child(val).child("tel").getValue(String.class);
-                                  String dbEmail = snapshot.child(val).child("email").getValue(String.class);
+                                c.startActivity(i);
+                            }else{
+                                Toast.makeText(c, "The Entered Password is incorrect", Toast.LENGTH_LONG).show();
+                            }
+                        }else{
+                            Toast.makeText(c, "No such user exist", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                                  Intent i = new Intent(c,DashBoard.class);
-
-                                  i.putExtra("pass",dbPassword);
-                                  i.putExtra("name",dbName);
-                                  i.putExtra("tel",dbTel);
-                                  i.putExtra("email",dbEmail);
-
-                                  c.startActivity(i);
-                              }else{
-                                  Toast.makeText(c, "The Entered Password is incorrect", Toast.LENGTH_LONG).show();
-                              }
-                          }else{
-                              Toast.makeText(c, "No such user exist", Toast.LENGTH_LONG).show();
-                          }
-                     }
-                     @Override
-                     public void onCancelled(@NonNull DatabaseError error) {
-
-                     }
-                 });
+                    }
+                });
             }
 
         } catch (Exception e) {
@@ -229,3 +240,4 @@ public class VacancyServicesImp implements VacancyServices {
     }
 
 }
+

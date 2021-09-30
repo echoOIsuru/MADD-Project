@@ -51,7 +51,6 @@ public class IT20224370_AdapterHousehold extends FirebaseRecyclerAdapter<IT20224
             @Override
             public void onClick(View view) {
 
-
                 Intent i = new Intent(view.getContext(), IT20224370_JobRequest.class);
 
                 //i.putExtra("email",);

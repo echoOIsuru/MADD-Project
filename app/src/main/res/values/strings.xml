@@ -27,5 +27,7 @@
 
 
     </string>
+    <string name="tv_Location">Kandy</string>
+    <string name="TV_Description">Description</string>
 
 </resources>

@@ -30,7 +30,7 @@
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="28dp"
                 android:layout_toEndOf="@+id/HJImg01"
-                android:text="Prathiba Wijesuriya"
+                android:text="@string/TV_Name"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -42,7 +42,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="13dp"
                 android:layout_toEndOf="@+id/HJImg01"
-                android:text="Kandy"
+                android:text="@string/tv_Location"
                 android:textSize="16sp" />
 
             <TextView
