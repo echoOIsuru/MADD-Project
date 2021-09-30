@@ -4,7 +4,7 @@ public class IT20224370_RequestModel {
 
     String key, time, mobileNumber, fullName, date, address,selectedJob, userMail, workerMail, status;
 
-    IT20224370_RequestModel(){
+    public IT20224370_RequestModel(){
 
     }
 

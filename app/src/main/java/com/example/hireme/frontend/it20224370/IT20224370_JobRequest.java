@@ -1,12 +1,9 @@
 package com.example.hireme.frontend.it20224370;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -33,6 +30,13 @@ public class IT20224370_JobRequest extends AppCompatActivity {
         setContentView(R.layout.activity_it20224370_job_request);
         getSupportActionBar().hide();
 
+        //get the usermail from the session
+        IT20224370_Session_Management session;//global variable
+        session = new IT20224370_Session_Management(IT20224370_JobRequest.this); //in oncreate
+        //set sharedpreference
+
+        String SessionMail = session.getusename();//assign the usermail to a string varaible which get from the session
+
         fullName = (EditText) findViewById(R.id.editTextTextPersonName);
         mobileNumber = (EditText) findViewById(R.id.editTextphoneNumber);
         date = (EditText) findViewById(R.id.editTextDate);
@@ -53,9 +57,8 @@ public class IT20224370_JobRequest extends AppCompatActivity {
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        insertData();
+                        insertData(SessionMail);
                         clearAll();
-                        Toast.makeText(fullName.getContext(), "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -80,12 +83,12 @@ public class IT20224370_JobRequest extends AppCompatActivity {
 
     //insert data inorder to send a job request
 
-    private void insertData(){
+    private void insertData(String sessionMail){
 
 
         String passedJob = getIntent().getStringExtra("wjob");
-        String passedWorkerMail = getIntent().getStringExtra("wmail");
-        String passedUserMail = getIntent().getStringExtra("email");     //passed data through intents
+        String passedWorkerMail = getIntent().getStringExtra("wmail");//passed data through intents
+
 
         //nested else if to clarify whether user enter inputs to text fields, if not shows a toast
         try {
@@ -112,11 +115,31 @@ public class IT20224370_JobRequest extends AppCompatActivity {
                 map.put("mobileNumber",mobileNumber.getText().toString());
                 map.put("date",date.getText().toString());
                 map.put("status","pending");
-                map.put("userMail","abcz@gmail.com");
+                map.put("userMail",sessionMail);
                 map.put("selectedJob",passedJob);
                 map.put("workerMail",passedWorkerMail);
                 map.put("time",time.getText().toString());
                 map.put("address",address.getText().toString());
+
+
+
+                /* reqModel.setFullName(fullName.getText().toString());
+                reqModel.setMobileNumber(mobileNumber.getText().toString());
+                reqModel.setDate(date.getText().toString());
+                reqModel.setStatus("pending");
+                reqModel.setUserMail("abcz@gmail.com");
+                reqModel.setSelectedJob(passedJob);
+                reqModel.setWorkerMail(passedWorkerMail);
+                reqModel.setTime(time.getText().toString());
+                reqModel.setAddress(address.getText().toString());
+
+                FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").push()
+                        .setValue(reqModel);
+
+                        Toast.makeText(c,"Data Inserted Successfully", Toast.LENGTH_SHORT).show(); */
+
+
+
 
                 FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").push()
                         .setValue(map)
