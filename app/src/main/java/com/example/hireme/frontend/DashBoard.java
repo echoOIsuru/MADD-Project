@@ -62,11 +62,11 @@ public class DashBoard extends AppCompatActivity {
 
         }
 
-//        else if(v == btnhireWorker){
-//            i = new Intent(this, IT20224370_JobCategories.class);
-//            i.putExtra("email",msg);
-//
-//        }
+        else if(v == btnhireWorker){
+            i = new Intent(this, IT20224370_JobCategories.class);
+            i.putExtra("email",msg);
+
+        }
         else if(v == btnworker) {
             i = new Intent(this, IT20245092_workerprofile.class);
             i.putExtra("email",msg);
