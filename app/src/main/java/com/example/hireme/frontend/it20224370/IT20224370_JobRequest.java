@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -67,7 +69,7 @@ public class IT20224370_JobRequest extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         insertData(SessionMail);
-                        clearAll();
+
                     }
                 });
 
@@ -106,22 +108,41 @@ public class IT20224370_JobRequest extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Request Denied!!", Toast.LENGTH_SHORT).show();
         }
         else {
+            String NamePattern = ".{1,50}"; // creating pattern for name
+            String AddressPattern = ".{1,200}"; // creating pattern for address
+            String DatePattern = ("[0-3][0-1]/[0-1][0-9]/[0-2][0][0-2][0-2]");
+            String Time = ("([01]?[0-9]|2[0-3]):[0-5][0-9]");
+
             //nested else if to clarify whether user enter inputs to text fields, if not shows a toast
             try {
                 if (TextUtils.isEmpty(fullName.getText().toString()))
                     Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
 
+                else if (!(fullName.getText().toString()).matches(NamePattern))
+                    Toast.makeText(getApplicationContext(), "The Name You have Entered has Exceeded the Limit", Toast.LENGTH_SHORT).show();
+
                 else if (TextUtils.isEmpty(mobileNumber.getText().toString()))
                     Toast.makeText(getApplicationContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
 
-                else if (TextUtils.isEmpty(date.getText().toString()))
+                else if (TextUtils.isEmpty(date.getText().toString()) )
+
                     Toast.makeText(getApplicationContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();
+
+                else if (!(date.getText().toString()).matches(DatePattern))
+
+                    Toast.makeText(getApplicationContext(), "Entered Data Pattern is incorrect", Toast.LENGTH_SHORT).show();
 
                 else if (TextUtils.isEmpty(time.getText().toString()))
                     Toast.makeText(getApplicationContext(), "Please enter Appointment Time", Toast.LENGTH_SHORT).show();
 
-                else if (TextUtils.isEmpty(address.getText().toString()))
+                else if (!(time.getText().toString()).matches(Time))
+                    Toast.makeText(getApplicationContext(), "You have Entered an Incorrect Type Time", Toast.LENGTH_SHORT).show();
+
+                else if (TextUtils.isEmpty(address.getText().toString()) )
                     Toast.makeText(getApplicationContext(), "Please enter Address", Toast.LENGTH_SHORT).show();
+
+                else if (!(address.getText().toString()).matches(AddressPattern))
+                    Toast.makeText(getApplicationContext(), "The Address You have Entered has Exceeded the Limit", Toast.LENGTH_SHORT).show();
 
                 else {
                     //map with firebase and insert user inputs to firebase object
@@ -164,6 +185,8 @@ public class IT20224370_JobRequest extends AppCompatActivity {
                                 public void onSuccess(Void unused) {
                                     if (!map.isEmpty())
                                         Toast.makeText(IT20224370_JobRequest.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+
+                                    clearAll();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
