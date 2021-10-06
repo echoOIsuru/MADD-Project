@@ -7,8 +7,11 @@
 package com.example.hireme.services.it20133290;
 
 import android.content.Context;
+import android.net.Uri;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.hireme.models.Vacancies;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -22,7 +25,7 @@ public interface VacancyServices {
 
     FirebaseRecyclerOptions<Vacancies> txtSearch(String str);
 
-    void addNewUser(Context c, EditText name, EditText tp, EditText email, EditText password, EditText repassword);
+    void addNewUser(Context c, EditText name, EditText tp, EditText email, EditText password, EditText repassword, Uri mImageUri, ProgressBar pb);
 
     void validateUser(Context c, EditText email, EditText password);
 

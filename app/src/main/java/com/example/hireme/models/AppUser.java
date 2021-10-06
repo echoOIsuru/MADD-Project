@@ -6,15 +6,17 @@ public class AppUser {
     private String email;
     private String tel;
     private String password;
+    private String img;
 
     public AppUser() {
     }
 
-    public AppUser(String name, String email, String tel, String password) {
+    public AppUser(String name, String email, String tel, String password, String img) {
         this.name = name;
         this.email = email;
         this.tel = tel;
         this.password = password;
+        this.img = img;
     }
 
     public String getName() {
@@ -47,5 +49,13 @@ public class AppUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

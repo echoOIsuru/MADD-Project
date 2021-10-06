@@ -37,7 +37,7 @@ public class VacancyAdapter extends FirebaseRecyclerAdapter<Vacancies,VacancyAda
 
     @Override
     protected void onBindViewHolder(@NonNull vacancyViewHolder holder, int position, @NonNull Vacancies model) {
-
+    //set values into recycle view holder
         holder.title.setText(model.getJobTitle());
         holder.description.setText(model.getDescription());
         holder.salary.setText("Rs. "+model.getSalary() + " /m");
