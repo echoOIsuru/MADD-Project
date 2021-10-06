@@ -20,11 +20,18 @@ public class Jobs extends AppCompatActivity {
     RecyclerView recyclerView;
     IT20245092_JobAdapter adapter;
     ImageButton imgbtn1;
+    String email,name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobs);
+
+        Intent i = getIntent();
+        email = i.getStringExtra("email");
+        name = i.getStringExtra("name");
+        System.out.println("hi" + email);
+        System.out.println("haaai" + name);
 
         recyclerView = (RecyclerView) findViewById(R.id.rv);
         //recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -32,12 +39,15 @@ public class Jobs extends AppCompatActivity {
 
         FirebaseRecyclerOptions<JobsModel> options =
                 new FirebaseRecyclerOptions.Builder<JobsModel>()
-                        .setQuery(FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs"), JobsModel.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/")
+                                .getReference().child("Jobs").orderByChild("email").equalTo(email), JobsModel.class)
                         .build();
 
         adapter = new IT20245092_JobAdapter(options);
         recyclerView.setAdapter(adapter);
         imgbtn1 = findViewById(R.id.btnaddnew);
+
+
 
     }
 
@@ -58,6 +68,8 @@ public class Jobs extends AppCompatActivity {
 
         if(v == imgbtn1){
             i = new Intent(this, IT20245092_JobDetails.class);
+            i.putExtra("email",email);
+            i.putExtra("name",name);
         }
 
         startActivity(i);

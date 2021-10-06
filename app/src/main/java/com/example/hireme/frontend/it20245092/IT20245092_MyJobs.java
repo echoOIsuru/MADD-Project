@@ -17,6 +17,7 @@ public class IT20245092_MyJobs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20245092_my_jobs);
+        getSupportActionBar().hide();
 
         imgbtn1 = findViewById(R.id.btnaddnew);
 

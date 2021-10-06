@@ -6,11 +6,17 @@
  */
 package com.example.hireme.services.it20133290;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Handler;
 import android.text.TextUtils;
+import android.webkit.MimeTypeMap;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Keep;
@@ -22,15 +28,23 @@ import com.example.hireme.frontend.DashBoard;
 import com.example.hireme.frontend.it20133290.IT20133290_AddVacancy;
 import com.example.hireme.frontend.it20133290.IT20133290_CustomerMenu;
 import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
+import com.example.hireme.frontend.it20133290.IT201333290_RegisterActivity;
 import com.example.hireme.models.AppUser;
 import com.example.hireme.models.Vacancies;
 import com.example.hireme.util.CommonUtils;
 import com.example.hireme.util.VacancyAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
+import com.google.firebase.storage.UploadTask;
 
 import java.security.Key;
 import java.util.Date;
@@ -46,6 +60,8 @@ public class VacancyServicesImp implements VacancyServices {
     CommonUtils cu = new CommonUtils();
     VacancyAdapter vacancyAdapter;
     RecyclerView rvAll;
+    private StorageTask mUploadTask;
+
 
     @Override
     public void addNewVacancy(Context c, EditText jobTitle, EditText organization, AutoCompleteTextView jobFamily,
@@ -62,11 +78,11 @@ public class VacancyServicesImp implements VacancyServices {
                 Toast.makeText(c, "Please enter job level", Toast.LENGTH_LONG).show();
             else if (TextUtils.isEmpty(organization.getText().toString()))
                 Toast.makeText(c, "Please enter job organization", Toast.LENGTH_LONG).show();
-            else if (TextUtils.isEmpty(salary.getText().toString()) )
+            else if (TextUtils.isEmpty(salary.getText().toString()))
                 Toast.makeText(c, "Please enter job salary", Toast.LENGTH_LONG).show();
             else if (TextUtils.isEmpty(description.getText().toString()))
                 Toast.makeText(c, "Please enter job description", Toast.LENGTH_LONG).show();
-            else if(!(description.getText().toString()).matches(desPattern))
+            else if (!(description.getText().toString()).matches(desPattern))
                 Toast.makeText(c, "job description max limit is 200 letters", Toast.LENGTH_LONG).show();
             else {
                 vacancies.setJobTitle(jobTitle.getText().toString().trim());
@@ -78,17 +94,17 @@ public class VacancyServicesImp implements VacancyServices {
                 vacancies.setDeadline(deadline);
                 vacancies.setEmail(email);
                 //insert value in to database
-                con.getRef().child("Vacancies").child("VID"+(cu.getNextID())).setValue(vacancies);
+                con.getRef().child("Vacancies").child("VID" + (cu.getNextID())).setValue(vacancies);
 
                 Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
 
                 Intent i = new Intent(c, IT20133290_CustomerMenu.class);
-                i.putExtra("email",email);
+                i.putExtra("email", email);
                 c.startActivity(i);
 
                 //clear entered values
                 clearVacancyForm(jobTitle, organization, jobFamily,
-                        jobLevel, description,salary);
+                        jobLevel, description, salary);
             }
         } catch (Exception e) {
             Toast.makeText(c, "Data Inserted Unsuccessful", Toast.LENGTH_LONG).show();
@@ -101,24 +117,24 @@ public class VacancyServicesImp implements VacancyServices {
         String val2 = "";
 
         //check the value is number or string
-        try{
+        try {
             val = Integer.parseInt(str);
-            val2 = ""+val;
+            val2 = "" + val;
             //find values by salary
             FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
-                    setQuery(con.getRef().child("Vacancies").orderByChild("salary").startAt(val2).endAt(val2+"~"),Vacancies.class).build();
+                    setQuery(con.getRef().child("Vacancies").orderByChild("salary").startAt(val2).endAt(val2 + "~"), Vacancies.class).build();
             return options;
-        }catch (Exception e){
+        } catch (Exception e) {
             //find values by job title
             FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
-                    setQuery(con.getRef().child("Vacancies").orderByChild("jobTitle").startAt(str).endAt(str+"~"),Vacancies.class).build();
+                    setQuery(con.getRef().child("Vacancies").orderByChild("jobTitle").startAt(str).endAt(str + "~"), Vacancies.class).build();
             return options;
         }
 
     }
 
     @Override
-    public void addNewUser(Context c, EditText name, EditText tp, EditText email, EditText password, EditText repassword) {
+    public void addNewUser(Context c, EditText name, EditText tp, EditText email, EditText password, EditText repassword, Uri mImageUri, ProgressBar pb) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         try {
             if (TextUtils.isEmpty(name.getText().toString()))
@@ -139,27 +155,28 @@ public class VacancyServicesImp implements VacancyServices {
             else if (!password.getText().toString().equals(repassword.getText().toString()))
                 Toast.makeText(c, "Password Mismatched", Toast.LENGTH_LONG).show();
 
-            else if(!(email.getText().toString()).matches(emailPattern))
+            else if (!(email.getText().toString()).matches(emailPattern))
                 Toast.makeText(c, "Incorrect Email", Toast.LENGTH_LONG).show();
             else {
+
                 String key = email.getText().toString().trim();
                 appUser.setName(name.getText().toString().trim());
                 appUser.setTel(tp.getText().toString().trim());
                 appUser.setEmail(email.getText().toString().trim());
                 appUser.setPassword(password.getText().toString().trim());
 
-                con.getRef().child("AppUser").child("CUID"+(cu.getCusID())).setValue(appUser);
+                if (mUploadTask != null && mUploadTask.isInProgress()) {
+                    Toast.makeText(c, "Progressing...", Toast.LENGTH_SHORT);
+                } else {
+                    uploadFile(mImageUri, pb, c, appUser);
+                }
 
-                Toast.makeText(c, "Account created Successfully, Now you can log in", Toast.LENGTH_LONG).show();
 
-                Intent i = new Intent(c, IT20133290_LoginActivity.class);
-                c.startActivity(i);
             }
 
         } catch (Exception e) {
 
         }
-
 
 
     }
@@ -176,7 +193,7 @@ public class VacancyServicesImp implements VacancyServices {
             else if (TextUtils.isEmpty(password.getText().toString()))
                 Toast.makeText(c, "Please enter password", Toast.LENGTH_LONG).show();
 
-            else if(!(email.getText().toString()).matches(emailPattern))
+            else if (!(email.getText().toString()).matches(emailPattern))
                 Toast.makeText(c, "Incorrect Email", Toast.LENGTH_LONG).show();
 
             else {
@@ -187,34 +204,37 @@ public class VacancyServicesImp implements VacancyServices {
                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.exists()){
+                        if (snapshot.exists()) {
                             String val = "ok";
-                            for(DataSnapshot temp : snapshot.getChildren()){
+                            for (DataSnapshot temp : snapshot.getChildren()) {
                                 val = temp.getKey();
                             }
 
                             String dbPassword = snapshot.child(val).child("password").getValue(String.class);
                             //get user values
-                            if(dbPassword.equals(enteredPassword)){
+                            if (dbPassword.equals(enteredPassword)) {
                                 String dbName = snapshot.child(val).child("name").getValue(String.class);
                                 String dbTel = snapshot.child(val).child("tel").getValue(String.class);
                                 String dbEmail = snapshot.child(val).child("email").getValue(String.class);
+                                String img =snapshot.child(val).child("img").getValue(String.class);
 
-                                Intent i = new Intent(c,DashBoard.class);
+                                Intent i = new Intent(c, DashBoard.class);
 
                                 //i.putExtra("pass",dbPassword);
-                                i.putExtra("name",dbName);
-                                i.putExtra("tel",dbTel);
-                                i.putExtra("email",dbEmail);
+                                i.putExtra("name", dbName);
+                                i.putExtra("tel", dbTel);
+                                i.putExtra("email", dbEmail);
+                                i.putExtra("img",img);
 
                                 c.startActivity(i);
-                            }else{
+                            } else {
                                 Toast.makeText(c, "The Entered Password is incorrect", Toast.LENGTH_LONG).show();
                             }
-                        }else{
+                        } else {
                             Toast.makeText(c, "No such user exist", Toast.LENGTH_LONG).show();
                         }
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
@@ -228,9 +248,9 @@ public class VacancyServicesImp implements VacancyServices {
 
     }
 
+
     public void clearVacancyForm(EditText jobTitle, EditText organization, EditText jobFamily,
                                  EditText jobLevel, EditText description, EditText salary) {
-
         jobTitle.setText("");
         organization.setText("");
         jobFamily.setText("");
@@ -239,5 +259,63 @@ public class VacancyServicesImp implements VacancyServices {
         salary.setText("");
     }
 
-}
 
+    private String getFileExtension(Uri uri, Context c) {
+        ContentResolver cR = c.getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
+
+    public void uploadFile(Uri mImageUri, ProgressBar pb, Context c, AppUser appUser) {
+        StorageReference mStorageRef = FirebaseStorage.getInstance("gs://hireme-2e86a.appspot.com/").getReference("uploads");
+
+        if (mImageUri != null) {
+
+            StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri, c));
+
+            mUploadTask = fileReference.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pb.setProgress(0);
+                        }
+                    }, 500);
+
+                    fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            Uri downloadUrl = uri;
+                            //Do what you want with the url
+
+                            appUser.setImg(downloadUrl.toString());
+                            con.getRef().child("AppUser").child("CUID" + (cu.getCusID())).setValue(appUser);
+
+
+                            Toast.makeText(c, "Account created Successfully, Now you can log in", Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(c, IT20133290_LoginActivity.class);
+                            c.startActivity(i);
+                        }
+
+                    });
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(c, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                    double progress = (100.0 * snapshot.getBytesTransferred() / snapshot.getTotalByteCount());
+                    pb.setProgress((int) progress);
+                }
+            });
+        } else {
+            Toast.makeText(c, "No file selected", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
