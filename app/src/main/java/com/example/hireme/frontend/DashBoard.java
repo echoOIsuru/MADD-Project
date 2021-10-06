@@ -22,7 +22,7 @@ import com.example.hireme.frontend.it20224370.IT20224370_Session_Management;
 public class DashBoard extends AppCompatActivity {
 
     Button btnVacancy, btnhireWorker,btnworker,btnFeedbackID;
-    String msg;
+    String msg, img;
 
 
     @Override
@@ -38,6 +38,7 @@ public class DashBoard extends AppCompatActivity {
 
         Intent i = getIntent();
         msg = i.getStringExtra("email");
+        img = i.getStringExtra("img");
 
         System.out.println(msg);
 
@@ -71,7 +72,8 @@ public class DashBoard extends AppCompatActivity {
             i = new Intent(this, IT20245092_workerprofile.class);
             i.putExtra("email",msg);
             i.putExtra("name",msg);
-            i.putExtra("tel",msg);
+            i.putExtra("img",img);
+
         }else if(v == btnFeedbackID){
             i = new Intent(this, IT20231682_feedback_view.class);
             i.putExtra("email",msg);

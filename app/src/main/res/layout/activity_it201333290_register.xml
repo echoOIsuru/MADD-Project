@@ -146,7 +146,9 @@
            <ImageView
                android:id="@+id/ivUploadProfImg"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content" />
+               android:layout_height="wrap_content"
+               android:maxHeight="200dp"
+               android:minHeight="200dp"/>
 
            <ProgressBar
                android:id="@+id/pbUploadImage"
