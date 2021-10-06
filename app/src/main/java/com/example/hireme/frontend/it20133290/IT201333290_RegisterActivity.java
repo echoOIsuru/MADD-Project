@@ -78,10 +78,6 @@ public class IT201333290_RegisterActivity extends AppCompatActivity {
              //   uploadFile();
                 vacSer.addNewUser(IT201333290_RegisterActivity.this,name,tp,email,pass,repass,mImageUri,pb);
 
-//
-//                Intent intent = new Intent(IT201333290_RegisterActivity.this, IT20133290_LoginActivity.class);
-//
-//                startActivity(intent);
             }
         });
 
@@ -109,47 +105,5 @@ public class IT201333290_RegisterActivity extends AppCompatActivity {
     }
 
 
-
-//    private String getFileExtension(Uri uri){
-//        ContentResolver cR = getContentResolver();
-//        MimeTypeMap mime = MimeTypeMap.getSingleton();
-//        return mime.getExtensionFromMimeType(cR.getType(uri));
-//    }
-
-//    private void uploadFile(Uri mImageUri){
-//        if(mImageUri != null){
-//            StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri));
-//
-//            fileReference.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                    Handler handler = new Handler();
-//                    handler.postDelayed(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            pb.setProgress(0);
-//                        }
-//                    },500);
-//                    Toast.makeText(IT201333290_RegisterActivity.this,"Upload successful", Toast.LENGTH_SHORT).show();
-//                    imageName = taskSnapshot.getUploadSessionUri().toString();
-//
-//
-//                }
-//            }).addOnFailureListener(new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception e) {
-//                    Toast.makeText(IT201333290_RegisterActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-//                }
-//            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-//                    double progress = (100.0 * snapshot.getBytesTransferred()/ snapshot.getTotalByteCount());
-//                    pb.setProgress((int) progress);
-//                }
-//            });
-//        }else{
-//            Toast.makeText(this, "No file selected", Toast.LENGTH_SHORT).show();
-//        }
-//    }
 
 }

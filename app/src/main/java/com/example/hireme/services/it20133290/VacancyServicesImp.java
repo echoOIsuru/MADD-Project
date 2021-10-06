@@ -216,6 +216,7 @@ public class VacancyServicesImp implements VacancyServices {
                                 String dbName = snapshot.child(val).child("name").getValue(String.class);
                                 String dbTel = snapshot.child(val).child("tel").getValue(String.class);
                                 String dbEmail = snapshot.child(val).child("email").getValue(String.class);
+                                String img =snapshot.child(val).child("img").getValue(String.class);
 
                                 Intent i = new Intent(c, DashBoard.class);
 
@@ -223,6 +224,7 @@ public class VacancyServicesImp implements VacancyServices {
                                 i.putExtra("name", dbName);
                                 i.putExtra("tel", dbTel);
                                 i.putExtra("email", dbEmail);
+                                i.putExtra("img",img);
 
                                 c.startActivity(i);
                             } else {
@@ -267,9 +269,8 @@ public class VacancyServicesImp implements VacancyServices {
     public void uploadFile(Uri mImageUri, ProgressBar pb, Context c, AppUser appUser) {
         StorageReference mStorageRef = FirebaseStorage.getInstance("gs://hireme-2e86a.appspot.com/").getReference("uploads");
 
-
         if (mImageUri != null) {
-            System.out.println(mImageUri + "     asdasdasdassssssssssssssss");
+
             StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri, c));
 
             mUploadTask = fileReference.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -299,11 +300,6 @@ public class VacancyServicesImp implements VacancyServices {
                         }
 
                     });
-
-                            //Toast.makeText(c,"Upload successful", Toast.LENGTH_SHORT).show();
-
-
-
 
                 }
             }).addOnFailureListener(new OnFailureListener() {
