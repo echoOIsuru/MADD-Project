@@ -73,6 +73,8 @@ public class IT20224370_Workerprofile extends AppCompatActivity {
 
                 i.putExtra("wjob",Details6);
                 i.putExtra("wmail",Details3);
+                i.putExtra("wname",Details);
+                i.putExtra("workerpic",Details5);
 
                 view.getContext().startActivity(i);
 
