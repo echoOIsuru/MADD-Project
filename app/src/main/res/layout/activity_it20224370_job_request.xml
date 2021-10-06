@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:background="#DCF3F8"
         android:backgroundTint="@color/backgroundcolor"
-        android:orientation="vertical"
-        tools:context=".IT20224370_JobRequest">
+        android:orientation="vertical">
+<!--        tools:context=".IT20224370_JobRequest">-->
 
     <!--Top Navbar-->
     <LinearLayout
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="Full Name"
+                android:text="@string/Tv_FullName"
                 android:textSize="18sp" />
 
 
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:text="Mobile Number"
+                android:text="@string/Tv_Mobilenumber"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.148"
@@ -140,7 +140,7 @@
                 android:layout_width="57dp"
                 android:layout_height="28dp"
                 android:layout_marginTop="22dp"
-                android:text="Date"
+                android:text="@string/tv_Date"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.121"
@@ -170,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="Address"
+                android:text="@string/tv_address"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/editTextTextPostalAddress"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="Time"
+                android:text="@string/tv_time"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/editTextTime3"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -204,9 +204,9 @@
                 android:id="@+id/editTextTime3"
                 android:layout_width="308dp"
                 android:layout_height="43dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginBottom="20dp"
                 android:ems="10"
-                android:hint="08.30 AM"
+                android:hint="@string/Time"
                 android:inputType="time"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -214,19 +214,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextTime3"
+            android:orientation="horizontal">
+
+
+        <Button
                 android:id="@+id/btnsendrequest"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="150dp"
-                android:layout_marginBottom="24dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="133dp"
+                android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/btn_color"
+                android:gravity="center"
                 android:text="@string/btnSendRequest"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.448"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/it20224370_rounded_btn"/>
 
+        </LinearLayout>
 
         </LinearLayout>
 

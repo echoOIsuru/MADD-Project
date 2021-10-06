@@ -72,6 +72,7 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="377dp"
                 android:layout_height="444dp"
+
                 android:layout_marginTop="2dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="30dp"
@@ -86,7 +87,7 @@
                     android:id="@+id/editTextTextPersonName3"
                     android:layout_width="309dp"
                     android:layout_height="39dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="12dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="textPersonName"
@@ -104,10 +105,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Full Name"
+                    android:text="@string/Tv_FullName"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.118"
+                    app:layout_constraintHorizontal_bias="0.108"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -117,38 +118,37 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="112dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Description"
+                    android:text="@string/TV_Description"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.121"
+                    app:layout_constraintHorizontal_bias="0.111"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textView36"
                     android:layout_width="50dp"
                     android:layout_height="21dp"
-                    android:layout_marginTop="23dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto"
                     android:text="@string/TV_email"
                     android:textSize="18sp"
 
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.107"
+                    app:layout_constraintHorizontal_bias="0.097"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextPhone3"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextPhone3" />
 
                 <TextView
                     android:id="@+id/textView34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto"
                     android:text="@string/TV_Number"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.142"
+                    app:layout_constraintHorizontal_bias="0.13"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
@@ -156,12 +156,12 @@
                     android:id="@+id/editTextemail"
                     android:layout_width="307dp"
                     android:layout_height="42dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:textSize="18sp"
-                    android:hint="amalaperera@gmail.com"
+                    android:hint="@string/TV_Email"
                     android:inputType="phone"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.457"
                     app:layout_constraintStart_toStartOf="parent"
@@ -175,7 +175,7 @@
                     android:layout_marginTop="12dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="0778976651"
+                    android:hint="@string/MobileNum_TV"
                     android:inputType="phone"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -188,18 +188,19 @@
                     android:id="@+id/editTextTextDes"
                     android:layout_width="318dp"
                     android:layout_height="68dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginBottom="32dp"
                     android:ems="10"
                     android:gravity="start|top"
-                    android:textSize="18sp"
                     android:hint="@string/ET_Description"
                     android:inputType="textMultiLine"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.542"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView37"
-                    app:layout_constraintVertical_bias="0.812" />
+                    app:layout_constraintVertical_bias="0.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -208,13 +209,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5">
 
+
                 <Button
                     android:id="@+id/workerbtn"
                     android:layout_width="150dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="130dp"
                     android:layout_marginBottom="20dp"
+                    android:background="@drawable/it20224370_rounded_btn"
                     android:backgroundTint="@color/btn_color"
                     android:text="@string/btnrequest">
 

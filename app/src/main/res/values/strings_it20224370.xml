@@ -53,5 +53,9 @@
     <string name="Tv_Job">Requested Job</string>
     <string name="Tv_Jobsample">Driver</string>
     <string name="BtnText">My Requests</string>
+    <string name="Status_TV">Status</string>
+    <string name="TV_Name">Roshan Wanigaseka</string>
+    <string name="MobileNum_TV">0757788912</string>
+    <string name="TV_Email">amalperera@gmail.com</string>
 
 </resources>

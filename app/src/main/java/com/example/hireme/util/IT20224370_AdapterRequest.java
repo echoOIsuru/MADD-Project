@@ -45,6 +45,9 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder,final int position, @NonNull IT20224370_RequestModel model) {
+
+        //get values from the model and assign them to text fields
+
         holder.fullname.setText(model.getFullName());
         holder.mobileNumber.setText(model.getMobileNumber());
         holder.SelectedJob.setText(model.getSelectedJob());
@@ -52,92 +55,108 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
         holder.date.setText(model.getDate());
         holder.time.setText(model.getTime());
 
+
+        //Update button onclick function
+
         holder.UpdateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final DialogPlus dialogPlus= DialogPlus.newDialog(holder.fullname.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.it20224370_update_popup))
-                        .setExpanded(true,1250)
-                        .create();
 
-                //dialogPlus.show();
+                String status = model.getStatus();
+                if (status.equals("accepted")  || status.equals("rejected")) {
+                    Toast.makeText(holder.fullname.getContext(), "Accepted or Rejected Requests Cannot be Updated", Toast.LENGTH_SHORT).show();
+                } else {
 
-                View view = dialogPlus.getHolderView();
-                EditText name = view.findViewById(R.id.UpdateName);
-                EditText mobile = view.findViewById(R.id.UpdateMobile);
-                EditText address = view.findViewById(R.id.UpdateAddress);
-                EditText date = view.findViewById(R.id.UpdateDate);
-                EditText time = view.findViewById(R.id.UpdateTime);
+                    final DialogPlus dialogPlus = DialogPlus.newDialog(holder.fullname.getContext())      //Dialog box
+                            .setContentHolder(new ViewHolder(R.layout.it20224370_update_popup))
+                            .setExpanded(true, 1770)
+                            .create();
 
-                Button btnUpdate = view.findViewById(R.id.reqUpButton);
+                    //dialogPlus.show();
 
-                name.setText(model.getFullName());
-                mobile.setText(model.getMobileNumber());
-                address.setText(model.getAddress());
-                date.setText(model.getDate());
-                time.setText(model.getTime());
+                    View view = dialogPlus.getHolderView();
+                    EditText name = view.findViewById(R.id.UpdateName);
+                    EditText mobile = view.findViewById(R.id.UpdateMobile);
+                    EditText address = view.findViewById(R.id.UpdateAddress);
+                    EditText date = view.findViewById(R.id.UpdateDate);
+                    EditText time = view.findViewById(R.id.UpdateTime);
 
-                dialogPlus.show();
+                    Button btnUpdate = view.findViewById(R.id.reqUpButton);         //Reference to update button in request_item.xml
 
-                btnUpdate.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                       Map<String,Object> map = new HashMap<>();
-                        map.put("fullName",name.getText().toString());
-                        map.put("mobileNumber",mobile.getText().toString());
-                        map.put("date",date.getText().toString());
-                        map.put("time",time.getText().toString());
-                        map.put("address",address.getText().toString());
+                    name.setText(model.getFullName());                              //Get data from models and set them to text fields
+                    mobile.setText(model.getMobileNumber());
+                    address.setText(model.getAddress());
+                    date.setText(model.getDate());
+                    time.setText(model.getTime());
 
-                        FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests")
-                                .child(getRef(position).getKey()).updateChildren(map)
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.fullname.getContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
-                                        dialogPlus.dismiss();
-                                    }
-                                })
-                                .addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(Exception e) {
-                                        Toast.makeText(holder.fullname.getContext(), "Error Occurred While Updating", Toast.LENGTH_SHORT).show();
-                                        dialogPlus.dismiss();
-                                    }
-                                });
-                    }
-                });
+                    dialogPlus.show();                                             //display the dialog box
 
+                    btnUpdate.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Map<String, Object> map = new HashMap<>();              //Map Values to the firebase object
+                            map.put("fullName", name.getText().toString());
+                            map.put("mobileNumber", mobile.getText().toString());
+                            map.put("date", date.getText().toString());
+                            map.put("time", time.getText().toString());
+                            map.put("address", address.getText().toString());
 
+                            FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests")
+                                    .child(getRef(position).getKey()).updateChildren(map)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Toast.makeText(holder.fullname.getContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();       //Toast Message
+                                            dialogPlus.dismiss();
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(Exception e) {
+                                            Toast.makeText(holder.fullname.getContext(), "Error Occurred While Updating", Toast.LENGTH_SHORT).show();    //Toast Message
+                                            dialogPlus.dismiss();
+                                        }
+                                    });
+                        }
+                    });
 
+                }
             }
+
         });
 
+        //Delete button onclick fuction
 
         holder.DeleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(holder.fullname.getContext());
-                builder.setTitle("Are you Sure?");
-                builder.setMessage("After delete the data it cannot be undo");
 
-                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests")
-                                .child(getRef(position).getKey()).removeValue();
-                        Toast.makeText(holder.fullname.getContext(), "Deleted Successfully", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                String status = model.getStatus();
+                if (status.equals("rejected")) {
+                    Toast.makeText(holder.fullname.getContext(), "Rejected Requests Cannot be Deleted", Toast.LENGTH_SHORT).show();
+                } else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(holder.fullname.getContext());            //Dialog box
+                    builder.setTitle("Are you Sure?");
+                    builder.setMessage("After delete the data it cannot be undo");
 
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(holder.fullname.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                builder.show();
-                //view.getContext().startActivity(new Intent(view.getContext(), IT20224370_Workerprofile.class));
+                    builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {                //if user select delete option
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests")
+                                    .child(getRef(position).getKey()).removeValue();
+                            Toast.makeText(holder.fullname.getContext(), "Deleted Successfully", Toast.LENGTH_SHORT).show();  //Toast Message
+                        }
+                    });
+
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {                //if user selects cancel option
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(holder.fullname.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();  //Toast Message
+                        }
+                    });
+                    builder.show();
+                    //view.getContext().startActivity(new Intent(view.getContext(), IT20224370_Workerprofile.class));
+                }
             }
         });
 

@@ -32,6 +32,9 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         setContentView(R.layout.activity_it20224370_householdjobs);
         getSupportActionBar().hide();
 
+        Intent i = getIntent();
+        String msg =i.getStringExtra("email");
+
         recyclerView=(RecyclerView) findViewById(R.id.HouseholdRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -44,15 +47,17 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         householdAdapter = new IT20224370_AdapterHousehold(options);
         recyclerView.setAdapter(householdAdapter);
 
+        //save reference of the layout file search view component to a Searchview object
         SearchView searchView = (SearchView) findViewById(R.id.HouseholdSearch);
 
+           //Search bar On text submit
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 textSearch(query);
                 return false;
             }
-
+            //Search bar On text Change
             @Override
             public boolean onQueryTextChange(String query) {
                 textSearch(query);
@@ -68,6 +73,7 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent launchactivity= new Intent(IT20224370_Householdjobs.this,IT20224370_MyRequests.class);
+                launchactivity.putExtra("email",msg);
                 startActivity(launchactivity);
 
             }
@@ -98,6 +104,7 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         householdAdapter.stopListening();
     }
 
+    //Data filter by the workers location
     private void textSearch(String str){
 
         FirebaseRecyclerOptions<IT20224370_HouseHoldModel> options =

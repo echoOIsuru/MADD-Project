@@ -22,6 +22,7 @@ public class IT20133290_PublishedVacancy extends AppCompatActivity {
     String msg;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

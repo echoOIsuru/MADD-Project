@@ -55,6 +55,8 @@ public class IT20224370_AdapterIndustrial  extends FirebaseRecyclerAdapter<IT202
 
                 i.putExtra("wjob",model.getJob());
                 i.putExtra("wmail",model.getEmail());
+                i.putExtra("wname",model.getName());
+                i.putExtra("workerpic",model.getHurl());
 
                 view.getContext().startActivity(i);
 

@@ -2,16 +2,20 @@
     <string name="app_name">HireMe</string>
     <string name="brandName">HireMe</string>
     <string name="tagLine">Hire Worker or Get Job</string>
-    <string name="title_activity_main_menu">MainMenu</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_it20133290_sent_vacancy">IT20133290_SentVacancy</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="title_activity_it20133290_sent_vacancy">IT20133290_SentVacancy</string>
+    <!-- Strings used for fragments for navigation -->
+
     <string name="title_activity_bottom_nav_bar">BottomNavBar</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -35,5 +39,20 @@
 
 
     </string>
+    <string name="tv_Location">Kandy</string>
+    <string name="TV_Description">Description</string>
+
+
+<!--    <string name="feedViewName5">Emily Smith</string>-->
+<!--    <string name="feedViewDate5">05 Apr 2021</string>-->
+<!--    <string name="feedViewCom5">Excellent</string>-->
+<!--    <string name="feedViewYou">You</string>-->
+<!--    <string name="feedConfirmBt1">Confirm</string>-->
+
+
+    <string name="feedConfirmMsg">Are you sure want to delete this?</string>
+    <string name="invalid_name">Please enter valid name</string>
+    <string name="invalid_email">Please enter valid email address</string>
+    <string name="invalide_review">Please give some feedback text</string>
 
 </resources>
