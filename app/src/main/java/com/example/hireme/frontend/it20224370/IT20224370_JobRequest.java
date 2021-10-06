@@ -44,11 +44,20 @@ public class IT20224370_JobRequest extends AppCompatActivity {
         address = (EditText) findViewById(R.id.et_Address);
         btn1 = (Button)findViewById(R.id.btnsendrequest);
 
+        //get worker mail from a intent
+        String passedWorkerMail = getIntent().getStringExtra("wmail");
+
+        //if worker-mail equlas to usermail that user cannot send request
+        if(SessionMail.equals(passedWorkerMail)){
+            btn1.setEnabled(false);
+        }
+
 
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(fullName.getContext());
                 builder.setTitle("Are you Sure?");
@@ -88,38 +97,47 @@ public class IT20224370_JobRequest extends AppCompatActivity {
 
         String passedJob = getIntent().getStringExtra("wjob");
         String passedWorkerMail = getIntent().getStringExtra("wmail");//passed data through intents
+        String passedWorkerName = getIntent().getStringExtra("wname");
+        String passedWorkerPhoto = getIntent().getStringExtra("workerpic");
 
 
-        //nested else if to clarify whether user enter inputs to text fields, if not shows a toast
-        try {
-            if (TextUtils.isEmpty(fullName.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
 
-            else if (TextUtils.isEmpty(mobileNumber.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
+        if(sessionMail.equals(passedWorkerMail)){
+            Toast.makeText(getApplicationContext(), "Request Denied!!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            //nested else if to clarify whether user enter inputs to text fields, if not shows a toast
+            try {
+                if (TextUtils.isEmpty(fullName.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
 
-            else if (TextUtils.isEmpty(date.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();
+                else if (TextUtils.isEmpty(mobileNumber.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
 
-            else if (TextUtils.isEmpty(time.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter Appointment Time", Toast.LENGTH_SHORT).show();
+                else if (TextUtils.isEmpty(date.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();
 
-            else if(TextUtils.isEmpty(address.getText().toString()))
-                Toast.makeText(getApplicationContext(), "Please enter Address", Toast.LENGTH_SHORT).show();
+                else if (TextUtils.isEmpty(time.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Please enter Appointment Time", Toast.LENGTH_SHORT).show();
 
-            else {
-        //map with firebase and insert user inputs to firebase object
-                Map<String,Object> map = new HashMap<>();
-                //map.put("workerID",wid);
-                map.put("fullName",fullName.getText().toString());
-                map.put("mobileNumber",mobileNumber.getText().toString());
-                map.put("date",date.getText().toString());
-                map.put("status","pending");
-                map.put("userMail",sessionMail);
-                map.put("selectedJob",passedJob);
-                map.put("workerMail",passedWorkerMail);
-                map.put("time",time.getText().toString());
-                map.put("address",address.getText().toString());
+                else if (TextUtils.isEmpty(address.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Please enter Address", Toast.LENGTH_SHORT).show();
+
+                else {
+                    //map with firebase and insert user inputs to firebase object
+                    Map<String, Object> map = new HashMap<>();
+                    //map.put("workerID",wid);
+                    map.put("fullName", fullName.getText().toString());
+                    map.put("mobileNumber", mobileNumber.getText().toString());
+                    map.put("date", date.getText().toString());
+                    map.put("status", "pending");
+                    map.put("userMail", sessionMail);
+                    map.put("selectedJob", passedJob);
+                    map.put("workerMail", passedWorkerMail);
+                    map.put("time", time.getText().toString());
+                    map.put("address", address.getText().toString());
+                    map.put("workerPhoto", passedWorkerPhoto);
+                    map.put("workerName", passedWorkerName);
 
 
 
@@ -139,30 +157,29 @@ public class IT20224370_JobRequest extends AppCompatActivity {
                         Toast.makeText(c,"Data Inserted Successfully", Toast.LENGTH_SHORT).show(); */
 
 
+                    FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").push()
+                            .setValue(map)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    if (!map.isEmpty())
+                                        Toast.makeText(IT20224370_JobRequest.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(Exception e) {
 
+                                    Toast.makeText(IT20224370_JobRequest.this, "Data Insertion is Unsuccessful", Toast.LENGTH_SHORT).show();
 
-                FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").push()
-                        .setValue(map)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                if(!map.isEmpty())
-                                Toast.makeText(IT20224370_JobRequest.this,"Data Inserted Successfully", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(Exception e) {
-
-                                Toast.makeText(IT20224370_JobRequest.this,"Data Insertion is Unsuccessful", Toast.LENGTH_SHORT).show();
-
-                            }
-                        });
-            }
+                                }
+                            });
+                }
 
             } catch (Exception e) {
 
             }
+        }
 
     }
 

@@ -33,8 +33,7 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Intent i = getIntent();
-        String msg = "abc@gmail.com";
-                //i.getStringExtra("email");
+        String msg =i.getStringExtra("email");
 
         recyclerView=(RecyclerView) findViewById(R.id.HouseholdRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

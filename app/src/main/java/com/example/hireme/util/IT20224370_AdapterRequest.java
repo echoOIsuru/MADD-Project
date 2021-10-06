@@ -69,7 +69,7 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
 
                     final DialogPlus dialogPlus = DialogPlus.newDialog(holder.fullname.getContext())      //Dialog box
                             .setContentHolder(new ViewHolder(R.layout.it20224370_update_popup))
-                            .setExpanded(true, 1250)
+                            .setExpanded(true, 1770)
                             .create();
 
                     //dialogPlus.show();
@@ -133,7 +133,7 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
 
                 String status = model.getStatus();
                 if (status.equals("rejected")) {
-                    Toast.makeText(holder.fullname.getContext(), "Accepted Requests Cannot be Deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(holder.fullname.getContext(), "Rejected Requests Cannot be Deleted", Toast.LENGTH_SHORT).show();
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(holder.fullname.getContext());            //Dialog box
                     builder.setTitle("Are you Sure?");

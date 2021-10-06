@@ -56,6 +56,8 @@ public class IT20224370_AdapterHousehold extends FirebaseRecyclerAdapter<IT20224
                 //i.putExtra("email",);
                 i.putExtra("wjob",model.getJob());
                 i.putExtra("wmail",model.getEmail());
+                i.putExtra("wname",model.getName());
+                i.putExtra("workerpic",model.getHurl());
 
                 view.getContext().startActivity(i);
 
@@ -89,7 +91,7 @@ public class IT20224370_AdapterHousehold extends FirebaseRecyclerAdapter<IT20224
         //                email.setText(model.getEmail());
         //                des.setText(model.getDescription());
 
-            Intent i = new Intent(view.getContext(), IT20224370_Workerprofile.class);
+                Intent i = new Intent(view.getContext(), IT20224370_Workerprofile.class);
 
                 i.putExtra("wname",model.getName());
                 i.putExtra("wnumber",model.getContact_Number());
