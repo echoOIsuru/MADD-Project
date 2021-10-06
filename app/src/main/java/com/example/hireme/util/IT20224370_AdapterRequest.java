@@ -111,6 +111,10 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
                                 else if (TextUtils.isEmpty(mobile.getText().toString()))
                                     Toast.makeText(holder.fullname.getContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
 
+                                else if (mobile.length() != 10 )
+
+                                    mobile.setError("Mobile Number should have 10 digits");
+
                                 else if (TextUtils.isEmpty(date.getText().toString()) )
 
                                     Toast.makeText(holder.fullname.getContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();

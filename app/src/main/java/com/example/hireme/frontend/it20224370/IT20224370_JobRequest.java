@@ -124,6 +124,10 @@ public class IT20224370_JobRequest extends AppCompatActivity {
                 else if (TextUtils.isEmpty(mobileNumber.getText().toString()))
                     Toast.makeText(getApplicationContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
 
+                else if (mobileNumber.length() != 10 )
+
+                    mobileNumber.setError("Mobile Number should have 10 digits");
+
                 else if (TextUtils.isEmpty(date.getText().toString()) )
 
                     Toast.makeText(getApplicationContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();
