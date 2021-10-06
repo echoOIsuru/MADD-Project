@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
-
+        <activity
+            android:name=".frontend.it20245092.IT20245092_MyReviews"
+            android:exported="true" />
         <activity
             android:name=".frontend.it20245092.IT20245092_Jobs"
             android:exported="true" />
@@ -19,14 +21,7 @@
             android:name=".frontend.it20245092.Jobs"
             android:exported="true" />
         <activity
-            android:name=".frontend.it20245092.IT20245092_DeleteConfimation"
-            android:exported="true"
-            android:theme="@style/Theme.HireMe.popMe" />
-        <activity
             android:name=".frontend.it20245092.IT20245092_WorkHistory"
-            android:exported="true" />
-        <activity
-            android:name=".frontend.it20245092.IT20245092_Requests"
             android:exported="true" />
         <activity
             android:name=".frontend.it20245092.IT20245092_JobDetails"
@@ -35,19 +30,21 @@
             android:name=".frontend.it20245092.IT20245092_MyJobs"
             android:exported="true" />
         <activity
-            android:name=".frontend.it20224370.IT20224370_Workerprofile" android:parentActivityName=".IT20224370_Workerprofile"
-            android:exported="true" />
+            android:name=".frontend.it20224370.IT20224370_Workerprofile"
+            android:exported="true"/>
+<!--            android:parentActivityName=".IT20224370_Workerprofile" -->
+            />
         <activity
-            android:name=".frontend.it20224370.IT20224370_IndustrialJobs" android:parentActivityName=".IT20224370_JobCategories"
-            android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".frontend.it20224370.IT20224370_EditProfile"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".frontend.it20224370.It20224370_UpdateRequests" android:parentActivityName=".IT20224370_MyRequests"-->
-<!--            android:exported="true" />-->
+            android:name=".frontend.it20224370.IT20224370_IndustrialJobs"
+            android:exported="true"/>
+<!--            android:parentActivityName=".IT20224370_JobCategories" -->
+            /> <!-- <activity -->
+
         <activity
             android:name=".frontend.it20224370.IT20224370_MyRequests"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20245092.IT20245092_MyRequests"
             android:exported="true" />
         <activity
             android:name=".frontend.it20224370.IT20224370_JobRequest"
@@ -58,7 +55,6 @@
         <activity
             android:name=".frontend.it20224370.IT20224370_JobCategories"
             android:exported="true" />
-
         <activity
             android:name=".frontend.it20133290.IT20133290_LoginActivity"
             android:exported="true" />
@@ -89,19 +85,19 @@
             android:exported="true" />
         <activity
             android:name=".frontend.it20133290.IT20133290_PublishedVacancy"
-            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu" />
         <activity
             android:name=".frontend.it20133290.IT20133290_AddVacancy"
-            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".frontend.it20133290.IT20133290_CustomerMenu" />
         <activity
             android:name=".frontend.it20133290.IT20133290_JobMenu"
             android:exported="true" />
         <activity
             android:name=".frontend.it20133290.IT20133290_VacancyMenu"
-            android:parentActivityName=".frontend.DashBoard"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".frontend.DashBoard" />
         <activity
             android:name=".frontend.MainMenu"
             android:exported="true"

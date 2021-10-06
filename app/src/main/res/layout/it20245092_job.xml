@@ -49,8 +49,7 @@
                         android:layout_height="80dp"
                         android:layout_centerVertical="true"
                         android:src="@android:drawable/arrow_up_float"
-                        app:civ_border_color="#000000"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -87,13 +86,20 @@
                                 android:id="@+id/editJob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Edit"/>
+                                android:backgroundTint="@color/backgroundcolor"
+                                android:text="Edit"
+
+                                android:textColor="#000000"
+                                app:cornerRadius="15dp" />
 
                             <Button
                                 android:id="@+id/deleteJob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Delete"/>
+                                android:backgroundTint="@color/backgroundcolor"
+                                android:text="Delete"
+                                android:textColor="#000000"
+                                app:cornerRadius="15dp" />
 
                         </LinearLayout>
                     </RelativeLayout>

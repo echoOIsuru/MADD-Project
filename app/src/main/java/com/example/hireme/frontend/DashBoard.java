@@ -19,7 +19,7 @@ import com.example.hireme.services.it20133290.VacancyServicesImp;
 public class DashBoard extends AppCompatActivity {
 
     Button btnVacancy, btnhireWorker,btnworker;
-    String msg;
+    String msg,name;
 
 
     @Override
@@ -34,10 +34,8 @@ public class DashBoard extends AppCompatActivity {
 
         Intent i = getIntent();
         msg = i.getStringExtra("email");
-
+        name = i.getStringExtra("name");
         System.out.println(msg);
-
-
     }
 
     public void onClick(View v){
@@ -57,8 +55,7 @@ public class DashBoard extends AppCompatActivity {
         else if(v == btnworker) {
             i = new Intent(this, IT20245092_workerprofile.class);
             i.putExtra("email",msg);
-            i.putExtra("name",msg);
-            i.putExtra("tel",msg);
+            i.putExtra("name",name);
         }
 
 
