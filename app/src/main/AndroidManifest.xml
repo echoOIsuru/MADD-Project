@@ -64,7 +64,8 @@
         <activity
             android:name=".frontend.it20224370.IT20224370_JobCategories"
             android:exported="true" />
-
+        <activity android:name=".frontend.it20133290.IT201333290_RegisterActivity"
+            android:exported="true"/>
         <activity
             android:name=".frontend.it20133290.IT20133290_LoginActivity"
             android:exported="true" />

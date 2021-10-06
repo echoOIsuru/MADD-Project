@@ -30,7 +30,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,VacancyPublishedAdapter.PublishedVacancyHolder> {
+public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, VacancyPublishedAdapter.PublishedVacancyHolder> {
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -47,7 +47,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
     protected void onBindViewHolder(@NonNull PublishedVacancyHolder holder, final int position, @NonNull Vacancies model) {
         holder.title.setText(model.getJobTitle());
         holder.description.setText(model.getDescription());
-        holder.salary.setText("Rs. "+model.getSalary() + " /m");
+        holder.salary.setText("Rs. " + model.getSalary() + " /m");
 
         String temp = model.getDeadline();
         holder.date.setText(temp);
@@ -57,9 +57,8 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.description.getContext())
                         .setContentHolder(new ViewHolder(R.layout.it20133290_update_popup))
-                        .setExpanded(true,1950)
+                        .setExpanded(true, 1950)
                         .create();
-
 
 
                 View view = dialogPlus.getHolderView();
@@ -80,7 +79,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
 
                 Date d = new Date(model.getDeadline());
 
-                datePicker.updateDate(d.getYear()+1900,d.getMonth(),d.getDate());
+                datePicker.updateDate(d.getYear() + 1900, d.getMonth(), d.getDate());
 
                 dialogPlus.show();
 
@@ -90,38 +89,41 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
                     public void onClick(View v) {
                         Connection con = new Connection();
 
-                        String date = ""+datePicker.getYear()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getDayOfMonth();
+                        String date = "" + datePicker.getYear() + "/" + (datePicker.getMonth() + 1) + "/" + datePicker.getDayOfMonth();
                         String desPattern = ".{1,200}";
 
-                        if(!(description.getText().toString()).matches(desPattern))
-                            Toast.makeText(view.getContext(), "Updated Successfully",Toast.LENGTH_LONG);
+                        //check description limit lower than 200 characters
+                        if (!(description.getText().toString()).matches(desPattern))
+                            Toast.makeText(view.getContext(), "Updated Successfully", Toast.LENGTH_LONG);
 
-                        else{
-                            Map<String,Object> map = new HashMap<>();
-                            map.put("deadline",date);
-                            map.put("description",description.getText().toString());
-                            map.put("jobTitle",title.getText().toString());
-                            map.put("organization",org.getText().toString());
-                            map.put("salary",salary.getText().toString());
+                        else {
+                            //put data into Hashmap
+                            Map<String, Object> map = new HashMap<>();
+                            map.put("deadline", date);
+                            map.put("description", description.getText().toString());
+                            map.put("jobTitle", title.getText().toString());
+                            map.put("organization", org.getText().toString());
+                            map.put("salary", salary.getText().toString());
 
                             int mLastPosition = holder.getAdapterPosition();
+                            //add map into firebase
                             con.getRef().child("Vacancies").child(getRef(mLastPosition).getKey()).updateChildren(map)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void unused) {
-                                            Toast.makeText(holder.itemView.getContext(), "Updated Successfully",Toast.LENGTH_LONG);
+                                            Toast.makeText(holder.itemView.getContext(), "Updated Successfully", Toast.LENGTH_LONG);
                                             dialogPlus.dismiss();
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(Exception e) {
-                                            Toast.makeText(holder.itemView.getContext(), "Error While Updating",Toast.LENGTH_LONG);
+                                            Toast.makeText(holder.itemView.getContext(), "Error While Updating", Toast.LENGTH_LONG);
                                             dialogPlus.dismiss();
                                         }
                                     });
                         }
-                        }
+                    }
 
 
                 });
@@ -132,24 +134,29 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //create alert box
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.description.getContext());
                 builder.setTitle("Are you Sure?");
                 builder.setMessage("Data will be permanently deleted");
 
+                //delete button
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Connection con = new Connection();
                         int mLastPosition = holder.getAdapterPosition();
+
+                        //remove data in firebase
                         con.getRef().child("Vacancies").child(getRef(mLastPosition).getKey()).removeValue();
-                        Toast.makeText(holder.itemView.getContext(), "Deleted.",Toast.LENGTH_LONG);
+
+                        Toast.makeText(holder.itemView.getContext(), "Deleted.", Toast.LENGTH_LONG);
                     }
                 });
-
+                //cancel button
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(holder.itemView.getContext(), "Cancelled.",Toast.LENGTH_LONG);
+                        Toast.makeText(holder.itemView.getContext(), "Cancelled.", Toast.LENGTH_LONG);
 
                     }
                 });
@@ -162,12 +169,12 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies,V
     @NonNull
     @Override
     public PublishedVacancyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.it20133290_published_vacancy_block,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.it20133290_published_vacancy_block, parent, false);
 
         return new PublishedVacancyHolder(view);
     }
 
-    class PublishedVacancyHolder extends RecyclerView.ViewHolder{
+    class PublishedVacancyHolder extends RecyclerView.ViewHolder {
 
         TextView title, description, salary, date;
         Button btnUpdate, btnDelete;

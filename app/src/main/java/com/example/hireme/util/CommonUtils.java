@@ -27,19 +27,22 @@ public class CommonUtils {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String val = "";
                 if(dataSnapshot.exists()) {
-                    maxID = dataSnapshot.getChildrenCount();
-                    maxID++;
-                    String nextID = Long.toString(maxID);
+                    maxID = dataSnapshot.getChildrenCount(); //get data count
+
+                    String nextID = Long.toString(maxID); // convert into string
+
                     for(DataSnapshot temp : dataSnapshot.getChildren()){
                         val = temp.getKey();
-                    }
-
-                    while (val.equals("VID"+nextID)){
-                        maxID++;
-                        nextID = Long.toString(maxID);
+                        //check if it's in the database
+                        while (val.equals("VID"+nextID)){
+                            maxID++;
+                            nextID = Long.toString(maxID);
+                        }
                     }
 
                     maxID = Long.parseLong(nextID);
+                }else{
+                    maxID = 1;
                 }
             }
 
@@ -55,22 +58,21 @@ public class CommonUtils {
                 if(dataSnapshot.exists()) {
                     String val = "";
                     cusID = dataSnapshot.getChildrenCount();
-                    cusID++;
+
                     String nextID = Long.toString(cusID);
                     for(DataSnapshot temp : dataSnapshot.getChildren()){
                         val = temp.getKey();
+                        while (val.equals("CUID"+nextID)){
+                            cusID++;
+                            nextID = Long.toString(cusID);
+                        }
                     }
-                    //System.out.println(val+" -----Value----------------");
-                   // System.out.println(nextID+" -----NextID----------------");
 
-                    while (val.equals("CUID"+nextID)){
-                        cusID++;
-                        nextID = Long.toString(cusID);
-                    }
 
                     cusID = Long.parseLong(nextID);
-                    //System.out.println(cusID+" -----MAX----------------ID");
 
+                }else{
+                    cusID = 1;
                 }
             }
 

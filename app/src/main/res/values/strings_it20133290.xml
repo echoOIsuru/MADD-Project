@@ -39,4 +39,6 @@
     <string name="Submit">SUBMIT</string>
     <string name="Login">LOGIN</string>
     <string name="Signin">SIGN IN</string>
+    <string name="chooseFile">Choose File</string>
+    <string name="upload">Upload</string>
 </resources>
