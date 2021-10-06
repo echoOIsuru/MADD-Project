@@ -9,7 +9,7 @@
         android:layout_height="50dp"
         android:text="Update Details"
         android:background="@color/purple_500"
-        android:textSize="25dp"
+        android:textSize="26dp"
         android:gravity="center"
         android:textColor="#FFF"/>
 

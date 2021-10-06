@@ -1,5 +1,6 @@
 package com.example.hireme.util;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -36,9 +37,10 @@ public class IT20245092_JobAdapter extends FirebaseRecyclerAdapter<JobsModel, IT
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull IT20245092_JobAdapter.myViewHolder holder, final int position, @NonNull JobsModel model) {
+    protected void onBindViewHolder(@NonNull IT20245092_JobAdapter.myViewHolder holder
+            , @SuppressLint("RecyclerView") final int position, @NonNull JobsModel model) {
         holder.tv1.setText(model.getName());
-        holder.tv2.setText(model.getRate());
+        holder.tv2.setText(model.getRate() +"/= per hour");
 
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
@@ -115,6 +117,7 @@ public class IT20245092_JobAdapter extends FirebaseRecyclerAdapter<JobsModel, IT
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs")
                                 .child(getRef(position).getKey()).removeValue();
+                        Toast.makeText(holder.tv1.getContext(),"Successfully deleted",Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

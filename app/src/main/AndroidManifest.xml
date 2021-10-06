@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HireMe">
-
+        <activity
+            android:name=".frontend.it20245092.IT20245092_MyReviews"
+            android:exported="true" />
         <activity
             android:name=".frontend.it20245092.IT20245092_Jobs"
             android:exported="true" />
@@ -54,6 +56,9 @@
 <!--            android:exported="true" />-->
         <activity
             android:name=".frontend.it20224370.IT20224370_MyRequests"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20245092.IT20245092_MyRequests"
             android:exported="true" />
         <activity
             android:name=".frontend.it20224370.IT20224370_JobRequest"
