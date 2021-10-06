@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="405dp"
+            android:layout_height="283dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/backgroundop4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.089">
+
+            <TextView
+                android:id="@+id/SelectedJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="22dp"
+                android:text="@string/Tv_Job"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="61dp"
+                android:text="@string/Tv_FullName"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="137dp"
+                android:text="@string/Status_TV"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/Tv_Mobilenumber"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/ReqDelimageView5"
+                android:layout_width="30dip"
+                android:layout_height="35dip"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="237dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/delete"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/RqName"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="62dp"
+                android:layout_toEndOf="@+id/textView13"
+                android:text="@string/TV_Name"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/RqMNumber"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="98dp"
+                android:layout_toEndOf="@+id/textView15"
+                android:text="@string/MobileNum_TV"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/RqStatus"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="97dp"
+                android:layout_marginTop="135dp"
+                android:layout_toEndOf="@+id/textView14"
+                android:text="@string/tv_status1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="172dp"
+                android:text="@string/tv_Date"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="207dp"
+                android:text="@string/tv_time"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/RqDate"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="111dp"
+                android:layout_marginTop="171dp"
+                android:layout_toEndOf="@+id/textView20"
+                android:text="@string/Date"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/RqTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="109dp"
+                android:layout_marginTop="206dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/textView21"
+                android:text="@string/Time"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/ReqJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@+id/SelectedJob"
+                android:text="@string/Tv_Jobsample"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RqTime"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/ReqUPbutton4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/it20224370_rounded_btn"
+                    android:backgroundTint="@color/btn_color"
+                    android:text="@string/btn_Update"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
