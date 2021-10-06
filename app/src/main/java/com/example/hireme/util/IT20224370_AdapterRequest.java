@@ -3,6 +3,7 @@ package com.example.hireme.util;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,6 +95,47 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
                     btnUpdate.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            String NamePattern = ".{1,50}"; // creating pattern for name
+                            String AddressPattern = ".{1,200}"; // creating pattern for address
+                            String DatePattern = ("[0-3][0-1]/[0-1][0-9]/[0-2][0][0-2][0-2]");
+                            String Time = ("([01]?[0-9]|2[0-3]):[0-5][0-9]");
+
+                            //nested else if to clarify whether user enter inputs to text fields, if not shows a toast
+                            try {
+                                if (TextUtils.isEmpty(name.getText().toString()))
+                                    Toast.makeText(holder.fullname.getContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
+
+                                else if (!(name.getText().toString()).matches(NamePattern))
+                                    Toast.makeText(holder.fullname.getContext(), "The Name You have Entered has Exceeded the Limit", Toast.LENGTH_SHORT).show();
+
+                                else if (TextUtils.isEmpty(mobile.getText().toString()))
+                                    Toast.makeText(holder.fullname.getContext(), "Please enter mobile number", Toast.LENGTH_SHORT).show();
+
+                                else if (mobile.length() != 10 )
+
+                                    mobile.setError("Mobile Number should have 10 digits");
+
+                                else if (TextUtils.isEmpty(date.getText().toString()) )
+
+                                    Toast.makeText(holder.fullname.getContext(), "Please enter Appointment Date", Toast.LENGTH_SHORT).show();
+
+                                else if (!(date.getText().toString()).matches(DatePattern))
+
+                                    Toast.makeText(holder.fullname.getContext(), "Entered Data Pattern is incorrect", Toast.LENGTH_SHORT).show();
+
+                                else if (TextUtils.isEmpty(time.getText().toString()))
+                                    Toast.makeText(holder.fullname.getContext(), "Please enter Appointment Time", Toast.LENGTH_SHORT).show();
+
+                                else if (!(time.getText().toString()).matches(Time))
+                                    Toast.makeText(holder.fullname.getContext(), "You have Entered an Incorrect Type Time", Toast.LENGTH_SHORT).show();
+
+                                else if (TextUtils.isEmpty(address.getText().toString()) )
+                                    Toast.makeText(holder.fullname.getContext(), "Please enter Address", Toast.LENGTH_SHORT).show();
+
+                                else if (!(address.getText().toString()).matches(AddressPattern))
+                                    Toast.makeText(holder.fullname.getContext(), "The Address You have Entered has Exceeded the Limit", Toast.LENGTH_SHORT).show();
+
+                                else {
                             Map<String, Object> map = new HashMap<>();              //Map Values to the firebase object
                             map.put("fullName", name.getText().toString());
                             map.put("mobileNumber", mobile.getText().toString());
@@ -117,6 +159,11 @@ public class IT20224370_AdapterRequest extends FirebaseRecyclerAdapter<IT2022437
                                             dialogPlus.dismiss();
                                         }
                                     });
+                                }
+
+                            } catch (Exception e) {
+
+                            }
                         }
                     });
 
