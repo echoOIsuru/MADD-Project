@@ -49,8 +49,8 @@ public class DashBoard extends AppCompatActivity {
         //set sharedpreference
 
         session.setusename(msg); //set the usermail to the session
-
-
+        session.setName(name); //set the name to the session
+        session.setImg(img); //set the image to the session
     }
 
 
