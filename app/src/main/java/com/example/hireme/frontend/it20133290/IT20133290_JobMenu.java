@@ -19,6 +19,7 @@ public class IT20133290_JobMenu extends AppCompatActivity {
     ImageView img;
     TextView tv,tv2;
     Animation topAnim, bottomAnim;
+    ImageView backArrow;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class IT20133290_JobMenu extends AppCompatActivity {
         img = findViewById(R.id.ivVacancyMenuImage);
         tv = findViewById(R.id.tvVacancyMenuTitle);
         tv2 = findViewById(R.id.tvVacancyMenuDescription);
+        backArrow = findViewById(R.id.backArrow);
 //        btn2 = findViewById(R.id.btnFindV);
 //        btn3 = findViewById(R.id.btnSentR);
 //        btn4 = findViewById(R.id.btnAcceptedV);
@@ -43,6 +45,12 @@ public class IT20133290_JobMenu extends AppCompatActivity {
         tv.setAnimation(bottomAnim);
         tv2.setAnimation(bottomAnim);
 
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void Onclick(View v){

@@ -3,7 +3,7 @@
  * Y2-S2
  * @author IT20133290 R.M.Isuru Sahan Kumarasingha
  */
-package com.example.hireme.util;
+package com.example.hireme.util.it20133290;
 
 import androidx.annotation.NonNull;
 
@@ -16,8 +16,8 @@ import com.google.firebase.database.ValueEventListener;
 public class CommonUtils {
 
     Connection con = new Connection();
-    DatabaseReference ref = con.getRef().child("Vacancies");
-    DatabaseReference ref2 = con.getRef().child("AppUser");
+    DatabaseReference ref = con.getRef().child(CommonConstants.VACANCY);
+    DatabaseReference ref2 = con.getRef().child(CommonConstants.APP_USER);
     private long maxID = 0;
     private long cusID = 0;
 
@@ -34,7 +34,7 @@ public class CommonUtils {
                     for(DataSnapshot temp : dataSnapshot.getChildren()){
                         val = temp.getKey();
                         //check if it's in the database
-                        while (val.equals("VID"+nextID)){
+                        while (val.equals(CommonConstants.VACANCY_ID +nextID)){
                             maxID++;
                             nextID = Long.toString(maxID);
                         }
@@ -62,7 +62,7 @@ public class CommonUtils {
                     String nextID = Long.toString(cusID);
                     for(DataSnapshot temp : dataSnapshot.getChildren()){
                         val = temp.getKey();
-                        while (val.equals("CUID"+nextID)){
+                        while (val.equals(CommonConstants.APP_USER_ID +nextID)){
                             cusID++;
                             nextID = Long.toString(cusID);
                         }

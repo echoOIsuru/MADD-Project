@@ -70,7 +70,7 @@
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/font/alegreya_sans_thin.xml" value="0.14444444444444443" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_bottom_nav_bar.xml" value="0.21842105263157896" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_dash_board.xml" value="0.264" />
-        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_accepted_request.xml" value="0.4" />
+        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_accepted_request.xml" value="0.2" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_add_vacancy.xml" value="0.264" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_customer_menu.xml" value="0.264" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_find_vacancy.xml" value="0.21842105263157896" />
@@ -83,6 +83,7 @@
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_vacancy_menu.xml" value="0.264" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20133290_worker_request.xml" value="0.2128205128205128" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it201333290_register.xml" value="0.264" />
+        <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_it20245092_job_details.xml" value="0.2128205128205128" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_main_menu.xml" value="0.2563405797101449" />
         <entry key="..\:/SLIIT/Y2 S2/MADD/MADD-Project/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
@@ -104,7 +105,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
@@ -113,7 +114,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.5310119695321001" />
+        <option name="scale" value="0.264" />
       </ProjectState>
     </option>
   </component>
