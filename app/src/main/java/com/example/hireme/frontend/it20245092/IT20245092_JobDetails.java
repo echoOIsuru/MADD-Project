@@ -57,7 +57,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
 //        jobType = (Spinner) findViewById(R.id.spinner1);
         description = (EditText) findViewById(R.id.txtDescription);
         contact = (EditText) findViewById(R.id.txtContact);
-        image = (EditText) findViewById(R.id.txtImage);
+//        image = (EditText) findViewById(R.id.txtImage);
         rate = (EditText) findViewById(R.id.txtRate);
         addNewSave = (Button) findViewById(R.id.btnaddnewsave);
         addNewCancel = (Button) findViewById(R.id.btnaddnewcancel);
@@ -141,7 +141,6 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         rate.setText("");
         contact.setText("");
         description.setText("");
-        image.setText("");
     }
 
     //form validation

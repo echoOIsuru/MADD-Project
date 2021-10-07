@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.hireme.util.IT20224370_AdapterRequest;
+import com.example.hireme.util.it20224370.IT20224370_AdapterRequest;
 import com.example.hireme.models.IT20224370_RequestModel;
 import com.example.hireme.R;
 import com.example.hireme.models.IT20224370_RequestModel;

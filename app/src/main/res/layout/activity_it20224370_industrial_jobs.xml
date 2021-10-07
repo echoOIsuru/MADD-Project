@@ -62,16 +62,16 @@
 
         <SearchView
             android:id="@+id/IndustrialSearch"
-
-            android:layout_width="@dimen/searchVie_Width"
+            android:layout_width="350dp"
             android:layout_height="@dimen/searchVie_Height"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="19dp"
             android:layout_marginTop="@dimen/card_padding"
-            android:layout_marginEnd="@dimen/card_padding"
+            android:layout_marginEnd="19dp"
             android:layout_marginBottom="@dimen/card_padding"
             android:layout_weight="0.5"
-            android:background="@drawable/backgroundop4">
+            android:background="@color/white">
 
         </SearchView>
 
@@ -84,7 +84,7 @@
 
                 <Button
                     android:id="@+id/ViewMyReq"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="30dp"
