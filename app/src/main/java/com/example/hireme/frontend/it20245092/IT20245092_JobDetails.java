@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.hireme.R;
 import com.example.hireme.models.IT20224370_RequestModel;
+import com.example.hireme.util.it20245092.it20245092_workerManagementTesting;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,6 +32,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
     Button addNewSave, addNewCancel;
     Spinner jobType;
     String uName,email,img;
+    it20245092_workerManagementTesting testing = new it20245092_workerManagementTesting();
 
     boolean fieldCheck = false;
 
@@ -43,6 +45,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20245092_job_details);
+        getSupportActionBar().hide();
 
         Intent i = getIntent();
         email = i.getStringExtra("email");
@@ -57,7 +60,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
 //        jobType = (Spinner) findViewById(R.id.spinner1);
         description = (EditText) findViewById(R.id.txtDescription);
         contact = (EditText) findViewById(R.id.txtContact);
-        image = (EditText) findViewById(R.id.txtImage);
+//        image = (EditText) findViewById(R.id.txtImage);
         rate = (EditText) findViewById(R.id.txtRate);
         addNewSave = (Button) findViewById(R.id.btnaddnewsave);
         addNewCancel = (Button) findViewById(R.id.btnaddnewcancel);
@@ -141,12 +144,11 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         rate.setText("");
         contact.setText("");
         description.setText("");
-        image.setText("");
     }
 
     //form validation
     private boolean CheckAllFields() {
-        if (name.length() == 0) {
+        if (testing.checkEmpty(name.getText().toString())) {
             name.setError("This field is required");
             return false;
         }else if (name.length() > 15) {
@@ -154,20 +156,20 @@ public class IT20245092_JobDetails extends AppCompatActivity {
             return false;
         }
 
-//        if (jobType.getSelectedItem().toString() == "Select Type     ▼") {
-//            jobType.setError("This field is required");
-//            return false;
-//        }
-
         if (location.length() == 0) {
             location.setError("This field is required");
+            return false;
+        }
+
+        if (selectedjobType.getText().toString() == "") {
+            selectedjobType.setError("Please select job type");
             return false;
         }
 
         if (rate.length() == 0) {
             rate.setError("This field is required");
             return false;
-        } else if (rate.length() > 5) {
+        } else if (testing.checkRateLength(rate.getText().toString())) {
             rate.setError("Price rate must be maximum 4 characters");
             return false;
         }

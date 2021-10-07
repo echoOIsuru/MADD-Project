@@ -2,7 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/hislinid"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -11,6 +14,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
+            app:cardCornerRadius="25dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true">
 
@@ -39,6 +43,17 @@
                     android:fontFamily="@font/tauri"
                     android:paddingBottom="5dp"
                     android:text="Client - Chathuranga Silva"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/RqEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tauri"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Email"
                     android:textColor="@color/black"
                     android:textSize="22sp" />
 

@@ -54,5 +54,6 @@
     <string name="invalid_name">Please enter valid name</string>
     <string name="invalid_email">Please enter valid email address</string>
     <string name="invalide_review">Please give some feedback text</string>
+    <string name="TV_RateCount">5000</string>
 
 </resources>
