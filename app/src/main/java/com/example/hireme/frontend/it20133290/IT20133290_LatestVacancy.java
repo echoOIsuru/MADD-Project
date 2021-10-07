@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +19,7 @@ import com.example.hireme.R;
 import com.example.hireme.database.Connection;
 import com.example.hireme.models.Vacancies;
 import com.example.hireme.services.it20133290.VacancyServicesImp;
-import com.example.hireme.util.VacancyAdapter;
+import com.example.hireme.util.it20133290.VacancyAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 public class IT20133290_LatestVacancy extends AppCompatActivity {
