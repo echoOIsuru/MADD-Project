@@ -32,7 +32,7 @@ public class IT20245092_workerprofile extends AppCompatActivity {
         IT20224370_Session_Management session;//global variable
         session = new IT20224370_Session_Management(IT20245092_workerprofile.this);
         img = session.getImg();
-        name = session.getImg();
+        name = session.getName();
         email = session.getusename();
 
 //        Intent i = getIntent();
