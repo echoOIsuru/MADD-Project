@@ -9,4 +9,5 @@
     <color name="Tv_Title">#FFFDFD</color>
     <color name="buttonmain">#172F38</color>
 
+    <string name="TV_Rate">Rate Per Hour</string>
 </resources>

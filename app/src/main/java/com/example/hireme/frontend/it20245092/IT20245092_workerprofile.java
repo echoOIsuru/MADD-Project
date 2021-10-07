@@ -43,6 +43,7 @@ public class IT20245092_workerprofile extends AppCompatActivity {
         System.out.println("haaai" + name);
 
 
+
         btn1 = findViewById(R.id.btnrequests);
         btn2 = findViewById(R.id.btnmyjobs);
         btn3 = findViewById(R.id.btnworkhistory);
