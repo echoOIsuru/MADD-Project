@@ -33,6 +33,7 @@ public class IT20245092_WorkHistory extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.historyRv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
         FirebaseRecyclerOptions<IT20224370_RequestModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_RequestModel>()
                         .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/")
@@ -41,7 +42,21 @@ public class IT20245092_WorkHistory extends AppCompatActivity {
                                 ,IT20224370_RequestModel.class)
                         .build();
 
+
         reqHistoryAdapter = new IT20245092_ReqHistoryAdapter(options);
         recyclerView.setAdapter(reqHistoryAdapter);
     }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        reqHistoryAdapter.startListening();
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        reqHistoryAdapter.stopListening();
+    }
+
 }

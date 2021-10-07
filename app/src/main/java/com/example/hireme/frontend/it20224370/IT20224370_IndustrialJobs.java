@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
 
-import com.example.hireme.util.IT20224370_AdapterIndustrial;
+import com.example.hireme.util.it20224370.IT20224370_AdapterIndustrial;
 import com.example.hireme.models.IT20224370_IndustrialModel;
 import com.example.hireme.R;
 import com.example.hireme.models.IT20224370_IndustrialModel;
@@ -33,16 +33,14 @@ public class IT20224370_IndustrialJobs extends AppCompatActivity {
         Intent i = getIntent();
         String msg = i.getStringExtra("email");
 
-        recyclerView=(RecyclerView) findViewById(R.id.IndustrialRV);
+        recyclerView = (RecyclerView) findViewById(R.id.IndustrialRV);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<IT20224370_IndustrialModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_IndustrialModel>()
-                        .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("IndustrialWorkers"), IT20224370_IndustrialModel.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").orderByChild("Type").equalTo("Industrial"), IT20224370_IndustrialModel.class)
                         .build();
-
-
 
 
         industrialAdapter = new IT20224370_AdapterIndustrial(options);
@@ -65,14 +63,14 @@ public class IT20224370_IndustrialJobs extends AppCompatActivity {
         });
 
 
-        Myrequests = (Button)findViewById(R.id.ViewMyReq);
+        Myrequests = (Button) findViewById(R.id.ViewMyReq);
 
         Myrequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent launchactivity= new Intent(IT20224370_IndustrialJobs.this,IT20224370_MyRequests.class);
-                launchactivity.putExtra("email",msg);
+                Intent launchactivity = new Intent(IT20224370_IndustrialJobs.this, IT20224370_MyRequests.class);
+                launchactivity.putExtra("email", msg);
                 startActivity(launchactivity);
 
             }
@@ -103,11 +101,11 @@ public class IT20224370_IndustrialJobs extends AppCompatActivity {
         industrialAdapter.stopListening();
     }
 
-    private void textSearch(String str){
+    private void textSearch(String str) {
 
         FirebaseRecyclerOptions<IT20224370_IndustrialModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_IndustrialModel>()
-                        .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("IndustrialWorkers").orderByChild("from").startAt(str).endAt(str+"~"), IT20224370_IndustrialModel.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").orderByChild("Location").startAt(str).endAt(str + "~"), IT20224370_IndustrialModel.class)
                         .build();
 
         industrialAdapter = new IT20224370_AdapterIndustrial(options);

@@ -15,7 +15,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class IT20224370_Workerprofile extends AppCompatActivity {
 
-    Button btn,btn1;
+    Button btn, btn1;
 //    IT20224370_HouseHoldModel model;
 
     @Override
@@ -36,28 +36,30 @@ public class IT20224370_Workerprofile extends AppCompatActivity {
 //        des.setText(model.getDescription());
 
 
-
         String Details = getIntent().getStringExtra("wname");
         String Details2 = getIntent().getStringExtra("wnumber");
         String Details3 = getIntent().getStringExtra("wmail");
         String Details4 = getIntent().getStringExtra("wdes");
         String Details5 = getIntent().getStringExtra("workerpic");
         String Details6 = getIntent().getStringExtra("workerjob");
+        String Details7 = getIntent().getStringExtra("workerrate");
 
-        btn=(Button)findViewById(R.id.workerbtn);
+        btn = (Button) findViewById(R.id.workerbtn);
 //        btn1=(Button)findViewById(R.id.backbtn);
 
         TextView name = (TextView) findViewById(R.id.editTextTextPersonName3);
-        TextView mobile = (TextView)findViewById(R.id.editTextPhone3);
-        TextView email = (TextView)findViewById(R.id.editTextemail);
-        TextView des = (TextView)findViewById(R.id.editTextTextDes);
-        CircleImageView Wpic = (CircleImageView)findViewById(R.id.workerpropic);
+        TextView mobile = (TextView) findViewById(R.id.editTextPhone3);
+        TextView email = (TextView) findViewById(R.id.editTextemail);
+        TextView des = (TextView) findViewById(R.id.editTextTextDes);
+        TextView rate = (TextView) findViewById(R.id.EdRate);
+        CircleImageView Wpic = (CircleImageView) findViewById(R.id.workerpropic);
 
 
         name.setText(Details);
         mobile.setText(Details2);
         email.setText(Details3);
         des.setText(Details4);
+        rate.setText(Details7);
         Glide.with(Wpic.getContext())
                 .load(Details5)
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -71,10 +73,11 @@ public class IT20224370_Workerprofile extends AppCompatActivity {
 
                 Intent i = new Intent(view.getContext(), IT20224370_JobRequest.class);
 
-                i.putExtra("wjob",Details6);
-                i.putExtra("wmail",Details3);
-                i.putExtra("wname",Details);
-                i.putExtra("workerpic",Details5);
+                i.putExtra("wjob", Details6);
+                i.putExtra("wmail", Details3);
+                i.putExtra("wname", Details);
+                i.putExtra("workerpic", Details5);
+
 
                 view.getContext().startActivity(i);
 

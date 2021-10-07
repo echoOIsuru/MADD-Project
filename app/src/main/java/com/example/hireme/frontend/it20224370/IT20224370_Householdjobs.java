@@ -11,10 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
 
-import com.example.hireme.util.IT20224370_AdapterHousehold;
+import com.example.hireme.util.it20224370.IT20224370_AdapterHousehold;
 import com.example.hireme.models.IT20224370_HouseHoldModel;
 import com.example.hireme.R;
-import com.example.hireme.util.IT20224370_AdapterHousehold;
+import com.example.hireme.util.it20224370.IT20224370_AdapterHousehold;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,14 +33,14 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Intent i = getIntent();
-        String msg =i.getStringExtra("email");
+        String msg = i.getStringExtra("email");
 
-        recyclerView=(RecyclerView) findViewById(R.id.HouseholdRV);
+        recyclerView = (RecyclerView) findViewById(R.id.HouseholdRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<IT20224370_HouseHoldModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_HouseHoldModel>()
-                        .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("HouseHoldWorkers"), IT20224370_HouseHoldModel.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").orderByChild("Type").equalTo("Household"), IT20224370_HouseHoldModel.class)
                         .build();
 
 
@@ -50,13 +50,14 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         //save reference of the layout file search view component to a Searchview object
         SearchView searchView = (SearchView) findViewById(R.id.HouseholdSearch);
 
-           //Search bar On text submit
+        //Search bar On text submit
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 textSearch(query);
                 return false;
             }
+
             //Search bar On text Change
             @Override
             public boolean onQueryTextChange(String query) {
@@ -66,14 +67,14 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
         });
 
 
-        Myrequests = (Button)findViewById(R.id.ViewMyReq2);
+        Myrequests = (Button) findViewById(R.id.ViewMyReq2);
 
         Myrequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent launchactivity= new Intent(IT20224370_Householdjobs.this,IT20224370_MyRequests.class);
-                launchactivity.putExtra("email",msg);
+                Intent launchactivity = new Intent(IT20224370_Householdjobs.this, IT20224370_MyRequests.class);
+                launchactivity.putExtra("email", msg);
                 startActivity(launchactivity);
 
             }
@@ -105,11 +106,11 @@ public class IT20224370_Householdjobs extends AppCompatActivity {
     }
 
     //Data filter by the workers location
-    private void textSearch(String str){
+    private void textSearch(String str) {
 
         FirebaseRecyclerOptions<IT20224370_HouseHoldModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_HouseHoldModel>()
-                        .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("HouseHoldWorkers").orderByChild("from").startAt(str).endAt(str+"~"), IT20224370_HouseHoldModel.class)
+                        .setQuery(FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").orderByChild("Location").startAt(str).endAt(str + "~"), IT20224370_HouseHoldModel.class)
                         .build();
 
         householdAdapter = new IT20224370_AdapterHousehold(options);
