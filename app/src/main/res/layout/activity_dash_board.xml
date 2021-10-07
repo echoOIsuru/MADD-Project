@@ -304,18 +304,6 @@
             android:layout_weight="0.5">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/icon_padding"
-                android:src="@drawable/notification" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5">
-
-            <ImageView
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"

@@ -20,7 +20,7 @@ public class Jobs extends AppCompatActivity {
     RecyclerView recyclerView;
     IT20245092_JobAdapter adapter;
     ImageButton imgbtn1;
-    String email,name;
+    String email,name,img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class Jobs extends AppCompatActivity {
         Intent i = getIntent();
         email = i.getStringExtra("email");
         name = i.getStringExtra("name");
+        img = i.getStringExtra("img");
         System.out.println("hi" + email);
         System.out.println("haaai" + name);
 
@@ -70,6 +71,7 @@ public class Jobs extends AppCompatActivity {
             i = new Intent(this, IT20245092_JobDetails.class);
             i.putExtra("email",email);
             i.putExtra("name",name);
+            i.putExtra("img",img);
         }
 
         startActivity(i);

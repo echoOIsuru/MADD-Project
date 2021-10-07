@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hireme.R;
+import com.example.hireme.frontend.it20224370.IT20224370_JobRequest;
+import com.example.hireme.frontend.it20224370.IT20224370_Session_Management;
 
 public class IT20245092_workerprofile extends AppCompatActivity {
 
@@ -26,10 +28,17 @@ public class IT20245092_workerprofile extends AppCompatActivity {
         setContentView(R.layout.activity_it20245092_workerprofile);
         getSupportActionBar().hide();
 
-        Intent i = getIntent();
-        email = i.getStringExtra("email");
-        name = i.getStringExtra("name");
-        img = i.getStringExtra("img");
+
+        IT20224370_Session_Management session;//global variable
+        session = new IT20224370_Session_Management(IT20245092_workerprofile.this);
+        img = session.getImg();
+        name = session.getImg();
+        email = session.getusename();
+
+//        Intent i = getIntent();
+//        email = i.getStringExtra("email");
+//        name = i.getStringExtra("name");
+//        img = i.getStringExtra("img");
         System.out.println("hi" + email);
         System.out.println("haaai" + name);
 
@@ -61,8 +70,11 @@ public class IT20245092_workerprofile extends AppCompatActivity {
             i = new Intent(this, Jobs.class);
             i.putExtra("email",email);
             i.putExtra("name",name);
+            i.putExtra("img",img);
         }else if(v == btn3){
             i = new Intent(this, IT20245092_WorkHistory.class);
+            i.putExtra("email",email);
+            i.putExtra("name",name);
         }else if(v == btn4){
             i = new Intent(this, IT20245092_MyJobs.class);
             i.putExtra("email",email);

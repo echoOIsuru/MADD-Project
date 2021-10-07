@@ -30,7 +30,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
     EditText name,location,description,contact,image,rate;
     Button addNewSave, addNewCancel;
     Spinner jobType;
-    String uName,email;
+    String uName,email,img;
 
     boolean fieldCheck = false;
 
@@ -47,6 +47,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         Intent i = getIntent();
         email = i.getStringExtra("email");
         uName = i.getStringExtra("name");
+        img = i.getStringExtra("img");
         System.out.println("hi" + email);
         System.out.println("haaai" + uName);
 
@@ -116,7 +117,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         map.put("Rate",rate.getText().toString());
         map.put("Contact",contact.getText().toString());
         map.put("Description",description.getText().toString());
-        map.put("Image",image.getText().toString());
+        map.put("Image",img);
         //connection
         FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("Jobs").push()
                 .setValue(map)

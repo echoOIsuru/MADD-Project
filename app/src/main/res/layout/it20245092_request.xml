@@ -83,19 +83,21 @@
                     android:layout_marginRight="20dp">
 
                     <Button
+                        android:id="@+id/btnAccept"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/btnaccept"
                         android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/btnaccept"
                         android:text="@string/btnaccept" />
 
                     <Button
+                        android:id="@+id/btnDecline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/btndecline"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="10dp"
                         android:backgroundTint="@color/btndecline"
-                        android:layout_alignParentRight="true"/>
+                        android:text="@string/btndecline" />
                 </RelativeLayout>
 
 

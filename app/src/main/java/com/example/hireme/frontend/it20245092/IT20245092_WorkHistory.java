@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.hireme.R;
@@ -15,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class IT20245092_WorkHistory extends AppCompatActivity {
 
+    String name,email;
+
     RecyclerView recyclerView;
     IT20245092_ReqHistoryAdapter reqHistoryAdapter;
 
@@ -23,6 +26,10 @@ public class IT20245092_WorkHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20245092_work_history);
 
+        Intent i = getIntent();
+        email = i.getStringExtra("email");
+        name = i.getStringExtra("name");
+
         recyclerView = (RecyclerView) findViewById(R.id.historyRv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -30,7 +37,7 @@ public class IT20245092_WorkHistory extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<IT20224370_RequestModel>()
                         .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/")
                                         .getReference().child("requests")
-                                        .orderByChild("workerMail").equalTo("janith@gmail.com")
+                                        .orderByChild("workerMail").equalTo(email)
                                 ,IT20224370_RequestModel.class)
                         .build();
 
