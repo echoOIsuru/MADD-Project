@@ -58,4 +58,5 @@ public class CommonConstants {
 
     public static final String SUCCESS_LOGIN = "Account created Successfully, Now you can log in";
 
+    
 }
