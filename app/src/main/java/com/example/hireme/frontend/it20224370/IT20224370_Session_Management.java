@@ -20,10 +20,26 @@ public class IT20224370_Session_Management extends AppCompatActivity {
     public void setusename(String usename) {
         prefs.edit().putString("usename", usename).commit();
     }
+    public void setName(String name) {
+        prefs.edit().putString("name", name).commit();
+    }
+    public void setImg(String img) {
+        prefs.edit().putString("img", img).commit();
+    }
 
     public String getusename() {
         String usename = prefs.getString("usename","");
         return usename;
+    }
+
+    public String getName() {
+        String name = prefs.getString("name","");
+        return name;
+    }
+
+    public String getImg() {
+        String img = prefs.getString("img","");
+        return img;
     }
 
 }

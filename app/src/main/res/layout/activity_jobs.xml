@@ -67,9 +67,9 @@
                         android:id="@+id/btnaddnew"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="onClick"
                         android:layout_alignParentRight="true"
                         android:background="#EEEEEE"
+                        android:onClick="onClick"
                         android:padding="@dimen/pad"
                         android:src="@drawable/it20245092_add" />
 
