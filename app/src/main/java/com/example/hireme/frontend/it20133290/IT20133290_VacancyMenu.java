@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.hireme.R;
 
@@ -13,6 +14,7 @@ public class IT20133290_VacancyMenu extends AppCompatActivity {
 
     Button btn1, btn2;
     String msg;
+    ImageView backArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +23,19 @@ public class IT20133290_VacancyMenu extends AppCompatActivity {
         getSupportActionBar().hide();
         btn1 = findViewById(R.id.btnVcustomerMenu);
         btn2 = findViewById(R.id.btnVworker);
+        backArrow = findViewById(R.id.backArrow);
 
         Intent i = getIntent();
         msg = i.getStringExtra("email");
 
-        System.out.println(msg);
+        //System.out.println(msg);
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 

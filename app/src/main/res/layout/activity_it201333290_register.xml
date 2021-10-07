@@ -43,124 +43,124 @@
             android:layout_weight="0.8"
             android:orientation="vertical"
             android:paddingTop="@dimen/card_padding">
-   <ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_weight="0.8">
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="20dp"
-           android:layout_marginBottom="20dp"
-           android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8">
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
-               android:layout_marginBottom="10dp"
-               android:hint="@string/UserName">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/etUserName"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:background="@color/input_filed2" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/UserName">
 
-           </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/input_filed2" />
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
-               android:layout_marginBottom="10dp"
-               android:hint="@string/UserContact">
+                    </com.google.android.material.textfield.TextInputLayout>
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/etUserContact"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:background="@color/input_filed2"
-                   android:inputType="number"
-                   android:maxLength="10" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/UserContact">
 
-           </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUserContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/input_filed2"
+                            android:inputType="number"
+                            android:maxLength="10" />
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
-               android:layout_marginBottom="10dp"
-               android:hint="@string/UserEmail">
+                    </com.google.android.material.textfield.TextInputLayout>
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/etUserEmail"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:background="@color/input_filed2" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/UserEmail">
 
-           </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUserEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/input_filed2" />
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
-               android:layout_marginBottom="10dp"
-               android:hint="@string/UserPassword">
+                    </com.google.android.material.textfield.TextInputLayout>
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/etUserPassword"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:background="@color/input_filed2"
-                   android:inputType="textPassword" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/UserPassword">
 
-           </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUserPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/input_filed2"
+                            android:inputType="textPassword" />
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:id="@+id/filledSalary"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
-               android:layout_marginBottom="10dp"
-               android:hint="@string/ReUserPassword">
+                    </com.google.android.material.textfield.TextInputLayout>
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/etReUserPassword"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:background="@color/input_filed2"
-                   android:inputType="textPassword" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/filledSalary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/ReUserPassword">
 
-           </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etReUserPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/input_filed2"
+                            android:inputType="textPassword" />
 
-           <Button
-               android:id="@+id/btnUploadProfImg"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:backgroundTint="@color/light_background"
-               android:text="@string/chooseFile"
-               android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-           <ImageView
-               android:id="@+id/ivUploadProfImg"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:maxHeight="200dp"
-               android:minHeight="200dp"/>
+                    <Button
+                        android:id="@+id/btnUploadProfImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/light_background"
+                        android:text="@string/chooseFile"
+                        android:textColor="@color/black" />
 
-           <ProgressBar
-               android:id="@+id/pbUploadImage"
-               style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:maxHeight="100dip"
-               android:minHeight="100dip"
-               android:progressTint="#F61111" />
+                    <ImageView
+                        android:id="@+id/ivUploadProfImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
 
-       </LinearLayout>
-   </ScrollView>
+                    <ProgressBar
+                        android:id="@+id/pbUploadImage"
+                        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="100dip"
+                        android:minHeight="100dip"
+                        android:progressTint="#F61111" />
+
+                </LinearLayout>
+            </ScrollView>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -180,9 +180,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
 
 
 </LinearLayout>

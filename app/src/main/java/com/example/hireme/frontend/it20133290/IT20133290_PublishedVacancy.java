@@ -10,8 +10,7 @@ import android.os.Bundle;
 import com.example.hireme.R;
 import com.example.hireme.database.Connection;
 import com.example.hireme.models.Vacancies;
-import com.example.hireme.util.VacancyAdapter;
-import com.example.hireme.util.VacancyPublishedAdapter;
+import com.example.hireme.util.it20133290.VacancyPublishedAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 public class IT20133290_PublishedVacancy extends AppCompatActivity {

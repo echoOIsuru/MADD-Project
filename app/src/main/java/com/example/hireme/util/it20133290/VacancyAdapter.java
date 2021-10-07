@@ -1,4 +1,4 @@
-package com.example.hireme.util;
+package com.example.hireme.util.it20133290;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -6,21 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hireme.R;
-import com.example.hireme.frontend.it20133290.IT20133290_LatestVacancy;
 import com.example.hireme.frontend.it20133290.IT20133290_Popup_apply_form;
 import com.example.hireme.models.Vacancies;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class VacancyAdapter extends FirebaseRecyclerAdapter<Vacancies,VacancyAdapter.vacancyViewHolder> {
 
@@ -40,7 +34,7 @@ public class VacancyAdapter extends FirebaseRecyclerAdapter<Vacancies,VacancyAda
     //set values into recycle view holder
         holder.title.setText(model.getJobTitle());
         holder.description.setText(model.getDescription());
-        holder.salary.setText("Rs. "+model.getSalary() + " /m");
+        holder.salary.setText("Rs. "+model.getSalary() + " /month");
 
         String temp = model.getDeadline();
         holder.date.setText(temp);
