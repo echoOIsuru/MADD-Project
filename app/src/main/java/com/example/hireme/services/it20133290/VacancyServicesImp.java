@@ -54,7 +54,7 @@ public class VacancyServicesImp implements VacancyServices {
     CommonUtils cu = new CommonUtils();
     VacancyAdapter vacancyAdapter;
     RecyclerView rvAll;
-    VacancyValidation vacancyValidation;
+    VacancyValidation vacancyValidation = new VacancyValidation();
     private StorageTask mUploadTask;
 
 
@@ -152,7 +152,7 @@ public class VacancyServicesImp implements VacancyServices {
             else if((tp.getText().toString().length() < 10))
                 Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_MOBILE_NUMBER, Toast.LENGTH_LONG).show();
 
-            else if (TextUtils.isEmpty(email.getText().toString()))
+            else if (!vacancyValidation.isTpValid(email.getText().toString()))
                 Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_EMAIL, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(password.getText().toString()))
@@ -169,6 +169,7 @@ public class VacancyServicesImp implements VacancyServices {
 
             else if(!vacancyValidation.isPasswordValid(password.getText().toString())){
                 Toast.makeText(c, CommonConstants.STRONG_PASSWORD, Toast.LENGTH_LONG).show();
+
             } else {
 
                 String key = email.getText().toString().trim();
