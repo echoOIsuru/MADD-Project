@@ -2,13 +2,13 @@ package com.example.hireme.models;
 
 public class IT20224370_RequestModel {
 
-    String key, time, mobileNumber, fullName, date, address,selectedJob, userMail, workerMail, status;
+    String key, time, mobileNumber, fullName, date, address,selectedJob, userMail, workerMail, status,workerName,workerPhoto;
 
     public IT20224370_RequestModel(){
 
     }
 
-    public IT20224370_RequestModel(String workerMail, String selectedJob, String userMail, String status, String time, String mobileNumber, String fullName, String date, String address) {
+    public IT20224370_RequestModel(String workerMail, String selectedJob, String userMail, String status, String time, String mobileNumber, String fullName, String date, String address, String workerName, String workerPhoto) {
         this.workerMail = workerMail;
         this.selectedJob = selectedJob;
         this.userMail = userMail;
@@ -18,6 +18,8 @@ public class IT20224370_RequestModel {
         this.fullName = fullName;
         this.date = date;
         this.address = address;
+        this.workerName = workerName;
+        this.workerPhoto = workerPhoto;
     }
 
     public String getSelectedJob() {
@@ -98,5 +100,21 @@ public class IT20224370_RequestModel {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getWorkerName() {
+        return workerName;
+    }
+
+    public void setWorkerName(String workerName) {
+        this.workerName = workerName;
+    }
+
+    public String getWorkerPhoto() {
+        return workerPhoto;
+    }
+
+    public void setWorkerPhoto(String workerPhoto) {
+        this.workerPhoto = workerPhoto;
     }
 }

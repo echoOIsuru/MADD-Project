@@ -1,5 +1,6 @@
 package com.example.hireme.util;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,7 @@ public class IT20245092_RequestAdapter extends FirebaseRecyclerAdapter<IT2022437
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull IT20224370_RequestModel model) {
+    protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull IT20224370_RequestModel model) {
         if (model.getStatus().equals("pending")) {
                 holder.job.setText(model.getSelectedJob());
                 holder.date.setText(model.getDate());
@@ -49,24 +50,37 @@ public class IT20245092_RequestAdapter extends FirebaseRecyclerAdapter<IT2022437
             public void onClick(View v) {
                 String status;
                 status = model.getStatus();
+                System.out.println(status + "before change");
 
                 Map<String,Object> map = new HashMap<>();
-                map.put("Name","Accepted");
+                map.put("status","accepted");
+                map.put("address",model.getAddress());
+                map.put("date",model.getDate());
+                map.put("fullName",model.getFullName());
+                map.put("mobileNumber",model.getMobileNumber());
+                map.put("selectedJob", model.getSelectedJob());
+                map.put("time", model.getTime());
+                map.put("userMail", model.getUserMail());
+                map.put("workerMail",model.getWorkerMail());
+                map.put("workerName",model.getWorkerName());
+                map.put("workerPhoto",model.getWorkerPhoto());
 
 
-                FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("requests")
-                        .child(getRef(position).getKey()).updateChildren(map)
+                FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/").getReference().child("requests").child(getRef(position).getKey()).updateChildren(map)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(holder.btnAccept.getContext(),"Accepted",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(holder.btnAccept.getContext(),"accepted",Toast.LENGTH_SHORT).show();
+                                System.out.println(model.getStatus());
+                                System.out.println(position + "adooooooooooooooooooooooooooooo");
+                                System.out.println(getRef(position).getKey() + "ad");
 
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(holder.btnAccept.getContext(),"Rejected",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(holder.btnAccept.getContext(),"error",Toast.LENGTH_SHORT).show();
                             }
                         });
             }
@@ -79,7 +93,7 @@ public class IT20245092_RequestAdapter extends FirebaseRecyclerAdapter<IT2022437
                 status = model.getStatus();
 
                 Map<String,Object> map = new HashMap<>();
-                map.put("Name","Rejected");
+                map.put("status","rejected");
 
 
                 FirebaseDatabase.getInstance("https://fir-demo-734c3-default-rtdb.firebaseio.com/").getReference().child("requests")
@@ -94,7 +108,7 @@ public class IT20245092_RequestAdapter extends FirebaseRecyclerAdapter<IT2022437
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(holder.btnDecline.getContext(),"Declined",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(holder.btnDecline.getContext(),"error",Toast.LENGTH_SHORT).show();
                             }
                         });
             }
@@ -125,7 +139,7 @@ public class IT20245092_RequestAdapter extends FirebaseRecyclerAdapter<IT2022437
             l1 = (LinearLayout) itemView.findViewById(R.id.linearid);
             params = new LinearLayout.LayoutParams(0, 0);
             btnAccept = (Button) itemView.findViewById(R.id.btnAccept);
-            btnDecline = (Button) itemView.findViewById(R.id.btnAccept);
+            btnDecline = (Button) itemView.findViewById(R.id.btnDecline);
         }
     }
 

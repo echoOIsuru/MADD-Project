@@ -143,7 +143,6 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         rate.setText("");
         contact.setText("");
         description.setText("");
-        image.setText("");
     }
 
     //form validation
@@ -177,7 +176,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
         if (contact.length() == 0) {
             contact.setError("This field is required");
             return false;
-        } else if (testing.checkContactLength(contact.getText().toString())) {
+        } else if (contact.length() != 10) {
             contact.setError("Contact no must be 10 characters");
             return false;
         }

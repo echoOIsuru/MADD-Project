@@ -37,4 +37,9 @@ public class it20245092_unitTest {
         assertEquals(true,result);
     }
 
+    @AfterClass
+    public static void clearAll(){
+        testActivity = null;
+    }
+
 }
