@@ -15,24 +15,22 @@ import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hireme.database.Connection;
 import com.example.hireme.frontend.DashBoard;
-import com.example.hireme.frontend.it20133290.IT20133290_AddVacancy;
 import com.example.hireme.frontend.it20133290.IT20133290_CustomerMenu;
 import com.example.hireme.frontend.it20133290.IT20133290_LoginActivity;
-import com.example.hireme.frontend.it20133290.IT201333290_RegisterActivity;
 import com.example.hireme.models.AppUser;
 import com.example.hireme.models.Vacancies;
-import com.example.hireme.util.CommonUtils;
-import com.example.hireme.util.VacancyAdapter;
+import com.example.hireme.util.it20133290.CommonConstants;
+import com.example.hireme.util.it20133290.CommonUtils;
+import com.example.hireme.util.it20133290.VacancyAdapter;
+import com.example.hireme.util.it20133290.VacancyValidation;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -46,10 +44,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
-import java.security.Key;
-import java.util.Date;
-import java.util.Locale;
-
 public class VacancyServicesImp implements VacancyServices {
     //get model class instance
     Vacancies vacancies = new Vacancies();
@@ -60,6 +54,7 @@ public class VacancyServicesImp implements VacancyServices {
     CommonUtils cu = new CommonUtils();
     VacancyAdapter vacancyAdapter;
     RecyclerView rvAll;
+    VacancyValidation vacancyValidation;
     private StorageTask mUploadTask;
 
 
@@ -67,23 +62,31 @@ public class VacancyServicesImp implements VacancyServices {
     public void addNewVacancy(Context c, EditText jobTitle, EditText organization, AutoCompleteTextView jobFamily,
                               AutoCompleteTextView jobLevel, EditText description, EditText salary, String deadline, String email) {
 
-        String desPattern = ".{1,200}"; // creating pattern for description
+
+        String DES_PATTERN = ".{1,200}"; // creating pattern for description
         try {
             //check input filed are empty or not
             if (TextUtils.isEmpty(jobTitle.getText().toString()))
-                Toast.makeText(c, "Please enter job title", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_TITLE, Toast.LENGTH_LONG).show();
+
             else if (TextUtils.isEmpty(jobFamily.getText().toString()))
-                Toast.makeText(c, "Please enter job family", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_FAMILY, Toast.LENGTH_LONG).show();
+
             else if (TextUtils.isEmpty(jobLevel.getText().toString()))
-                Toast.makeText(c, "Please enter job level", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_LEVEL, Toast.LENGTH_LONG).show();
+
             else if (TextUtils.isEmpty(organization.getText().toString()))
-                Toast.makeText(c, "Please enter job organization", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_ORGANIZATION, Toast.LENGTH_LONG).show();
+
             else if (TextUtils.isEmpty(salary.getText().toString()))
-                Toast.makeText(c, "Please enter job salary", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_SALARY, Toast.LENGTH_LONG).show();
+
             else if (TextUtils.isEmpty(description.getText().toString()))
-                Toast.makeText(c, "Please enter job description", Toast.LENGTH_LONG).show();
-            else if (!(description.getText().toString()).matches(desPattern))
-                Toast.makeText(c, "job description max limit is 200 letters", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_DESCRIPTION, Toast.LENGTH_LONG).show();
+
+            else if (!(description.getText().toString()).matches(DES_PATTERN))
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_JOB_DESCRIPTION_LIMIT, Toast.LENGTH_LONG).show();
+
             else {
                 vacancies.setJobTitle(jobTitle.getText().toString().trim());
                 vacancies.setJobFamily(jobFamily.getText().toString().trim());
@@ -93,13 +96,14 @@ public class VacancyServicesImp implements VacancyServices {
                 vacancies.setDescription(description.getText().toString().trim());
                 vacancies.setDeadline(deadline);
                 vacancies.setEmail(email);
-                //insert value in to database
-                con.getRef().child("Vacancies").child("VID" + (cu.getNextID())).setValue(vacancies);
 
-                Toast.makeText(c, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
+                //insert value in to database
+                con.getRef().child(CommonConstants.VACANCY).child(CommonConstants.VACANCY_ID + (cu.getNextID())).setValue(vacancies);
+
+                Toast.makeText(c, CommonConstants.DATA_INSERT_SUCCESSFULLY, Toast.LENGTH_LONG).show();
 
                 Intent i = new Intent(c, IT20133290_CustomerMenu.class);
-                i.putExtra("email", email);
+                i.putExtra(CommonConstants.EMAIL_EXTRA, email);
                 c.startActivity(i);
 
                 //clear entered values
@@ -107,7 +111,7 @@ public class VacancyServicesImp implements VacancyServices {
                         jobLevel, description, salary);
             }
         } catch (Exception e) {
-            Toast.makeText(c, "Data Inserted Unsuccessful", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, CommonConstants.DATA_INSERT_UNSUCCESSFULLY, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -122,12 +126,12 @@ public class VacancyServicesImp implements VacancyServices {
             val2 = "" + val;
             //find values by salary
             FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
-                    setQuery(con.getRef().child("Vacancies").orderByChild("salary").startAt(val2).endAt(val2 + "~"), Vacancies.class).build();
+                    setQuery(con.getRef().child(CommonConstants.VACANCY).orderByChild("salary").startAt(val2).endAt(val2 + "~"), Vacancies.class).build();
             return options;
         } catch (Exception e) {
             //find values by job title
             FirebaseRecyclerOptions<Vacancies> options = new FirebaseRecyclerOptions.Builder<Vacancies>().
-                    setQuery(con.getRef().child("Vacancies").orderByChild("jobTitle").startAt(str).endAt(str + "~"), Vacancies.class).build();
+                    setQuery(con.getRef().child(CommonConstants.VACANCY).orderByChild("jobTitle").startAt(str).endAt(str + "~"), Vacancies.class).build();
             return options;
         }
 
@@ -136,28 +140,36 @@ public class VacancyServicesImp implements VacancyServices {
     @Override
     public void addNewUser(Context c, EditText name, EditText tp, EditText email, EditText password, EditText repassword, Uri mImageUri, ProgressBar pb) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        String passwordPatter = "^(?=.*[0-9])(?=.*[a-z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+
         try {
-            if (TextUtils.isEmpty(name.getText().toString()))
-                Toast.makeText(c, "Please enter your name", Toast.LENGTH_LONG).show();
+            if (vacancyValidation.isNameEmpty((name.getText().toString())))
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_NAME, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(tp.getText().toString()))
-                Toast.makeText(c, "Please enter mobile number", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_MOBILE_NUMBER, Toast.LENGTH_LONG).show();
+
+            else if((tp.getText().toString().length() < 10))
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_MOBILE_NUMBER, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(email.getText().toString()))
-                Toast.makeText(c, "Please enter email", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_EMAIL, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(password.getText().toString()))
-                Toast.makeText(c, "Please enter password", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_PASSWORD, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(repassword.getText().toString()))
-                Toast.makeText(c, "Please enter password", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_PASSWORD, Toast.LENGTH_LONG).show();
 
             else if (!password.getText().toString().equals(repassword.getText().toString()))
-                Toast.makeText(c, "Password Mismatched", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PASSWORD_MISMATCHED, Toast.LENGTH_LONG).show();
 
-            else if (!(email.getText().toString()).matches(emailPattern))
-                Toast.makeText(c, "Incorrect Email", Toast.LENGTH_LONG).show();
-            else {
+            else if (!vacancyValidation.isEmailValid(email.getText().toString()))
+                Toast.makeText(c, CommonConstants.INCORRECT_EMAIL, Toast.LENGTH_LONG).show();
+
+            else if(!vacancyValidation.isPasswordValid(password.getText().toString())){
+                Toast.makeText(c, CommonConstants.STRONG_PASSWORD, Toast.LENGTH_LONG).show();
+            } else {
 
                 String key = email.getText().toString().trim();
                 appUser.setName(name.getText().toString().trim());
@@ -188,19 +200,19 @@ public class VacancyServicesImp implements VacancyServices {
         try {
             //check input fields are empty or not
             if (TextUtils.isEmpty(email.getText().toString()))
-                Toast.makeText(c, "Please enter email", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_EMAIL, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(password.getText().toString()))
-                Toast.makeText(c, "Please enter password", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_PASSWORD, Toast.LENGTH_LONG).show();
 
             else if (!(email.getText().toString()).matches(emailPattern))
-                Toast.makeText(c, "Incorrect Email", Toast.LENGTH_LONG).show();
+                Toast.makeText(c, CommonConstants.INCORRECT_EMAIL, Toast.LENGTH_LONG).show();
 
             else {
                 String enteredEmail = email.getText().toString();
                 String enteredPassword = password.getText().toString();
                 //validate user
-                Query checkUser = con.getRef().child("AppUser").orderByChild("email").equalTo(enteredEmail);
+                Query checkUser = con.getRef().child(CommonConstants.APP_USER).orderByChild("email").equalTo(enteredEmail);
                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -228,10 +240,10 @@ public class VacancyServicesImp implements VacancyServices {
 
                                 c.startActivity(i);
                             } else {
-                                Toast.makeText(c, "The Entered Password is incorrect", Toast.LENGTH_LONG).show();
+                                Toast.makeText(c, CommonConstants.ENTERED_PASSWORD_INCORRECT, Toast.LENGTH_LONG).show();
                             }
                         } else {
-                            Toast.makeText(c, "No such user exist", Toast.LENGTH_LONG).show();
+                            Toast.makeText(c, CommonConstants.NO_SUCH_USER, Toast.LENGTH_LONG).show();
                         }
                     }
 
@@ -243,7 +255,7 @@ public class VacancyServicesImp implements VacancyServices {
             }
 
         } catch (Exception e) {
-            Toast.makeText(c, "Try again", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, CommonConstants.TRY_AGAIN , Toast.LENGTH_LONG).show();
         }
 
     }
@@ -267,7 +279,7 @@ public class VacancyServicesImp implements VacancyServices {
     }
 
     public void uploadFile(Uri mImageUri, ProgressBar pb, Context c, AppUser appUser) {
-        StorageReference mStorageRef = FirebaseStorage.getInstance("gs://hireme-2e86a.appspot.com/").getReference("uploads");
+        StorageReference mStorageRef = FirebaseStorage.getInstance(CommonConstants.FIREBASE_STORAGE_1).getReference("uploads");
 
         if (mImageUri != null) {
 
@@ -291,10 +303,10 @@ public class VacancyServicesImp implements VacancyServices {
                             //Do what you want with the url
 
                             appUser.setImg(downloadUrl.toString());
-                            con.getRef().child("AppUser").child("CUID" + (cu.getCusID())).setValue(appUser);
+                            con.getRef().child(CommonConstants.APP_USER).child(CommonConstants.APP_USER_ID + (cu.getCusID())).setValue(appUser);
 
 
-                            Toast.makeText(c, "Account created Successfully, Now you can log in", Toast.LENGTH_LONG).show();
+                            Toast.makeText(c, CommonConstants.SUCCESS_LOGIN, Toast.LENGTH_LONG).show();
                             Intent i = new Intent(c, IT20133290_LoginActivity.class);
                             c.startActivity(i);
                         }
@@ -315,7 +327,7 @@ public class VacancyServicesImp implements VacancyServices {
                 }
             });
         } else {
-            Toast.makeText(c, "No file selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(c, CommonConstants.NO_FILE_SELECTED, Toast.LENGTH_SHORT).show();
         }
     }
 }

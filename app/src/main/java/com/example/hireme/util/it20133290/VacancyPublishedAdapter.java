@@ -1,4 +1,4 @@
-package com.example.hireme.util;
+package com.example.hireme.util.it20133290;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -14,7 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.hireme.R;
 import com.example.hireme.database.Connection;
 import com.example.hireme.models.Vacancies;
@@ -22,7 +21,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
@@ -107,7 +105,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
 
                             int mLastPosition = holder.getAdapterPosition();
                             //add map into firebase
-                            con.getRef().child("Vacancies").child(getRef(mLastPosition).getKey()).updateChildren(map)
+                            con.getRef().child(CommonConstants.VACANCY).child(getRef(mLastPosition).getKey()).updateChildren(map)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void unused) {
@@ -147,7 +145,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
                         int mLastPosition = holder.getAdapterPosition();
 
                         //remove data in firebase
-                        con.getRef().child("Vacancies").child(getRef(mLastPosition).getKey()).removeValue();
+                        con.getRef().child(CommonConstants.VACANCY).child(getRef(mLastPosition).getKey()).removeValue();
 
                         Toast.makeText(holder.itemView.getContext(), "Deleted.", Toast.LENGTH_LONG);
                     }

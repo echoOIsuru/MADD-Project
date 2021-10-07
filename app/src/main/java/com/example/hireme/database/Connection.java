@@ -6,6 +6,7 @@
 package com.example.hireme.database;
 import androidx.annotation.NonNull;
 
+import com.example.hireme.util.it20133290.CommonConstants;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,7 +18,7 @@ public class Connection {
     private DatabaseReference ref;
 
     public Connection(){
-        ref = FirebaseDatabase.getInstance("https://hireme-2e86a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference();
+        ref = FirebaseDatabase.getInstance(CommonConstants.FIREBASE_URL_1).getReference();
 
     }
 
