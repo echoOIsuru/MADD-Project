@@ -21,6 +21,7 @@ public class IT20133290_UnitTest {
     private String name;
     private String password;
     private String email;
+    private String tp;
 
 
     @BeforeClass
@@ -33,6 +34,7 @@ public class IT20133290_UnitTest {
         name = "";
         password = "";
         email = "";
+        tp="";
     }
 
     @Test
@@ -54,14 +56,24 @@ public class IT20133290_UnitTest {
     public void validName(){
         name = "";
         boolean result = vacancyValidation.isNameEmpty(name);
-        assertEquals("empty name",true,result);
+        assertEquals("empty name",true, result);
     }
+
+    @Test
+    public void validTp(){
+        tp = "";
+        boolean result = vacancyValidation.isTpValid("0812674985");
+        assertEquals("valid tp number",true, result);
+
+    }
+
 
     @After
     public void clear(){
-       name="";
-       password="";
-       email="";
+       name = "";
+       password = "";
+       email = "";
+       tp = "";
     }
 
     @AfterClass

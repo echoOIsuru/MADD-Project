@@ -20,6 +20,8 @@ public class VacancyValidation {
         return password.matches(passwordPatter);
     }
 
-
+    public boolean isTpValid(String tp){
+        return (tp.length() == 10);
+    }
 
 }
