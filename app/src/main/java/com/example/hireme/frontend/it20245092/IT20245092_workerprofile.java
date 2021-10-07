@@ -77,8 +77,7 @@ public class IT20245092_workerprofile extends AppCompatActivity {
             i.putExtra("email",email);
             i.putExtra("name",name);
         }else if(v == btn4){
-            i = new Intent(this, IT20245092_MyJobs.class);
-            i.putExtra("email",email);
+
         }
 
         startActivity(i);

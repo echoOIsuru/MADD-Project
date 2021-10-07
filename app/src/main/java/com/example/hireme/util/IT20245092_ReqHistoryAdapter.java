@@ -24,6 +24,8 @@ import com.google.firebase.database.Transaction;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
+import org.w3c.dom.Text;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,19 +38,20 @@ public class IT20245092_ReqHistoryAdapter extends FirebaseRecyclerAdapter<IT2022
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull IT20224370_RequestModel model) {
         if (model.getStatus().equals("rejected") || model.getStatus().equals("accepted")) {
-            holder.job.setText(model.getSelectedJob());
+            holder.clientName.setText(model.getFullName());
             holder.date.setText(model.getDate());
-            //holder.time.setText(model.getTime());
-            //model.getStatus().equals("accepted");
+            holder.RqName.setText(model.getSelectedJob());
+            holder.location.setText(model.getAddress());
+            holder.rqStatus.setText("Status - " + model.getStatus());
+            holder.rqEmail.setText(model.getUserMail());
+//            holder.time.setText(model.getTime());
+            //!model.getStatus().equals("accepted")
         }else{
-            holder.job.setVisibility(View.GONE);
+            holder.clientName.setVisibility(View.GONE);
             holder.date.setVisibility(View.GONE);
-            //holder.time.setVisibility(View.GONE);
+//            holder.time.setVisibility(View.GONE);
             holder.l1.setLayoutParams(holder.params);
         }
-        System.out.println("mama waddec");
-
-
     }
 
     @NonNull
@@ -60,17 +63,20 @@ public class IT20245092_ReqHistoryAdapter extends FirebaseRecyclerAdapter<IT2022
 
     class myViewHolder extends RecyclerView.ViewHolder{
 
-        TextView job,date,time;
+        TextView clientName,date,time,RqName,location,rqStatus,rqEmail;
         LinearLayout l1;
         ViewGroup.LayoutParams params;
-
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            job = (TextView) itemView.findViewById(R.id.RqJName);
+            clientName = (TextView) itemView.findViewById(R.id.RqName);
             date = (TextView) itemView.findViewById(R.id.rqDate);
-//          time = (TextView) itemView.findViewById(R.id.timetext);
+            RqName = (TextView) itemView.findViewById(R.id.RqJName);
+            location = (TextView) itemView.findViewById(R.id.rqLocation);
+            rqStatus = (TextView) itemView.findViewById(R.id.rqStatus);
+            rqEmail = (TextView) itemView.findViewById(R.id.RqEmail);
+//            time = (TextView) itemView.findViewById(R.id.timetext);
             l1 = (LinearLayout) itemView.findViewById(R.id.hislinid);
             params = new LinearLayout.LayoutParams(0, 0);
 
