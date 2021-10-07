@@ -28,6 +28,7 @@ public class IT20245092_MyRequests extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20245092_my_requests);
+        getSupportActionBar().hide();
 
         Intent i = getIntent();
         email = i.getStringExtra("email");

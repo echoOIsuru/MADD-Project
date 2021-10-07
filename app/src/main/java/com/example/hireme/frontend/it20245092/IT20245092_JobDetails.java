@@ -45,6 +45,7 @@ public class IT20245092_JobDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it20245092_job_details);
+        getSupportActionBar().hide();
 
         Intent i = getIntent();
         email = i.getStringExtra("email");
