@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundop3sq">
+    android:background="@drawable/backgroundop3sq"
+    tools:context=".frontend.it20231682.IT20231682_feedback_user_activities">
 
-<!--    Top Navbar-->
+
+    <!--Top Navbar-->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="413dp"
@@ -34,28 +36,69 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="0dp"
                 android:fontFamily="@font/aclonica"
                 android:gravity="center"
                 android:padding="12dp"
-                android:text="Leave Feedback"
+                android:text="Hire Me"
                 android:textSize="23dp" />
         </RelativeLayout>
 
     </LinearLayout>
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
-    <!-- recycle view-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:id="@+id/lay1">
+
+
+                    <Button
+                        android:id="@+id/btnviewall"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="#0882E3"
+                        android:text="All Reviews"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btnmyreview"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="My Reviews"
+                        android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/feedrv"
+        android:id="@+id/feedworkerrv"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="6dp"
+        android:layout_below="@id/lay1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</RelativeLayout>
 
 
     <!--Bottom Navbar-->

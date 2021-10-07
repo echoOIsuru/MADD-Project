@@ -1,13 +1,15 @@
-package com.example.hireme;
+package com.example.hireme.util.it20231682;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.usage.NetworkStats;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.hireme.R;
+import com.example.hireme.models.IT20231682_feedback_model;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -31,6 +35,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT20231682_feedback_model,IT20231682_feedbackAdapter.myViewHolder> {
 
+    private NetworkStats.Bucket firebaseAuth;
+
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
@@ -44,6 +50,8 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView")final int position, @NonNull IT20231682_feedback_model model) {
 
+
+
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -51,10 +59,16 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
-        holder.name.setText(model.name);
-        holder.email.setText(model.email);
-        holder.review.setText(model.review);
-        holder.rateCount.setText(model.rate);
+        holder.name.setText("Your name : " + model.getName());
+        holder.email.setText("Your email : " + model.getEmail());
+        holder.wname.setText("Worker name : " +model.getWname());
+        holder.wemail.setText("Worker email : " +model.getWemail());
+        holder.review.setText("Review : " +model.getReview());
+        holder.rateCount.setText("Rating value : " +model.getRate());
+
+
+
+
 
         //click on edit button and after display popup update
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +76,7 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.it20231682_feedback_update_popup))
-                        .setExpanded(true,1300)
+                        .setExpanded(true,1100)
                         .create();
 
                 //dialogPlus.show(); //without data
@@ -71,8 +85,8 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
 
                 RatingBar ratingBar;
 
-                EditText name = view.findViewById(R.id.textName);
-                EditText email = view.findViewById(R.id.textEmail);
+//                EditText name = view.findViewById(R.id.textName);
+//                EditText email = view.findViewById(R.id.textEmail);
                 TextView rateCount = view.findViewById(R.id.ratecount);
                 EditText review = view.findViewById(R.id.textReview);
                 Button btnupdate = view.findViewById(R.id.btnUpdate);
@@ -99,8 +113,8 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
                     }
                 });
 
-                name.setText(model.getName());
-                email.setText(model.getEmail());
+//                name.setText(model.getName());
+//                email.setText(model.getEmail());
                 rateCount.setText(model.getRate());
                 review.setText(model.getReview());
 
@@ -112,8 +126,8 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
                     public void onClick(View v) {
 
                         Map<String,Object> map = new HashMap<>();
-                        map.put("name",name.getText().toString());
-                        map.put("email",email.getText().toString());
+//                        map.put("name",name.getText().toString());
+//                        map.put("email",email.getText().toString());
                         map.put("rate",rateCount.getText().toString());
                         map.put("review",review.getText().toString());
 
@@ -177,7 +191,7 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.it20231682_feedback_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.it20231682_onecustomer_item,parent,false);
         return new myViewHolder(view);
     }
 
@@ -185,9 +199,9 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
 
         //Initialize Variables
         CircleImageView img;
-        TextView name,email,review;
+        TextView name,email,wname,wemail,review;
         TextView rateCount ;
-        Button btnEdit,btnDelete;
+        ImageView btnEdit,btnDelete;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -196,10 +210,14 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
             img = (CircleImageView)itemView.findViewById(R.id.img1);
             name = (TextView) itemView.findViewById(R.id.nametest);
             email = (TextView) itemView.findViewById(R.id.emailtext);
+            wname = (TextView) itemView.findViewById(R.id.wnametest);
+            wemail = (TextView) itemView.findViewById(R.id.wemailtext);
             review = (TextView) itemView.findViewById(R.id.reviewtext);
             rateCount = (TextView) itemView.findViewById(R.id.ratingtext);
-            btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
-            btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
+//            btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
+//            btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
+            btnEdit = (ImageView) itemView.findViewById(R.id.btnEdit);
+            btnDelete = (ImageView) itemView.findViewById(R.id.btnDelete);
 
         }
 

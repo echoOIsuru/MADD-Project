@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundop3sq">
+    android:background="@drawable/backgroundop3sq"
+    tools:context=".frontend.it20231682.IT20231682_feedback_onecustomer_reviews">
 
-<!--    Top Navbar-->
+    <!--    Top Navbar-->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="413dp"
@@ -43,6 +44,65 @@
 
     </LinearLayout>
 
+<!--    &lt;!&ndash; total rating card&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="130dp"-->
+<!--        android:background="@drawable/backgroundop1"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/feedrv"-->
+<!--        app:layout_constraintStart_toStartOf="@id/linearLayout3"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+
+<!--        &lt;!&ndash;        &lt;!&ndash;add gif &ndash;&gt;&ndash;&gt;-->
+<!--        &lt;!&ndash;        <pl.droidsonroids.gif.GifImageView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="240dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginTop="5dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:src="@drawable/it20231682_feedback_rate_gif"/>&ndash;&gt;-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView2"-->
+<!--            android:layout_width="176dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:srcCompat="@drawable/it20231682_total_rating"-->
+<!--            tools:layout_editor_absoluteY="115dp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/totalrate"-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="44dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="25sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="87dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:text="Rates"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
 
 
     <!-- recycle view-->
@@ -50,13 +110,28 @@
         android:id="@+id/feedrv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="65dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/feedfloatingActionButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="16dp"-->
+    <!--        android:backgroundTint="#FFB74D"-->
+    <!--        android:clickable="true"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.954"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.911"-->
+    <!--        app:srcCompat="@drawable/add_new_feed" />-->
 
     <!--Bottom Navbar-->
 
@@ -112,5 +187,8 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

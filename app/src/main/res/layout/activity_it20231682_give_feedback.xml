@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroundop3sq"
     android:layout_gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <!--Top Navbar-->
     <LinearLayout
@@ -63,13 +62,22 @@
         android:textSize="25dp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView"
+
+    <!--add gif -->
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
         android:layout_marginTop="5dp"
-        android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/feedback"/>
+        android:src="@drawable/it20231682_feedback_gif" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:srcCompat="@drawable/feedback"/>-->
 
 
     <!--input name-->
@@ -179,14 +187,11 @@
 
     <!--Bottom Navbar-->
 
-
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="414dp"
         android:layout_height="48dp"
         android:background="#FFFFFF"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -232,7 +237,6 @@
                 android:padding="@dimen/icon_padding"
                 android:src="@drawable/profile" />
         </RelativeLayout>
-
 
     </LinearLayout>
 

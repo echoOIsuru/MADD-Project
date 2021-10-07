@@ -7,7 +7,7 @@
     android:background="#DCF3F8"
     android:backgroundTint="@color/backgroundcolor"
     android:orientation="vertical">
-<!--    tools:context=".IT20224370_Workerprofile"-->
+    <!--    tools:context=".IT20224370_Workerprofile"-->
 
     <!--Top Navbar-->
     <LinearLayout
@@ -210,27 +210,57 @@
                 android:layout_weight="0.5">
 
 
-                <Button
-                    android:id="@+id/workerbtn"
-                    android:layout_width="150dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/it20224370_rounded_btn"
-                    android:backgroundTint="@color/btn_color"
-                    android:text="@string/btnrequest">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                </Button>
+                    <Button
+                        android:id="@+id/workerbtn"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="@color/btn_color"
+                        android:text="@string/btnrequest"
+                        android:textAllCaps="false" />
 
-                <!--            <Button-->
-                <!--                android:id="@+id/backbtn"-->
-                <!--                android:layout_width="120dp"-->
-                <!--                android:layout_height="50dp"-->
-                <!--                android:backgroundTint="@color/btn_color"-->
-                <!--                android:text="back">-->
+                    <Button
+                        android:id="@+id/workerfeedbackbtn"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Reviews"
+                        android:textAllCaps="false" />
 
-                <!--            </Button>-->
+                </LinearLayout>
+
+
+<!--                <Button-->
+<!--                    android:id="@+id/workerbtn"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginStart="130dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:background="@drawable/it20224370_rounded_btn"-->
+<!--                    android:backgroundTint="@color/btn_color"-->
+<!--                    android:text="@string/btnrequest">-->
+
+<!--                </Button>-->
+
+<!--                            <Button-->
+<!--                                android:id="@+id/backbtn"-->
+<!--                                android:layout_width="120dp"-->
+<!--                                android:layout_height="50dp"-->
+<!--                                android:backgroundTint="@color/btn_color"-->
+<!--                                android:text="back">-->
+
+<!--                            </Button>-->
 
 
             </RelativeLayout>

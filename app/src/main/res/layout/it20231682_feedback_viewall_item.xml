@@ -11,8 +11,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:background="#EFE9E9">
+        android:background="#EFE9E9"
+        android:padding="15dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
@@ -49,10 +49,21 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/ratingtext"
+            android:id="@+id/wemailtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/emailtext"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img1"
+            android:text="worker email address"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ratingtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wemailtext"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
             android:text="No of rating"
@@ -71,32 +82,6 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/reviewtext"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <Button-->
-<!--                android:id="@+id/btnEdit"-->
-<!--                android:layout_width="173dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="5dp"-->
-<!--                android:layout_marginRight="5dp"-->
-<!--                android:backgroundTint="#0882E3"-->
-<!--                android:text="Edit"-->
-<!--                android:textAllCaps="false" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/btnDelete"-->
-<!--                android:layout_width="173dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginLeft="5dp"-->
-<!--                android:layout_marginTop="5dp"-->
-<!--                android:text="Delete"-->
-<!--                android:textAllCaps="false" />-->
-
-<!--        </LinearLayout>-->
 
     </RelativeLayout>
 

@@ -18,10 +18,19 @@
             android:name=".frontend.it20245092.IT20245092_Jobs"
             android:exported="true" />
         <activity
-            android:name=".IT20231682_give_feedback"
+            android:name=".frontend.it20231682.IT20231682_give_feedback"
             android:exported="true" />
         <activity
-            android:name=".IT20231682_feedback_view"
+            android:name=".frontend.it20231682.IT20231682_feedback_view"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20231682.IT20231682_Overrall_rating"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20231682.IT20231682_feedback_user_activities"
+            android:exported="true" />
+        <activity
+            android:name=".frontend.it20231682.IT20231682_feedback_onecustomer_reviews"
             android:exported="true" />
         <activity
             android:name=".frontend.it20245092.Jobs"

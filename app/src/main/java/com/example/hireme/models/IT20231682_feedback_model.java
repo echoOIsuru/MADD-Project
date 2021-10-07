@@ -1,4 +1,4 @@
-package com.example.hireme;
+package com.example.hireme.models;
 
 public class IT20231682_feedback_model {
 
@@ -6,18 +6,22 @@ public class IT20231682_feedback_model {
     String email;
     String review;
     String rate;
+    String wname;
     String image;
+    String wemail;
 
-    IT20231682_feedback_model(){
+    public IT20231682_feedback_model(){
 
     }
 
-    public IT20231682_feedback_model(String name, String email, String review, String rate, String image) {
+    public IT20231682_feedback_model(String name, String email, String review, String rate, String wname, String image, String wemail) {
         this.name = name;
         this.email = email;
         this.review = review;
         this.rate = rate;
+        this.wname = wname;
         this.image = image;
+        this.wemail = wemail;
     }
 
     public String getName() {
@@ -58,5 +62,21 @@ public class IT20231682_feedback_model {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getWemail() {
+        return wemail;
+    }
+
+    public void setWemail(String wemail) {
+        this.wemail = wemail;
+    }
+
+    public String getWname() {
+        return wname;
+    }
+
+    public void setWname(String ratevalue) {
+        this.wname = ratevalue;
     }
 }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hireme.R;
+import com.example.hireme.frontend.it20231682.IT20231682_Overrall_rating;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -45,7 +46,7 @@ public class IT20224370_Workerprofile extends AppCompatActivity {
         String Details6 = getIntent().getStringExtra("workerjob");
 
         btn=(Button)findViewById(R.id.workerbtn);
-//        btn1=(Button)findViewById(R.id.backbtn);
+        btn1=(Button)findViewById(R.id.workerfeedbackbtn);
 
         TextView name = (TextView) findViewById(R.id.editTextTextPersonName3);
         TextView mobile = (TextView)findViewById(R.id.editTextPhone3);
@@ -81,14 +82,20 @@ public class IT20224370_Workerprofile extends AppCompatActivity {
             }
         });
 
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent launchactivity= new Intent(IT20224370_Workerprofile.this,IT20224370_Householdjobs.class);
-//                startActivity(launchactivity);
-//
-//            }
-//        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(view.getContext(), IT20231682_Overrall_rating.class);
+
+                i.putExtra("wjob",Details6);
+                i.putExtra("wmail",Details3);
+                i.putExtra("wname",Details);
+                i.putExtra("workerpic",Details5);
+
+                view.getContext().startActivity(i);
+
+            }
+        });
     }
 }
