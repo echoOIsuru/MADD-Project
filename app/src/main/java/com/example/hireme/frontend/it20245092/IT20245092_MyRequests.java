@@ -38,28 +38,6 @@ public class IT20245092_MyRequests extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.requestsrv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        Query temp = FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/")
-//                .getReference().child("requests")
-//                .orderByChild("workerMail").equalTo("janith@gmail.com");
-//
-//        temp.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                if(snapshot.exists()) {
-//                    String val = "ok";
-//                    for (DataSnapshot temp : snapshot.getChildren()) {
-//                        temp.status
-//                        System.out.println("asddasdasd  "+ temp.getValue().equals("pending"));
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
         FirebaseRecyclerOptions<IT20224370_RequestModel> options =
                 new FirebaseRecyclerOptions.Builder<IT20224370_RequestModel>()
                 .setQuery(FirebaseDatabase.getInstance("https://hireme-2753d-default-rtdb.firebaseio.com/")
