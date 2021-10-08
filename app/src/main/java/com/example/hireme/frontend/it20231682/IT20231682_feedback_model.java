@@ -1,4 +1,4 @@
-package com.example.hireme;
+package com.example.hireme.frontend.it20231682;
 
 public class IT20231682_feedback_model {
 

@@ -42,20 +42,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/filledOrganization"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/Organization">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etUpdateOrganization"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/input_filed2" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/filledSalary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
