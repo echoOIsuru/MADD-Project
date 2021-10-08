@@ -152,7 +152,7 @@ public class VacancyServicesImp implements VacancyServices {
             else if((tp.getText().toString().length() < 10))
                 Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_MOBILE_NUMBER, Toast.LENGTH_LONG).show();
 
-            else if (!vacancyValidation.isTpValid(email.getText().toString()))
+            else if (TextUtils.isEmpty(email.getText().toString()))
                 Toast.makeText(c, CommonConstants.PLEASE_ENTER_YOUR_EMAIL, Toast.LENGTH_LONG).show();
 
             else if (TextUtils.isEmpty(password.getText().toString()))
