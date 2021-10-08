@@ -55,7 +55,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.description.getContext())
                         .setContentHolder(new ViewHolder(R.layout.it20133290_update_popup))
-                        .setExpanded(true, 1950)
+                        .setExpanded(true, 1960)
                         .create();
 
 
@@ -92,7 +92,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
 
                         //check description limit lower than 200 characters
                         if (!(description.getText().toString()).matches(desPattern))
-                            Toast.makeText(view.getContext(), "Updated Successfully", Toast.LENGTH_LONG);
+                            Toast.makeText(holder.btnUpdate.getContext(), "Too long Description", Toast.LENGTH_LONG);
 
                         else {
                             //put data into Hashmap
@@ -147,14 +147,14 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
                         //remove data in firebase
                         con.getRef().child(CommonConstants.VACANCY).child(getRef(mLastPosition).getKey()).removeValue();
 
-                        Toast.makeText(holder.itemView.getContext(), "Deleted.", Toast.LENGTH_LONG);
+                        Toast.makeText(holder.btnDelete.getContext(), "Deleted.", Toast.LENGTH_LONG);
                     }
                 });
                 //cancel button
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(holder.itemView.getContext(), "Cancelled.", Toast.LENGTH_LONG);
+                        Toast.makeText(holder.btnDelete.getContext(), "Cancelled.", Toast.LENGTH_LONG);
 
                     }
                 });
