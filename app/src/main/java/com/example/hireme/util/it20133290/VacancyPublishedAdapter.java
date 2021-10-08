@@ -55,7 +55,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.description.getContext())
                         .setContentHolder(new ViewHolder(R.layout.it20133290_update_popup))
-                        .setExpanded(true, 1960)
+                        .setExpanded(true, 1780)
                         .create();
 
 
@@ -64,7 +64,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
                 EditText salary = view.findViewById(R.id.etUpdateSalary);
                 EditText title = view.findViewById(R.id.etUpdateJobTitle);
                 EditText description = view.findViewById(R.id.etUpdateDescription);
-                EditText org = view.findViewById(R.id.etUpdateOrganization);
+               // EditText org = view.findViewById(R.id.etUpdateOrganization);
                 DatePicker datePicker = view.findViewById(R.id.dpUpdateDeadline);
 
                 Button btnUp = view.findViewById(R.id.btnUpdateInfo);
@@ -73,7 +73,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
                 salary.setText(model.getSalary());
                 title.setText(model.getJobTitle());
                 description.setText(model.getDescription());
-                org.setText(model.getOrganization());
+               // org.setText(model.getOrganization());
 
                 Date d = new Date(model.getDeadline());
 
@@ -100,7 +100,7 @@ public class VacancyPublishedAdapter extends FirebaseRecyclerAdapter<Vacancies, 
                             map.put("deadline", date);
                             map.put("description", description.getText().toString());
                             map.put("jobTitle", title.getText().toString());
-                            map.put("organization", org.getText().toString());
+                           // map.put("organization", org.getText().toString());
                             map.put("salary", salary.getText().toString());
 
                             int mLastPosition = holder.getAdapterPosition();

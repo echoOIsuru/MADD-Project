@@ -6,16 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.hireme.IT20231682_feedback_view;
+import com.example.hireme.frontend.it20231682.IT20231682_feedback_view;
 import com.example.hireme.R;
 import com.example.hireme.frontend.it20133290.IT20133290_VacancyMenu;
 //import com.example.hireme.frontend.it20224370.IT20224370_JobCategories;
 //import com.example.hireme.frontend.it20224370.IT20224370_MyRequests;
 import com.example.hireme.frontend.it20245092.IT20245092_workerprofile;
-import com.example.hireme.models.AppUser;
-import com.example.hireme.services.it20133290.VacancyServicesImp;
 import com.example.hireme.frontend.it20224370.IT20224370_JobCategories;
 import com.example.hireme.frontend.it20224370.IT20224370_Session_Management;
 
