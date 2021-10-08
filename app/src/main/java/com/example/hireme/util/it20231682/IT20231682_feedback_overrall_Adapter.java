@@ -38,10 +38,10 @@ public class IT20231682_feedback_overrall_Adapter extends FirebaseRecyclerAdapte
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
-        holder.name.setText(model.getName());
-        holder.email.setText(model.getEmail());
-        holder.review.setText(model.getReview());
-        holder.rateCount.setText(model.getRate());
+        holder.name.setText("User name : " + model.getName());
+        holder.email.setText("User email : " + model.getEmail());
+        holder.review.setText("Review : " +model.getReview());
+        holder.rateCount.setText("Rate : " +model.getRate());
 
     }
 

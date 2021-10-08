@@ -57,7 +57,6 @@ public class IT20231682_give_feedback extends AppCompatActivity {
         rateCount = findViewById(R.id.ratecount);
         ratingBar = findViewById(R.id.feedrate);
         btnsave = findViewById(R.id.btnAdd);
-       // it20231682_feedback_model = new IT20231682_feedback_model();
         name = findViewById(R.id.textName);
         email = findViewById(R.id.textEmail);
         review = findViewById(R.id.textReview);
@@ -75,8 +74,8 @@ public class IT20231682_give_feedback extends AppCompatActivity {
 //        awesomeValidation.addValidation(this,R.id.feedrate,
 //                RegexTemplate.NOT_EMPTY,R.string.invalid_rating);
         //add validation for feedback
-//        awesomeValidation.addValidation(this,R.id.textReview,
-//                RegexTemplate.NOT_EMPTY,R.string.invalide_review);
+        awesomeValidation.addValidation(this,R.id.textReview,
+                RegexTemplate.NOT_EMPTY,R.string.invalide_review);
 
 
 
@@ -107,7 +106,7 @@ public class IT20231682_give_feedback extends AppCompatActivity {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                rateValue = ratingBar.getRating();
+                rateValue = ratingBar.getRating(); // get value of rating bar
 
                 if (rateValue<=1 && rateValue > 0)
                     rateCount.setText("      Bad - " + rateValue + "/5");
@@ -137,8 +136,8 @@ public class IT20231682_give_feedback extends AppCompatActivity {
         name = (TextView) findViewById(R.id.textName);
         email = (TextView)findViewById(R.id.textEmail);
 
-        System.out.println(userEmail+ "-------asdasdasdasdasd");
-        System.out.println(userName+ "-------asdasdasdasdasd");
+//        System.out.println(userEmail+ "-------asdasdasdasdasd");
+//        System.out.println(userName+ "-------asdasdasdasdasd");
 
 
         name.setText(userName);
@@ -194,6 +193,9 @@ public class IT20231682_give_feedback extends AppCompatActivity {
 
 
                     Toast.makeText(getApplicationContext(),"Successfully data inserted " , Toast.LENGTH_SHORT).show();
+
+
+
                //     startActivity(new Intent(getApplicationContext(),IT20231682_feedback_onecustomer_reviews.class));
 
                     //pass data and launch IT20231682_feedback_onecustomer_reviews page
@@ -202,7 +204,7 @@ public class IT20231682_give_feedback extends AppCompatActivity {
 //                    i.putExtra("workerMail",iworkerMail);
 //                    i.putExtra("workerName",iworkerName);
 //                    v.getContext().startActivity(i);
-
+                        finish();
 
                 }
 

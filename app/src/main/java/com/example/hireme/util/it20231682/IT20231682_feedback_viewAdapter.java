@@ -38,11 +38,11 @@ public class IT20231682_feedback_viewAdapter extends FirebaseRecyclerAdapter<IT2
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
-        holder.name.setText(model.getName());
-        holder.email.setText(model.getEmail());
-        holder.wemail.setText(model.getWemail());
-        holder.review.setText(model.getReview());
-        holder.rateCount.setText(model.getRate());
+        holder.name.setText("User name : " +model.getName());
+        holder.email.setText("User name : " +model.getEmail());
+        holder.wemail.setText("Worker email : " +model.getWemail());
+        holder.review.setText("Review : " +model.getReview());
+        holder.rateCount.setText("Rate : " +model.getRate());
 
 
     }

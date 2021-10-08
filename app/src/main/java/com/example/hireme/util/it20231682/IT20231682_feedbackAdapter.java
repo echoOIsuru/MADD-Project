@@ -139,7 +139,7 @@ public class IT20231682_feedbackAdapter extends FirebaseRecyclerAdapter<IT202316
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.name.getContext(), "Update is unsuccessfully!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(holder.name.getContext(), "Update is successfully!", Toast.LENGTH_SHORT).show();
                                         //click on update button after redirect previous page (popup is closed)
                                         dialogPlus.dismiss();
                                     }

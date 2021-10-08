@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.example.hireme.R;
 import com.example.hireme.frontend.it20224370.IT20224370_JobRequest;
 import com.example.hireme.frontend.it20224370.IT20224370_Session_Management;
+import com.example.hireme.frontend.it20231682.IT20231682_Overrall_rating;
 
 public class IT20245092_workerprofile extends AppCompatActivity {
 
@@ -77,7 +78,9 @@ public class IT20245092_workerprofile extends AppCompatActivity {
             i.putExtra("email",email);
             i.putExtra("name",name);
         }else if(v == btn4){
-
+            i = new Intent(this, IT20231682_Overrall_rating.class);
+            i.putExtra("wmail",email);
+            i.putExtra("name",name);
         }
 
         startActivity(i);
